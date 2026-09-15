@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 295-339 (id 294-337).",
+
+  "294": { "answer": "B", "vi": "Lưu embedding vào vector database phục vụ RAG — Amazon OpenSearch Service hỗ trợ chỉ mục vector và tìm kiếm k-NN, là lựa chọn tiêu chuẩn trên AWS. Ground Truth (A) gán nhãn dữ liệu, Transcribe (C) xử lý giọng nói, Textract (D) trích xuất văn bản từ tài liệu." },
+
+  "295": { "answer": "B", "vi": "Generative AI tạo ra nội dung mới, nên chatbot sinh câu trả lời tự nhiên theo thời gian thực là ví dụ đúng. Dự báo nhu cầu (A) là ML dự đoán. Dashboard phân tích (C) là báo cáo. Recommendation engine dựa trên luật (D) không dùng AI sinh nội dung." },
+
+  "296": { "answer": "B", "vi": "Cần dịch vụ vừa lưu trữ vector vừa tìm kiếm vector — Amazon OpenSearch Service. DynamoDB (A) là CSDL key-value không có vector search gốc. ElastiCache (C) là bộ nhớ đệm. Redshift (D) là kho dữ liệu phân tích." },
+
+  "297": { "answer": "D", "vi": "Gợi ý phim dựa trên lịch sử tài khoản của từng người dùng — Amazon Personalize được xây riêng cho bài toán cá nhân hoá này. Polly (A) tạo giọng nói, Comprehend (B) phân tích văn bản, Transcribe (C) chuyển giọng nói thành văn bản." },
+
+  "298": { "answer": "B", "vi": "Yêu cầu kép: quyết định phải minh bạch, giải thích được, VÀ phải lập tài liệu phục vụ kiểm toán — SageMaker Model Card ghi lại mục đích, hiệu năng, giới hạn và cách mô hình ra quyết định theo khuôn mẫu chuẩn. Textract (A) và Comprehend (D) là dịch vụ AI khác. CloudFormation (C) là công cụ hạ tầng dạng mã." },
+
+  "299": { "answer": "C", "vi": "Từ khoá LEAST effort, và nhu cầu là rào an toàn cấu hình được cho LLM — Amazon Bedrock Guardrails bật lên là dùng, khai báo chủ đề cấm và bộ lọc nội dung bằng giao diện. Playgrounds (A) chỉ để thử nghiệm. Clarify (B) phân tích bias. JumpStart (D) là kho mô hình." },
+
+  "300": { "answer": "A", "vi": "Cần mô hình đa phương thức, hỗ trợ nhiều ngôn ngữ, và rẻ nhất — Nova Lite là mô hình đa phương thức có giá thấp nhất trong dòng Nova. Nova Pro (B) cũng đa phương thức nhưng đắt hơn. Nova Canvas (C) chỉ sinh ảnh, Nova Reel (D) chỉ sinh video — cả hai đều không phải mô hình hội thoại đa phương thức." },
+
+  "301": { "answer": "B", "vi": "Từ khoá LEAST implementation effort để chống prompt injection — Bedrock Guardrails có sẵn bộ lọc nội dung và denied topics, bật lên là xong. Fine-tune (A) tốn kém và không đảm bảo. Đổi FM (C) không giải quyết vấn đề vì mọi LLM đều dễ bị injection. Chain-of-thought (D) là kỹ thuật suy luận, không phải biện pháp bảo mật." },
+
+  "302": { "answer": "B", "vi": "Inference là dùng mô hình đã huấn luyện để đưa ra dự đoán hoặc quyết định trên dữ liệu chưa từng thấy. Tạo thuật toán mới (A), kết hợp nhiều mô hình (C) và thu thập dữ liệu huấn luyện (D) đều là các hoạt động khác trong vòng đời ML." },
+
+  "303": { "answer": "D", "vi": "Trợ lý phải đánh giá nguồn dữ liệu, gọi API bên ngoài, tạo nhiều phương án rồi so sánh và xếp thứ tự — chuỗi hành động nhiều bước có suy luận, đúng năng lực của Amazon Bedrock Agents. Prompt Management (A) chỉ quản lý mẫu prompt. Response streaming (B) là cách trả kết quả dần. Knowledge Bases (C) chỉ truy xuất tài liệu, không gọi API hay so sánh phương án." },
+
+  "304": { "answer": "B", "vi": "Cùng một đầu vào nhưng mỗi lần gọi lại ra kết quả khác nhau — đó là tính bất định (nondeterminism), hệ quả của việc mô hình lấy mẫu token theo xác suất. Hallucination (A) là bịa thông tin sai, khác với việc chỉ đơn giản là khác nhau. Accuracy (C) là độ chính xác. Multimodality (D) là khả năng xử lý nhiều loại dữ liệu." },
+
+  "305": { "answer": "A", "vi": "Cần sinh hình minh hoạ cho truyện từ mô tả văn bản — mô hình sinh ảnh như Stable Diffusion 3.5 Large trên Bedrock. Polly (B) tạo sách nói, không phải hình. Rekognition (C) phân tích ảnh có sẵn chứ không tạo mới. Q Business (D) là trợ lý tra cứu dữ liệu doanh nghiệp." },
+
+  "306": { "answer": "B", "vi": "Báo cáo lập theo tháng, không cần kết quả tức thì, chỉ chạy trên dữ liệu đã tích luỹ — batch transform xử lý cả lô một lần rồi tắt, rẻ nhất. Real-time (A) và serverless (C) duy trì endpoint chờ yêu cầu, lãng phí. Asynchronous (D) dùng khi vẫn cần độ trễ tương đối thấp." },
+
+  "308": { "answer": "D", "vi": "Chứng nhận ISO cấp cho hệ thống quản lý và khung phát triển của tổ chức, không cấp cho từng cá nhân hay từng hệ thống AI riêng lẻ. Vì vậy A, B, C đều sai — chứng nhận không có nghĩa mọi nhân viên hay mọi hệ thống đều được chứng nhận." },
+
+  "310": { "answer": "B", "vi": "Dữ liệu có sẵn giá trị mục tiêu cho biết bệnh nhân có mắc bệnh tim hay không — tức đã gán nhãn, nên đây là supervised learning. Unsupervised (A) dùng khi không có nhãn. Reinforcement (C) học qua phần thưởng. Semi-supervised (D) dùng khi chỉ một phần dữ liệu có nhãn." },
+
+  "312": { "answer": "C", "vi": "Quy định về việc lưu dữ liệu bao lâu và khi nào xoá chính là chính sách data retention (lưu giữ dữ liệu). Data de-identification (A) là ẩn danh hoá. Data quality standards (B) là tiêu chuẩn chất lượng. Log storage (D) chỉ là nơi chứa nhật ký." },
+
+  "313": { "answer": "B", "vi": "Xoay và lật ảnh là phép biến đổi số học xác định, có thư viện xử lý ảnh làm sẵn — viết một hàm Lambda là xong, đơn giản và rẻ nhất. Xây mạng nơ-ron sâu (A) là dùng dao mổ trâu giết gà. LLM (C) không xử lý được phép biến đổi ảnh. Glue Data Quality (D) dùng cho kiểm tra chất lượng dữ liệu dạng bảng." },
+
+  "314": { "answer": "C", "vi": "Từ khoá LEAST effort để sinh test case và viết tài liệu cho code — Amazon Q Developer tích hợp thẳng vào IDE, làm được cả hai. Tải code lên công cụ trực tuyến (A) có rủi ro bảo mật. Tự xây ứng dụng dùng FM (B) tốn công. Tự viết tay (D) là phương án tốn công nhất." },
+
+  "315": { "answer": "B", "vi": "Cần sinh hàng nghìn đoạn văn mô tả sản phẩm nhất quán về văn phong — mô hình dựa trên transformer (các LLM hiện đại) là lựa chọn cho sinh văn bản. VAE (A) và GAN (D) chủ yếu sinh ảnh/dữ liệu số. Diffusion model (C) sinh ảnh và video." },
+
+  "316": { "answer": "D", "vi": "Tốt trên dữ liệu huấn luyện nhưng kém trên dữ liệu đánh giá — dấu hiệu kinh điển của overfitting: mô hình học thuộc lòng thay vì khái quát hoá. Underfit (A) thì kém ở cả hai tập. Prompt engineering (B) không áp dụng cho mô hình ML truyền thống. Bias (C) là thiên lệch hệ thống, biểu hiện khác." },
+
+  "317": { "answer": "B", "vi": "Yêu cầu là mô hình đánh giá rủi ro khoản vay phải DIỄN GIẢI ĐƯỢC — logistic regression cho ra hệ số rõ ràng cho từng biến, dễ giải trình với cơ quan quản lý. Deep learning (A) là hộp đen. K-means (C) là gom cụm, không đánh giá rủi ro. Random cut forest (D) dùng phát hiện bất thường và cũng khó diễn giải." },
+
+  "318": { "answer": "B", "vi": "Bắt buộc lưu dữ liệu cá nhân trong phạm vi Region của công ty — đó là data residency (nơi cư trú dữ liệu). Data mining (A) là khai phá dữ liệu. Pre-training bias (C) là thiên lệch trong dữ liệu. Geolocation routing (D) là kỹ thuật định tuyến DNS, không phải quản trị dữ liệu." },
+
+  "319": { "answer": "B", "vi": "Trước khi làm gì về mặt kỹ thuật, cần phỏng vấn các bên liên quan để xác định rõ tình huống sử dụng và đặt mục tiêu đo lường được — nếu không sẽ xây thứ không ai dùng. Lao vào huấn luyện mô hình riêng (A) là đầu tư lớn khi chưa rõ mục tiêu. Triển khai giải pháp dựng sẵn (C) đo nhầm chỉ số so với mục tiêu doanh thu. Sao chép đối thủ (D) không đảm bảo phù hợp." },
+
+  "320": { "answer": "B", "vi": "Lọc bản ghi giọng nói theo thời lượng và ngôn ngữ là công đoạn làm sạch, chuẩn hoá dữ liệu trước khi huấn luyện — data preprocessing. Data collection (A) đã hoàn tất khi họ ghi âm xong. Feature engineering (C) là tạo đặc trưng mới từ dữ liệu đã sạch. Model training (D) chưa bắt đầu." },
+
+  "321": { "answer": "A", "vi": "Câu trả lời chung chung và lạc đề vì mô hình thiếu ngữ cảnh — few-shot prompting kèm ngữ cảnh chuyên ngành và chỉ dẫn rõ ràng khắc phục trực tiếp điều đó. Phương án B tự mâu thuẫn (bỏ qua chỉ dẫn chuyên ngành). Đổi văn phong trang trọng (C) không làm câu trả lời sát hơn. Zero-shot (D) là ít ngữ cảnh nhất, còn tệ hơn." },
+
+  "322": { "answer": "D", "vi": "Sinh mô tả khách sạn với văn phong nhất quán cho toàn website — cần foundation model sinh văn bản, tức Amazon Bedrock. Comprehend (A) phân tích văn bản chứ không tạo mới. Personalize (B) gợi ý sản phẩm. Rekognition (C) xử lý ảnh." },
+
+  "323": { "answer": "C", "vi": "Mấu chốt là dữ liệu KHÔNG có nhãn và mô hình còn thiếu kiến thức về nhiều chủ đề kỹ thuật — continued pre-training nạp dữ liệu văn bản thô để bổ sung kiến thức miền. Supervised fine-tuning (B) đòi hỏi dữ liệu có nhãn. Full training (A) là huấn luyện lại từ đầu, cực kỳ tốn kém. RAG (D) không phải phương pháp fine-tuning." },
+
+  "324": { "answer": "B", "vi": "Từ khoá LEAST development effort cho bài toán phân loại ảnh — lấy mô hình deep learning đã pre-trained rồi fine-tune trên tập dữ liệu của mình (transfer learning), tận dụng được đặc trưng đã học sẵn. Ba phương án còn lại đều buộc phải tự thiết kế đặc trưng thủ công hoặc huấn luyện từ đầu. GAN (C) vốn để sinh dữ liệu chứ không phân loại." },
+
+  "325": { "answer": "A", "vi": "Fine-tuning mô hình text-to-text trên Bedrock yêu cầu dữ liệu có nhãn theo cặp prompt/completion, đóng gói dưới dạng JSON Lines. Dữ liệu không nhãn (B, D) dùng cho continued pre-training. Dữ liệu bảng (C) không phù hợp với mô hình sinh văn bản." },
+
+  "327": { "answer": "A", "vi": "Chuyển đổi hệ thống từ ngôn ngữ lập trình này sang ngôn ngữ khác đòi hỏi mô hình nắm được cú pháp, hiểu ngữ nghĩa chương trình và tối ưu mã sinh ra. Tốc độ sinh mã (B) là thứ yếu so với tính đúng đắn. Sáng tạo nội dung (C) không cần cho việc dịch mã. Kích thước mô hình (D) là ràng buộc hạ tầng, không phải tiêu chí chất lượng." },
+
+  "328": { "answer": "B", "vi": "Muốn prompt gọi được API bên ngoài, phải khai báo tools configuration (định nghĩa công cụ mà mô hình được phép gọi). Special tokens (A) là ký hiệu điều khiển nội bộ. Prompt variables (C) chỉ chèn giá trị vào chỗ trống trong mẫu. Stop sequence (D) báo mô hình ngừng sinh." },
+
+  "329": { "answer": "AE", "vi": "Câu này chọn 2. Bảo mật và riêng tư cho Amazon Q Business gồm: mã hoá chỉ mục bằng khoá KMS do bạn quản lý, và dùng IAM để xác thực/phân quyền người dùng. Cho phép truy cập công khai (D) là lỗ hổng nghiêm trọng. Cross-account access (B) mở rộng quyền chứ không siết. Inspector (C) quét lỗ hổng chứ không làm xác thực." },
+
+  "330": { "answer": "A", "vi": "Cần báo cáo tự động về các endpoint Comprehend không dùng quá 15 ngày — AWS Trusted Advisor có sẵn kiểm tra 'Amazon Comprehend Underutilized Endpoints' trong nhóm tối ưu chi phí. CloudWatch (B) đo metric nhưng không có sẵn kiểm tra này. CloudTrail (C) ghi log lời gọi API. Config (D) theo dõi thay đổi cấu hình." },
+
+  "331": { "answer": "D", "vi": "Báo giá dịch vụ theo thời gian thực nên tiêu chí quyết định là độ trễ thấp và tốc độ suy luận đã được tối ưu. Model size (A) chỉ ảnh hưởng gián tiếp. Chất lượng dữ liệu huấn luyện (B) quan trọng nhưng không phải yếu tố chọn mô hình cho yêu cầu thời gian thực. GPU mạnh (C) là hạ tầng, không phải tiêu chí chọn mô hình." },
+
+  "332": { "answer": "B", "vi": "Từ khoá LEAST operational effort để fine-tune một LLM mã nguồn mở khi dữ liệu đã sẵn sàng — SageMaker JumpStart cung cấp mô hình dựng sẵn và quy trình fine-tuning chỉ vài cú nhấp. Tự viết script (C) hoặc dựng notebook trên EC2 (D) tốn công hơn nhiều. PartyRock (A) không hỗ trợ huấn luyện mô hình." },
+
+  "333": { "answer": "C", "vi": "System prompt định nghĩa vai trò và phạm vi hành vi của mô hình — nó đặt ra 'luật chơi' áp dụng cho toàn bộ cuộc hội thoại. Nó không dùng để xác thực người dùng (A), không tạo câu trả lời ngẫu nhiên (B) và không nén dữ liệu (D)." },
+
+  "334": { "answer": "A", "vi": "RAG cung cấp cho mô hình nguồn tri thức xác thực để bám vào khi trả lời, nhờ đó giảm hiện tượng bịa đặt thông tin — hallucination. Security (B), nondeterminism (C) và interpretability (D) là các hạn chế khác của LLM mà RAG không giải quyết trực tiếp." },
+
+  "335": { "answer": "D", "vi": "Hệ thống gợi ý việc làm đối xử khác nhau giữa nam và nữ dù hồ sơ tương đương — đó là vi phạm nguyên tắc fairness (công bằng) trong bộ nguyên tắc AI có trách nhiệm của AWS. Governance (A) là khung quản trị. Explainability (B) là khả năng giải thích. Controllability (C) là khả năng giám sát và điều khiển hệ thống." },
+
+  "336": { "answer": "AC", "vi": "Câu này chọn 2. Minh bạch và giải thích được cần hai thứ: SageMaker Model Cards lập tài liệu chuẩn hoá về mục đích, hiệu năng và giới hạn của mô hình; SageMaker Clarify (đề viết nhầm thành 'Clarity') giải thích mức đóng góp của từng đặc trưng. Pipelines (B) điều phối quy trình, Model Monitor (D) giám sát drift, Debugger (E) gỡ lỗi huấn luyện." },
+
+  "337": { "answer": "A", "vi": "Giảm tác động môi trường nghĩa là dùng ít tài nguyên tính toán hơn — tối ưu kiến trúc mô hình để suy luận hiệu quả là cách trực tiếp nhất. Triển khai nhiều mô hình ở nhiều AZ (B) và triển khai nhiều mô hình rồi chọn ngẫu nhiên (D) đều làm tăng tiêu thụ tài nguyên. Kiến trúc lai (C) không nhất thiết tiết kiệm năng lượng." }
+}

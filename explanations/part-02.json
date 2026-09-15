@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 36-75 (id 35-74).",
+
+  "35": { "answer": "B", "vi": "Mô hình đã huấn luyện xong và đang chạy thật, nay nhận ảnh mới để nhận diện vật thể — đó là inference (suy luận). Training (A) là giai đoạn học từ dữ liệu, đã kết thúc. Model deployment (C) là bước đưa mô hình lên môi trường chạy, cũng đã xong. Bias correction (D) là xử lý thiên lệch, không phải hành động dự đoán." },
+
+  "36": { "answer": "A", "vi": "Nguyên nhân là dữ liệu đầu vào mất cân bằng giữa các nhóm thuộc tính, nên phải xử lý ngay ở tầng dữ liệu: data augmentation bổ sung mẫu cho các lớp thiểu số để cân bằng lại. Model monitoring (B) chỉ phát hiện vấn đề chứ không sửa. RAG (C) dùng cho truy xuất tri thức. Watermark detection (D) để nhận biết ảnh do AI tạo." },
+
+  "37": { "answer": "C", "vi": "Bổ sung dữ liệu riêng của công ty vào mô hình mà không cần huấn luyện lại — đó là RAG, và trên Bedrock nó được hiện thực bằng Knowledge Base. Đổi mô hình (A) không đưa được dữ liệu nội bộ vào. Giảm temperature (B) chỉ làm đầu ra ổn định hơn. Invocation logging (D) chỉ ghi log." },
+
+  "38": { "answer": "B", "vi": "SageMaker Clarify sinh báo cáo, chỉ số và ví dụ về mức đóng góp của từng đặc trưng (feature attribution/SHAP) — đúng thứ cần cho yêu cầu minh bạch và giải thích được của ngành y tế. Inspector (A) quét lỗ hổng bảo mật. Macie (C) phát hiện dữ liệu nhạy cảm. Rekognition (D) gán nhãn ảnh." },
+
+  "39": { "answer": "BC", "vi": "Câu này chọn 2. Với chatbot chạy trên hạ tầng AWS, những năng lực có thể chứng minh tuân thủ quy định là bảo vệ dữ liệu (mã hoá khi lưu và khi truyền, kiểm soát truy cập) và phát hiện mối đe doạ (giám sát truy cập trái phép). Auto scaling (A), tối ưu chi phí (D) và kiến trúc microservice (E) là đặc tính vận hành/kiến trúc, không phải hạng mục tuân thủ pháp lý." },
+
+  "40": { "answer": "B", "vi": "Muốn tăng độ chính xác lên tới ngưỡng mong muốn thì cho mô hình học thêm nhiều vòng trên dữ liệu — tăng số epoch. Giảm epoch (C) làm mô hình học chưa tới (underfit). Giảm batch size (A) ảnh hưởng tốc độ và độ ổn định chứ không nhắm thẳng vào độ chính xác. Temperature (D) là tham số suy luận, không dùng khi huấn luyện." },
+
+  "41": { "answer": "B", "vi": "Mục tiêu kinh doanh là giảm số thao tác nhân viên tổng đài phải làm, hệ quả đo được là cuộc gọi ngắn lại — average call duration. Website engagement (A) không liên quan tới tổng đài. Trách nhiệm xã hội (C) và tuân thủ quy định (D) không đo được hiệu quả của chatbot." },
+
+  "42": { "answer": "D", "vi": "SageMaker Clarify phát hiện thiên lệch (bias) trong dữ liệu ở giai đoạn chuẩn bị, đồng thời giải thích mức đóng góp của đặc trưng. Tích hợp RAG (A) là việc của Bedrock. Giám sát chất lượng mô hình khi chạy thật (B) là Model Monitor. Lập tài liệu mô hình (C) là Model Cards." },
+
+  "43": { "answer": "C", "vi": "Tốt trên tập huấn luyện nhưng kém khi chạy thật là dấu hiệu kinh điển của overfitting — mô hình học thuộc dữ liệu thay vì học quy luật. Cách khắc phục căn bản là tăng lượng dữ liệu huấn luyện để mô hình khái quát hoá tốt hơn. Giảm dữ liệu (A) và kéo dài thời gian huấn luyện (D) đều làm overfit nặng thêm." },
+
+  "44": { "answer": "BD", "vi": "Câu này chọn 2. Amazon Comprehend có sẵn API phân tích cảm xúc cho văn bản, dùng ngay không cần huấn luyện. Amazon Bedrock cho phép dùng LLM để phân tích cảm xúc linh hoạt hơn. Lex (A) xây chatbot, Polly (C) chuyển văn bản thành giọng nói, Rekognition (E) xử lý ảnh — đều không phân tích cảm xúc văn bản." },
+
+  "45": { "answer": "D", "vi": "Câu hỏi nhấn mạnh MOST cost-effectively. Đưa PDF vào Bedrock Knowledge Base rồi dùng RAG chỉ nạp đúng đoạn liên quan vào prompt, tiết kiệm token nhất. Nhét cả một (A) hoặc toàn bộ (B) PDF vào mỗi prompt đốt token khủng khiếp và có thể vượt context window. Fine-tuning (C) tốn kém và phải làm lại mỗi khi tài liệu đổi." },
+
+  "46": { "answer": "D", "vi": "Từ khoá là LEAST administrative effort. Benchmark dataset là bộ dữ liệu chuẩn đã được xây sẵn để đo bias và phân biệt đối xử, dùng ngay không cần tự thu thập hay gán nhãn. Nội dung do người dùng tạo (A), log kiểm duyệt (B) đều cần công sức xử lý lớn. Hướng dẫn kiểm duyệt (C) là văn bản quy định, không phải dữ liệu đánh giá." },
+
+  "47": { "answer": "C", "vi": "Mô hình đã pre-trained, chỉ cần nội dung khớp giọng điệu thương hiệu — viết prompt rõ ràng kèm ngữ cảnh là cách trực tiếp và rẻ nhất. Tối ưu kiến trúc/siêu tham số (A) và thêm lớp (B) đòi huấn luyện lại. Pre-train mô hình mới từ đầu (D) cực kỳ tốn kém và thừa thãi." },
+
+  "48": { "answer": "AC", "vi": "Câu này chọn 2. Để dùng AI có trách nhiệm và giảm thiên lệch: trước hết phát hiện mất cân bằng/chênh lệch trong dữ liệu (A), sau đó đánh giá hành vi mô hình để minh bạch với các bên liên quan (C). Chạy mô hình thường xuyên (B) và thời gian suy luận (E) là chỉ số vận hành. ROUGE (D) là chỉ số đánh giá văn bản sinh, và không mô hình nào đạt 100% chính xác." },
+
+  "49": { "answer": "A", "vi": "Sau khi tuỳ chỉnh (fine-tune) một mô hình trên Bedrock, để gọi được nó bạn phải mua Provisioned Throughput cho custom model đó. 'Grant access' chỉ áp dụng khi xin quyền dùng foundation model của nhà cung cấp, không áp dụng cho mô hình của chính bạn. SageMaker endpoint (B) và Model Registry (C) thuộc hệ SageMaker, không phải cách chạy custom model trên Bedrock." },
+
+  "50": { "answer": "B", "vi": "Tiêu chí là 'phong cách trả lời mà nhân viên ưa thích' — đây là đánh giá chủ quan, máy không chấm được. Vì vậy phải dùng human evaluation kèm bộ prompt tự soạn sát với nhu cầu thực tế. Bộ prompt dựng sẵn (A) không phản ánh nhu cầu riêng. Bảng xếp hạng công khai (C) đo năng lực chung. InvocationLatency (D) đo tốc độ, không đo phong cách." },
+
+  "51": { "answer": "C", "vi": "Sinh viên chép nội dung do AI tạo ra rồi nộp như bài của mình — đó là đạo văn (plagiarism), một thách thức đạo đức của generative AI. Toxicity (A) là nội dung độc hại. Hallucination (B) là bịa đặt thông tin. Privacy (D) là rò rỉ dữ liệu cá nhân." },
+
+  "52": { "answer": "D", "vi": "Trn là dòng instance dùng chip AWS Trainium, thiết kế riêng cho huấn luyện mô hình lớn với hiệu năng trên mỗi watt cao nhất, nên tác động môi trường thấp nhất. Dòng P (C) dùng GPU NVIDIA, mạnh nhưng tốn điện hơn. Dòng G (B) thiên về đồ hoạ/suy luận. Dòng C (A) là CPU, không phù hợp huấn luyện LLM." },
+
+  "53": { "answer": "C", "vi": "Cần đảm bảo nội dung và chủ đề phù hợp với trẻ em — Guardrails for Amazon Bedrock lọc nội dung độc hại và chặn các chủ đề bị cấm (denied topics) ở cả đầu vào lẫn đầu ra. Rekognition (A) phân tích ảnh. Playgrounds (B) chỉ là nơi thử nghiệm. Agents (D) điều phối tác vụ, không lọc nội dung." },
+
+  "54": { "answer": "A", "vi": "GAN gồm generator tạo dữ liệu giả và discriminator phân biệt thật/giả, hai bên cạnh tranh cho tới khi dữ liệu sinh ra giống dữ liệu thật — đúng nhu cầu tạo synthetic data. XGBoost (B) là mô hình cây tăng cường dùng để dự đoán. ResNet (C) dùng cho thị giác. WaveNet (D) sinh âm thanh." },
+
+  "55": { "answer": "D", "vi": "Từ khoá quyết định: công ty không biết code, không rành thuật toán ML. SageMaker Canvas là giao diện kéo-thả, chọn cột dữ liệu là ra dự báo, hoàn toàn không cần lập trình. Các phương án A, B, C đều yêu cầu viết code hoặc hiểu thuật toán. Personalize Trending-Now (C) còn dùng cho gợi ý sản phẩm chứ không phải dự báo nhu cầu." },
+
+  "56": { "answer": "B", "vi": "Mô hình gắn cờ quá mức một nhóm sắc tộc vì dữ liệu huấn luyện không đại diện đầy đủ cho các nhóm — đó là sampling bias (thiên lệch do lấy mẫu). Measurement bias (A) là sai lệch do cách đo. Observer bias (C) do người quan sát. Confirmation bias (D) là xu hướng tìm bằng chứng củng cố niềm tin sẵn có." },
+
+  "57": { "answer": "B", "vi": "Yêu cầu là chatbot tự cải thiện dựa trên tương tác trong quá khứ — reinforcement learning với phần thưởng từ phản hồi tích cực của khách hàng tạo ra vòng lặp tự học đó. Hai phương án supervised (A, D) cần người liên tục gán nhãn, không phải tự cải thiện. Unsupervised (C) chỉ gom nhóm câu hỏi, không sinh câu trả lời tốt hơn." },
+
+  "58": { "answer": "A", "vi": "Đây là bài toán phân loại nhiều lớp, và confusion matrix cho thấy chi tiết mô hình đúng/sai ở lớp nào, nhầm lớp nào với lớp nào. Correlation matrix (B) đo tương quan giữa các biến. R2 (C) và MSE (D) là chỉ số cho hồi quy, không dùng cho phân loại." },
+
+  "59": { "answer": "A", "vi": "Chặn ảnh không phù hợp trước khi trả về cho người dùng cần một lớp lọc chuyên trách — moderation API (như Rekognition Content Moderation) kiểm duyệt nội dung theo thời gian thực. Huấn luyện lại bằng dữ liệu công khai (B) không đảm bảo gì. Model validation (C) chỉ đánh giá lúc phát triển. Thu thập phản hồi (D) là biện pháp sau khi sự cố đã xảy ra." },
+
+  "60": { "answer": "B", "vi": "Bedrock có sẵn tính năng model invocation logging — bật lên là ghi được toàn bộ dữ liệu vào/ra của mỗi lần gọi mô hình vào S3 hoặc CloudWatch. CloudTrail (A) chỉ ghi metadata lời gọi API chứ không ghi nội dung prompt/response. Audit Manager (C) và EventBridge (D) không phải đích đến của log này." },
+
+  "61": { "answer": "A", "vi": "Dữ liệu lớn nhiều GB, chạy trên dữ liệu lưu trữ, và không cần kết quả ngay — đúng đặc điểm của Batch transform: xử lý cả tập một lượt rồi ghi kết quả ra S3, không duy trì endpoint. Real-time (B) và serverless (C) phục vụ từng yêu cầu tức thời. Asynchronous (D) dùng khi vẫn cần độ trễ gần thời gian thực." },
+
+  "62": { "answer": "A", "vi": "Embeddings là biểu diễn số (vector) của từ, câu hay đối tượng, đặt chúng vào không gian nhiều chiều sao cho các mục có ngữ nghĩa gần nhau thì vector gần nhau. Token (B) là đơn vị chia nhỏ văn bản, chưa phải biểu diễn số mang ngữ nghĩa. Model (C) và binary (D) không phải khái niệm này." },
+
+  "63": { "answer": "B", "vi": "Đã thử nhiều lần prompt engineering mà vẫn kém vì thuật ngữ khoa học chuyên sâu — dấu hiệu mô hình thiếu kiến thức miền, cần domain adaptation fine-tuning để dạy nó vốn từ chuyên ngành. Few-shot (A) đã nằm trong phạm vi prompt engineering vừa thất bại. Đổi tham số suy luận (C) không bổ sung kiến thức. Xoá thuật ngữ khoa học (D) làm mất chính nội dung cần tra cứu." },
+
+  "64": { "answer": "A", "vi": "Temperature điều khiển độ ngẫu nhiên: giảm về gần 0 thì mô hình luôn chọn token có xác suất cao nhất, cho ra câu trả lời nhất quán với cùng một prompt. Tăng temperature (B) làm ngược lại. Độ dài đầu ra (C, D) chỉ ảnh hưởng số token, không ảnh hưởng tính ổn định." },
+
+  "65": { "answer": "A", "vi": "Mỗi nhóm chỉ được truy cập dữ liệu khách hàng của nhóm mình, nên phải tạo service role riêng cho từng nhóm với quyền giới hạn đúng phạm vi dữ liệu đó. Dựa vào tên khách hàng người dùng tự khai (B) không phải kiểm soát truy cập. Che dữ liệu (C) không phân tách được theo nhóm. Một role có toàn quyền S3 (D) phá vỡ nguyên tắc đặc quyền tối thiểu." },
+
+  "66": { "answer": "C", "vi": "Hai yêu cầu: chặn thông tin bệnh nhân lọt vào câu trả lời, và được báo khi có vi phạm. Guardrails for Bedrock có bộ lọc sensitive information (PII) làm việc thứ nhất, kết hợp CloudWatch alarm làm việc thứ hai. Macie (A) quét dữ liệu trong S3 chứ không lọc đầu ra mô hình. CloudTrail (B) không đọc nội dung phản hồi. Model Monitor (D) theo dõi trôi dữ liệu." },
+
+  "67": { "answer": "A", "vi": "Chuyển hồ sơ PDF đã quét thành văn bản thuần là bài toán trích xuất văn bản từ tài liệu — Amazon Textract. Personalize (B) gợi ý sản phẩm. Lex (C) xây chatbot. Transcribe (D) chuyển giọng nói thành văn bản, đầu vào là audio chứ không phải PDF." },
+
+  "68": { "answer": "B", "vi": "Từ khoá LEAST implementation effort. Chỉ cần thêm một dòng mô tả vai trò và độ tuổi người hỏi vào ngữ cảnh prompt là mô hình tự điều chỉnh văn phong — không phải huấn luyện gì cả. Fine-tune cho từng nhóm tuổi (A) tốn kém nhất. Chain-of-thought (C) phức tạp hơn mà không giải quyết đúng vấn đề. Cắt ngắn câu trả lời (D) chỉ đổi độ dài chứ không đổi văn phong." },
+
+  "69": { "answer": "B", "vi": "Đánh giá độ chính xác của mô hình phân loại ảnh cần đo trên một bộ dữ liệu chuẩn (benchmark) đã biết nhãn đúng, rồi so kết quả. Chi phí tài nguyên (A), số lớp mạng (C) và độ chính xác màu sắc (D) đều không phản ánh khả năng phân loại đúng hay sai." },
+
+  "70": { "answer": "AC", "vi": "Câu này chọn 2. Để triển khai LLM có trách nhiệm, hai việc đúng trọng tâm là: đưa chỉ số công bằng (fairness metrics) vào quy trình đánh giá mô hình, và chỉnh sửa dữ liệu huấn luyện để giảm thiên lệch. Temperature (B) và prompt engineering (E) là kỹ thuật vận hành, không giải quyết vấn đề đạo đức. Tránh overfitting (D) là yêu cầu chất lượng chung, không riêng cho trách nhiệm AI." },
+
+  "71": { "answer": "C", "vi": "Tạo ma trận tương quan, tính thống kê mô tả và trực quan hoá dữ liệu — đó chính là exploratory data analysis (EDA), giai đoạn tìm hiểu dữ liệu trước khi xử lý. Data pre-processing (A) là làm sạch/chuẩn hoá. Feature engineering (B) là tạo đặc trưng mới. Hyperparameter tuning (D) diễn ra khi huấn luyện." },
+
+  "72": { "answer": "D", "vi": "Điền từ còn thiếu vào chỗ trống trong câu chính là masked language modeling — nhiệm vụ huấn luyện cốt lõi của BERT, nên mô hình họ BERT phù hợp nhất. Topic modeling (A) tìm chủ đề của văn bản. Clustering (B) gom nhóm. Prescriptive model (C) đề xuất hành động." },
+
+  "73": { "answer": "C", "vi": "Cần tự động sinh biểu đồ từ dữ liệu bán hàng — Amazon Q trong QuickSight, công cụ business intelligence của AWS, làm đúng việc này bằng câu lệnh ngôn ngữ tự nhiên. Q Developer (B) hỗ trợ lập trình. Q trong EC2 (A) tư vấn về instance. Q trong AWS Chatbot (D) vận hành qua Slack/Teams." },
+
+  "74": { "answer": "C", "vi": "Few-shot learning cho bài toán nhận diện ý định (intent detection) cần ví dụ ánh xạ từ đầu vào tới nhãn cần dự đoán, tức cặp: câu người dùng nói → ý định đúng. Cặp câu hỏi–câu trả lời (B) dạy mô hình cách trả lời chứ không phải cách phân loại ý định. Hai phương án còn lại (A, D) đảo ngược vai trò đầu vào/đầu ra." }
+}

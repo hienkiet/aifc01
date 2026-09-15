@@ -1,0 +1,189 @@
+{
+  "_note": "Câu HOTSPOT phần 2 (id 274-438).",
+
+  "274": {
+    "no": 275,
+    "intro": "An ecommerce company is developing a generative AI solution to create personalized product recommendations for its application users. The company wants to track how effectively the AI solution increases product sales and user engagement in the application. Select the correct business metric from the following list for each business goal. Each business metric should be selected one time.",
+    "choices": ["Average order value (AOV)", "Click-through rate (CTR)", "Retention rate"],
+    "slots": [
+      { "l": "Measure how engaging the product recommendations are to users", "a": "Click-through rate (CTR)" },
+      { "l": "Determine the effect of the AI solution on the total value of user purchases", "a": "Average order value (AOV)" },
+      { "l": "Assess the AI solution's ability to encourage users to return to the platform", "a": "Retention rate" }
+    ],
+    "vi": "Bám vào đúng thứ mỗi chỉ số đo: mức độ người dùng bấm vào gợi ý → CTR (đo tương tác). Tổng giá trị đơn hàng → AOV (đo doanh thu mỗi lần mua). Khả năng kéo người dùng quay lại → retention rate (đo giữ chân)."
+  },
+
+  "279": {
+    "no": 280,
+    "intro": "A company wants to improve multiple ML models. Select the correct technique from the following list of use cases. Each technique should be selected one time or not at all.",
+    "choices": ["Few-shot learning", "Fine-tuning", "Retrieval Augmented Generation (RAG)", "Zero-shot learning"],
+    "slots": [
+      { "l": "Enhancing the capabilities of a large language model (LLM) by using external sources", "a": "Retrieval Augmented Generation (RAG)" },
+      { "l": "Querying a model to generalize and make predictions on unseen tasks", "a": "Zero-shot learning" },
+      { "l": "Querying a model with a limited amount of data for new tasks", "a": "Few-shot learning" }
+    ],
+    "vi": "Chỉ RAG mới lấy tri thức từ NGUỒN BÊN NGOÀI mà không cần huấn luyện lại. Hỏi mô hình làm tác vụ chưa từng thấy, không đưa ví dụ nào → zero-shot. Đưa một lượng nhỏ ví dụ cho tác vụ mới → few-shot. Fine-tuning cần huấn luyện lại nên không khớp mô tả nào ở đây."
+  },
+
+  "282": {
+    "no": 283,
+    "intro": "Select the correct AI term from the following list for each statement. Each AI term should be selected one time.",
+    "choices": ["AI", "Deep learning", "ML"],
+    "slots": [
+      { "l": "Simulates human problem-solving capabilities", "a": "AI" },
+      { "l": "Applies data-driven learning techniques to make predictions", "a": "ML" },
+      { "l": "Focuses on processing data through intricate neural networks", "a": "Deep learning" }
+    ],
+    "vi": "Ba khái niệm lồng nhau từ rộng tới hẹp: AI là lĩnh vực rộng nhất, mô phỏng khả năng giải quyết vấn đề của con người. ML là tập con của AI, học từ dữ liệu để dự đoán. Deep learning là tập con của ML, dùng mạng nơ-ron nhiều tầng."
+  },
+
+  "290": {
+    "no": 291,
+    "intro": "An AI practitioner is determining the appropriate data type for various use cases. Select the correct data type from the following list for each use case. Select each data type one time.",
+    "choices": ["Image data", "Tabular data", "Text data", "Time series data"],
+    "slots": [
+      { "l": "Build a sentiment analysis model for social media posts.", "a": "Text data" },
+      { "l": "Train a self-driving car to recognize traffic signs.", "a": "Image data" },
+      { "l": "Optimize ad campaigns by using customer demographic data and purchase history.", "a": "Tabular data" },
+      { "l": "Forecast stock prices by using historical price data.", "a": "Time series data" }
+    ],
+    "vi": "Nhận diện theo bản chất đầu vào: bài đăng mạng xã hội là chữ viết → text data. Nhận diện biển báo qua camera → image data. Nhân khẩu học và lịch sử mua nằm dạng hàng-cột → tabular data. Giá cổ phiếu theo trình tự thời gian → time series data."
+  },
+
+  "307": {
+    "no": 309,
+    "intro": "Select and order the steps from the following list to correctly describe the ML lifecycle for a new custom model. Select each step one time.",
+    "choices": ["Define the business objective.", "Deploy the model.", "Develop and train the model.", "Process the data."],
+    "slots": [
+      { "l": "Step 1", "a": "Define the business objective." },
+      { "l": "Step 2", "a": "Process the data." },
+      { "l": "Step 3", "a": "Develop and train the model." },
+      { "l": "Step 4", "a": "Deploy the model." }
+    ],
+    "vi": "Thứ tự bất biến của vòng đời ML: xác định mục tiêu kinh doanh trước để biết mình giải bài toán gì, rồi thu thập và xử lý dữ liệu, sau đó mới xây và huấn luyện mô hình, cuối cùng triển khai. Không bao giờ bắt đầu bằng việc chọn mô hình."
+  },
+
+  "309": {
+    "no": 311,
+    "intro": "Select the correct prompt engineering technique from the following list for each description. Select each prompt engineering technique one time or not at all.",
+    "choices": ["Chain-of-thought prompting", "Few-shot prompting", "Role-based prompting", "Single-shot prompting", "Zero-shot prompting"],
+    "slots": [
+      { "l": "Provide a small number of examples to the model to understand the desired task before generating outputs.", "a": "Few-shot prompting" },
+      { "l": "Prompt a model to break down the step-by-step process that the model took to arrive at a final answer.", "a": "Chain-of-thought prompting" },
+      { "l": "Prompt a model to perform a task without providing examples.", "a": "Zero-shot prompting" }
+    ],
+    "vi": "Đếm số ví dụ mẫu trong prompt: một vài ví dụ → few-shot; không ví dụ nào → zero-shot. Yêu cầu mô hình trình bày các bước suy luận dẫn tới câu trả lời → chain-of-thought. Role-based (gán vai trò) và single-shot (đúng một ví dụ) không khớp mô tả nào ở đây."
+  },
+
+  "311": {
+    "no": 313,
+    "intro": "A company periodically updates its product database by manually uploading digital product guides. The product guides contain text and images. The company wants to automate this task by using generative AI. Select and order the steps from the following list to automate the database update task by using generative AI. Select each step one time.",
+    "choices": ["Insert data into the product database.", "Upload the digital text and image files to an Amazon S3 bucket.", "Use Amazon Nova multimodal models to process the digital text and image files."],
+    "slots": [
+      { "l": "Step 1", "a": "Upload the digital text and image files to an Amazon S3 bucket." },
+      { "l": "Step 2", "a": "Use Amazon Nova multimodal models to process the digital text and image files." },
+      { "l": "Step 3", "a": "Insert data into the product database." }
+    ],
+    "vi": "Luồng xử lý theo dòng chảy dữ liệu: đưa tệp thô lên S3 trước để dịch vụ AWS truy cập được, sau đó dùng mô hình đa phương thức Nova đọc cả chữ lẫn ảnh để rút ra dữ liệu có cấu trúc, cuối cùng ghi kết quả vào cơ sở dữ liệu sản phẩm."
+  },
+
+  "326": {
+    "no": 328,
+    "intro": "A company wants to build generative AI applications by using Amazon Bedrock. The company wants to minimize development effort. Select and order the model development techniques from the following list from the LEAST development effort to the MOST development effort. Each model development technique should be selected one time.",
+    "choices": ["Continued pre-training", "Fine-tuning", "Prompt engineering", "Retrieval Augmented Generation (RAG)"],
+    "slots": [
+      { "l": "LEAST development effort", "a": "Prompt engineering" },
+      { "l": "Thứ hai", "a": "Retrieval Augmented Generation (RAG)" },
+      { "l": "Thứ ba", "a": "Fine-tuning" },
+      { "l": "MOST development effort", "a": "Continued pre-training" }
+    ],
+    "vi": "Thang công sức tăng dần: prompt engineering chỉ cần viết lại câu lệnh, không đụng tới dữ liệu hay huấn luyện. RAG phải dựng nguồn tri thức và vector store nhưng vẫn không huấn luyện. Fine-tuning đòi dữ liệu có nhãn và một job huấn luyện. Continued pre-training tốn nhất vì cần khối dữ liệu lớn và tài nguyên tính toán nhiều nhất."
+  },
+
+  "348": {
+    "no": 350,
+    "intro": "A company wants to use ML to increase customer engagement and sales. The company has collected a large dataset that includes customer demographics, purchase history, browsing patterns, and product ratings. Select the correct ML approach from the following list for each use case. Select each ML approach one time.",
+    "choices": ["Classification", "Clustering", "Regression"],
+    "slots": [
+      { "l": "Predict customer lifetime value (CLV) by estimating how much revenue a customer will generate over the customer's lifetime.", "a": "Regression" },
+      { "l": "Identify the likelihood of a customer to stop using the company's services.", "a": "Classification" },
+      { "l": "Group customers based on similar purchasing patterns and preferences.", "a": "Clustering" }
+    ],
+    "vi": "CLV là một số tiền cụ thể, tức giá trị liên tục → regression. Khách hàng rời bỏ hay không là bài toán hai nhãn → classification. Gom khách hàng thành nhóm mà không có nhãn định sẵn → clustering."
+  },
+
+  "349": {
+    "no": 351,
+    "intro": "A company wants to build a new ML solution. The company already has data. The company needs to understand the ML lifecycle before building the solution. Select and order the steps from the following list to correctly describe the ML lifecycle. Select each step one time.",
+    "choices": ["Deploy the model.", "Prepare the data for training.", "Test the model.", "Train the model."],
+    "slots": [
+      { "l": "Step 1", "a": "Prepare the data for training." },
+      { "l": "Step 2", "a": "Train the model." },
+      { "l": "Step 3", "a": "Test the model." },
+      { "l": "Step 4", "a": "Deploy the model." }
+    ],
+    "vi": "Đề nói rõ công ty ĐÃ CÓ dữ liệu, nên bước đầu là chuẩn bị dữ liệu cho huấn luyện, rồi huấn luyện, rồi kiểm thử để biết mô hình có đủ tốt không, cuối cùng mới triển khai. Kiểm thử luôn phải nằm trước triển khai."
+  },
+
+  "364": {
+    "no": 366,
+    "intro": "A company wants to customize a foundation model (FM). The company wants to understand the customization methods and data types that are available. Select the correct customization method from the following list for each description. Select each customization method one time.",
+    "choices": ["Continued pre-training", "Distillation", "Fine-tuning"],
+    "slots": [
+      { "l": "Provide labeled data to customize a model to improve performance on specific tasks.", "a": "Fine-tuning" },
+      { "l": "Provide unlabeled data to customize an FM for a specific domain.", "a": "Continued pre-training" },
+      { "l": "Transfer knowledge from a larger and more intelligent model to a smaller model.", "a": "Distillation" }
+    ],
+    "vi": "Ba phương pháp phân biệt rất rạch ròi: dữ liệu CÓ nhãn cho tác vụ cụ thể → fine-tuning; dữ liệu KHÔNG nhãn để bổ sung kiến thức lĩnh vực → continued pre-training; chuyển tri thức từ mô hình lớn sang mô hình nhỏ hơn → distillation (chưng cất mô hình)."
+  },
+
+  "385": {
+    "no": 387,
+    "intro": "A company is building an AI assistant application. The company must implement a core governance process for the application development project. The company must ensure that the application aligns with responsible AI practices. Select and order the steps from the following list to correctly describe the implementation of a core governance process for this use case. Select each step one time.",
+    "choices": ["Determine governance goals, risks, and policies.", "Put together a cross-functional AI governance group.", "Set up model monitoring mechanisms."],
+    "slots": [
+      { "l": "Step 1", "a": "Put together a cross-functional AI governance group." },
+      { "l": "Step 2", "a": "Determine governance goals, risks, and policies." },
+      { "l": "Step 3", "a": "Set up model monitoring mechanisms." }
+    ],
+    "vi": "Lập nhóm quản trị liên phòng ban trước, vì phải có người chịu trách nhiệm thì mới xác định được mục tiêu, rủi ro và chính sách; có chính sách rồi mới dựng cơ chế giám sát để thực thi. LƯU Ý: câu này cộng đồng chia đôi — có người cho rằng nên đặt mục tiêu trước rồi mới lập nhóm. Nếu bạn theo hướng đó, dùng nút sửa đáp án để đổi."
+  },
+
+  "412": {
+    "no": 417,
+    "intro": "An AI practitioner is using an Amazon Nova text model. The AI practitioner wants to apply prompt engineering techniques to ensure that prompts support an iterative refinement process. Select the correct prompt design component from the following list for each definition. Select each prompt design component one time.",
+    "choices": ["Response style", "Role", "Success criteria", "Task"],
+    "slots": [
+      { "l": "Specify the use case for the model.", "a": "Task" },
+      { "l": "Define the persona the model should assume to meet the requirements effectively.", "a": "Role" },
+      { "l": "Describe the tone, format, or structure that the model should follow.", "a": "Response style" },
+      { "l": "Set clear metrics to evaluate whether the model output meets expectations.", "a": "Success criteria" }
+    ],
+    "vi": "Bốn thành phần của một prompt tốt: Task là việc cần làm; Role là vai trò/nhân cách mô hình đóng; Response style là giọng văn, định dạng, cấu trúc đầu ra; Success criteria là tiêu chí đo lường để biết kết quả đã đạt yêu cầu hay chưa."
+  },
+
+  "437": {
+    "no": 442,
+    "intro": "A company is using Amazon Bedrock AgentCore to build, deploy, and implement agents at scale. The company needs to identify which resources to use. Select the correct AgentCore resource from the following list for each description. Select each resource one time or not at all.",
+    "choices": ["Observability", "Code Interpreter", "Browser tool", "Runtime", "Gateway", "Memory"],
+    "slots": [
+      { "l": "Monitor agent behavior through intuitive dashboards", "a": "Observability" },
+      { "l": "Execute code securely across multiple languages", "a": "Code Interpreter" },
+      { "l": "Fast, secure, and serverless browser runtime for agents", "a": "Browser tool" }
+    ],
+    "vi": "Các thành phần của Bedrock AgentCore: Observability cung cấp bảng điều khiển theo dõi hành vi agent. Code Interpreter chạy mã an toàn trong môi trường cô lập, hỗ trợ nhiều ngôn ngữ. Browser tool là môi trường trình duyệt serverless cho agent thao tác web. Runtime, Gateway và Memory là các thành phần khác, không khớp ba mô tả này."
+  },
+
+  "438": {
+    "no": 443,
+    "intro": "A company wants to use Amazon Bedrock to create a knowledge base from existing documents. The documents include text, tables, and images. Select and order the steps from the following list to correctly describe how to convert data from the documents into a knowledge base by using an ingestion process in Amazon Bedrock. Select each step one time or not at all.",
+    "choices": ["Convert the chunks into vector embeddings.", "Divide the data into chunks.", "Parse the documents.", "Use data events to create a data lineage.", "Use Retrieval Augmented Generation (RAG) to retrieve relevant content.", "Write the vector embeddings to the vector store."],
+    "slots": [
+      { "l": "Step 1", "a": "Parse the documents." },
+      { "l": "Step 2", "a": "Divide the data into chunks." },
+      { "l": "Step 3", "a": "Convert the chunks into vector embeddings." },
+      { "l": "Step 4", "a": "Write the vector embeddings to the vector store." }
+    ],
+    "vi": "Quy trình nạp dữ liệu (ingestion) của Bedrock Knowledge Base: đọc và bóc tách nội dung tài liệu trước, chia thành các đoạn nhỏ (chunk), chuyển từng đoạn thành vector embedding, rồi ghi vào vector store. Hai phương án còn lại là bẫy: RAG là bước TRUY XUẤT lúc người dùng hỏi, không thuộc khâu nạp dữ liệu; data lineage là quản trị dữ liệu, không nằm trong pipeline này."
+  }
+}

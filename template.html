@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luyện thi AWS AI Practitioner (AIF-C01)</title>
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --fg:#15181d; --muted:#5c6570; --line:#dfe3e8;
+  --accent:#0b62d0; --accent-fg:#ffffff; --ok:#1a7f43; --okbg:#e7f6ec;
+  --bad:#c0392b; --badbg:#fdecea; --warn:#a05a00; --warnbg:#fff3e0;
+  --chip:#eef1f5;
+}
+@media (prefers-color-scheme: dark){
+:root{
+  --bg:#14171c; --card:#1c2027; --fg:#e6e9ee; --muted:#9aa4b1; --line:#2e343d;
+  --accent:#4c9aff; --accent-fg:#0b1220; --ok:#5ed48e; --okbg:#12301f;
+  --bad:#ff8a7a; --badbg:#3a1a16; --warn:#ffc46b; --warnbg:#3a2c12;
+  --chip:#262c35;
+}
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--fg);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:0 0 4px}
+h2{font-size:19px;margin:0 0 12px}
+h3{font-size:16px;margin:18px 0 8px}
+p{margin:0 0 10px}
+a{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+.muted{color:var(--muted);font-size:14px}
+.note{color:var(--muted);font-size:13px;margin-top:10px}
+button{font:inherit;cursor:pointer}
+.btn{
+  background:var(--accent);color:var(--accent-fg);border:1px solid transparent;
+  border-radius:8px;padding:11px 16px;font-weight:600;min-height:44px;
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.sec{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn.sm{padding:7px 12px;min-height:36px;font-size:14px;font-weight:500}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.grow{flex:1 1 auto}
+.stat{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.stat div{background:var(--chip);border-radius:8px;padding:8px 12px;font-size:14px}
+.stat b{font-size:18px;display:block;font-weight:700}
+.topbar{
+  position:sticky;top:0;z-index:20;background:var(--card);
+  border-bottom:1px solid var(--line);padding:10px 16px;
+}
+.topbar .inner{max-width:900px;margin:0 auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:20px;padding:4px 10px;border-radius:8px;background:var(--chip)}
+.timer.warn{background:var(--warnbg);color:var(--warn)}
+.timer.crit{background:var(--badbg);color:var(--bad)}
+.qhead{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+.qno{font-weight:700;font-size:15px}
+.qtext{font-size:17px;line-height:1.65;margin:0 0 14px;white-space:pre-wrap}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{
+  display:flex;gap:12px;align-items:flex-start;
+  border:1px solid var(--line);border-radius:10px;padding:13px 14px;
+  background:var(--card);cursor:pointer;min-height:48px;
+}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin:3px 0 0;width:20px;height:20px;flex:0 0 auto;accent-color:var(--accent)}
+.opt .lab{font-weight:700;flex:0 0 auto;min-width:18px}
+.opt .txt{flex:1 1 auto}
+.opt.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.opt.correct{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt.locked{cursor:default}
+
+/* ===== Câu HOTSPOT: bảng nhãn + ô sổ xuống ===== */
+.hs{display:flex;flex-direction:column;gap:12px}
+.hs-row{
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);
+}
+.hs-label{flex:1 1 260px;min-width:0;font-size:16px;line-height:1.55;white-space:pre-wrap}
+.hs-row select{flex:0 1 320px;min-width:180px;max-width:100%}
+.hs-row.correct{border-color:var(--ok);background:var(--okbg)}
+.hs-row.wrong{border-color:var(--bad);background:var(--badbg)}
+.hs-fix{flex:1 1 100%;font-size:14px;color:var(--ok);font-weight:600}
+.hs-row.wrong .hs-fix{color:var(--bad)}
+@media (max-width:520px){
+  .hs-row select{flex:1 1 100%}
+}
+/* Tô sáng từ khoá: kw = tên dịch vụ / thuật ngữ, kq = từ ràng buộc quyết định đáp án */
+mark.kw{background:none;color:inherit;font-weight:700;padding:0}
+mark.kq{
+  background:var(--warnbg);color:var(--warn);font-weight:700;
+  border-radius:4px;padding:0 3px;
+}
+.opt mark.kq{background:none;padding:0}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--chip);color:var(--muted)}
+.badge.warn{background:var(--warnbg);color:var(--warn)}
+.badge.ok{background:var(--okbg);color:var(--ok)}
+.badge.bad{background:var(--badbg);color:var(--bad)}
+.fb{border-radius:10px;padding:12px 14px;margin-top:14px;border:1px solid var(--line)}
+.fb.ok{background:var(--okbg);border-color:var(--ok)}
+.fb.bad{background:var(--badbg);border-color:var(--bad)}
+.fb.neutral{background:var(--chip)}
+.exp{margin-top:12px;font-size:15px}
+.exp ul{margin:6px 0 0;padding-left:20px}
+.exp li{margin-bottom:8px}
+/* Lưới chọn bộ 50 câu */
+.setgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:10px;margin-top:12px}
+.setcard{
+  border:1px solid var(--line);border-radius:10px;padding:12px 13px;background:var(--card);
+  text-align:left;color:var(--fg);cursor:pointer;min-height:92px;font:inherit;
+}
+.setcard:hover{border-color:var(--accent)}
+.setcard .t{font-weight:700;font-size:15px}
+.setcard .r{font-size:12px;color:var(--muted);margin-top:1px}
+.setcard .s{font-size:12px;color:var(--muted)}
+.setcard.done{border-color:var(--ok)}
+.setcard.done .bar i{background:var(--ok)}
+.bar{height:6px;border-radius:999px;background:var(--chip);margin:9px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:6px;margin-top:10px}
+.navgrid button{
+  border:1px solid var(--line);background:var(--card);color:var(--fg);
+  border-radius:8px;padding:8px 0;font-size:14px;min-height:40px;
+}
+.navgrid button.answered{background:var(--accent);color:var(--accent-fg);border-color:transparent}
+.navgrid button.flagged{outline:2px solid var(--warn);outline-offset:-2px}
+.navgrid button.cur{box-shadow:0 0 0 2px var(--fg) inset}
+select,input[type=number],input[type=text],textarea{
+  font:inherit;color:var(--fg);background:var(--card);
+  border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-height:42px;
+}
+textarea{min-height:70px;width:100%;resize:vertical}
+.hidden{display:none !important}
+.ovr{border:1px dashed var(--accent);border-radius:10px;padding:12px;margin-top:12px}
+.ovr .letters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.ovr .letters label{
+  display:flex;gap:6px;align-items:center;border:1px solid var(--line);
+  border-radius:8px;padding:8px 12px;cursor:pointer;min-height:42px;
+}
+.ovr .letters input{width:18px;height:18px;accent-color:var(--accent)}
+.wrongitem{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+.histrow{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding:8px 0;font-size:14px}
+@media (max-width:420px){
+  .wrap{padding:12px}
+  .topbar{padding:8px 12px}
+  .stat div{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<div id="topbar" class="topbar hidden">
+  <div class="inner">
+    <button class="btn sec sm" id="btnHome">&#8592; Trang chính</button>
+    <span class="grow muted" id="topLabel"></span>
+    <span class="timer hidden" id="timer">90:00</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section id="scHome">
+  <h1>Luyện thi AWS Certified AI Practitioner (AIF-C01)</h1>
+  <p class="muted">Bộ câu hỏi cộng đồng — dùng để luyện tập, không phải đề thi chính thức.</p>
+
+  <div class="card hidden" id="storageWarn" style="border-color:var(--bad);background:var(--badbg)">
+    <b>⚠ Trình duyệt này không cho phép lưu dữ liệu</b>
+    <p class="muted" style="margin:8px 0 0">
+      Bạn vẫn làm bài và xem giải thích bình thường, nhưng đáp án đã sửa, dấu trang và lịch sử
+      thi sẽ mất khi đóng trang. Thường gặp khi mở file bằng trình xem tài liệu thay vì trình duyệt thật,
+      hoặc khi đang ở chế độ ẩn danh. Hãy thử mở lại bằng Chrome (Android) hoặc một trình duyệt hỗ trợ
+      mở file cục bộ.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="stat">
+      <div><b id="hTotal">0</b>câu khả dụng</div>
+      <div><b id="hExam">0</b>dùng được cho thi thật</div>
+      <div><b id="hNeed">0</b>chưa có đáp án chuẩn</div>
+      <div><b id="hOvr">0</b>đáp án đã sửa</div>
+      <div><b id="hBm">0</b>đã đánh dấu</div>
+    </div>
+    <div class="note" id="hDropped"></div>
+  </div>
+
+  <div class="card">
+    <h2>Chọn chế độ</h2>
+    <div class="row">
+      <button class="btn" id="btnSmart">Ôn thông minh — chỉ câu chưa thuộc</button>
+      <button class="btn sec" id="btnExam">Thi thật — 65 câu / 90 phút</button>
+      <button class="btn sec" id="btnPractice">Luyện tập — toàn bộ câu hỏi</button>
+      <button class="btn sec" id="btnHotspot">Luyện riêng câu ô sổ xuống</button>
+    </div>
+    <p class="note" id="smartNote"></p>
+    <p class="note" id="hotNote"></p>
+    <p class="note">Thi thật: xáo thứ tự câu và thứ tự đáp án, không hiện đúng/sai cho đến khi nộp bài. Luyện tập: hiện đúng/sai ngay kèm giải thích và link thảo luận gốc.</p>
+    <label class="row" style="gap:10px;cursor:pointer;margin-top:6px">
+      <input type="checkbox" id="optHighlight" checked style="width:20px;height:20px;accent-color:var(--accent)">
+      <span class="muted">Tô sáng từ khoá trong đề và đáp án (tên dịch vụ AWS in đậm, từ ràng buộc như MOST / LEAST / NOT tô nền)</span>
+    </label>
+  </div>
+
+  <div class="card">
+    <h2>Học theo bộ 50 câu</h2>
+    <p class="muted" style="margin:0">Chia nhỏ để dễ nhớ. Một câu được tính là <b>đã thuộc</b> khi
+      bạn trả lời đúng <b>2 lần liên tiếp</b>; trả lời sai thì đếm lại từ đầu.</p>
+    <div class="setgrid" id="setGrid"></div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn sec sm" id="btnResetProgress">Đặt lại tiến độ học</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Kết quả lần làm gần nhất</h2>
+    <div id="hLast" class="muted">Chưa có lần thi nào.</div>
+    <div id="hHistWrap" class="hidden">
+      <h3>Lịch sử</h3>
+      <div id="hHist"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Dữ liệu của bạn</h2>
+    <p class="muted">Đáp án đã sửa, dấu trang và lịch sử được lưu trong trình duyệt này. Xuất ra file để không mất khi đổi máy hoặc xóa cache.</p>
+    <div class="row">
+      <button class="btn sec sm" id="btnExport">Xuất dữ liệu</button>
+      <button class="btn sec sm" id="btnImport">Nhập dữ liệu</button>
+      <input type="file" id="fileImport" accept="application/json,.json" class="hidden">
+    </div>
+    <div class="note" id="ioMsg"></div>
+  </div>
+</section>
+
+<section id="scExam" class="hidden">
+  <div class="card" id="examQCard"></div>
+  <div class="card">
+    <div class="row">
+      <button class="btn sec" id="exPrev">&#8592; Trước</button>
+      <button class="btn sec" id="exFlag">&#9873; Đánh dấu xem lại</button>
+      <button class="btn sec" id="exNext">Sau &#8594;</button>
+      <span class="grow"></span>
+      <button class="btn" id="exSubmit">Nộp bài</button>
+    </div>
+    <h3>Bảng điều hướng</h3>
+    <div class="muted" style="font-size:13px">Nền xanh = đã trả lời · Viền vàng = đánh dấu xem lại</div>
+    <div class="navgrid" id="exNav"></div>
+  </div>
+</section>
+
+<section id="scResult" class="hidden">
+  <div class="card">
+    <h1>Kết quả bài thi</h1>
+    <div class="stat">
+      <div><b id="rScore">0%</b>Điểm</div>
+      <div><b id="rCorrect">0</b>Câu đúng</div>
+      <div><b id="rWrong">0</b>Câu sai</div>
+      <div><b id="rTime">0</b>Thời gian đã dùng</div>
+    </div>
+    <div class="row">
+      <button class="btn sec" id="rHome">Về trang chính</button>
+      <button class="btn sec" id="rAgain">Thi lại</button>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Danh sách câu sai</h2>
+    <div id="rWrongList"></div>
+  </div>
+</section>
+
+<section id="scPractice" class="hidden">
+  <div class="card">
+    <div class="row">
+      <label class="muted" for="pSet">Bộ</label>
+      <select id="pSet"></select>
+      <label class="muted" for="pFilter">Lọc</label>
+      <select id="pFilter">
+        <option value="all">Tất cả</option>
+        <option value="unmastered">Chưa thuộc</option>
+        <option value="bm">Đã đánh dấu</option>
+        <option value="wrong">Từng làm sai</option>
+        <option value="needkey">Chưa có đáp án chuẩn</option>
+      </select>
+      <span class="grow"></span>
+      <label class="muted" for="pJump">Tới câu</label>
+      <input type="number" id="pJump" min="1" style="width:92px">
+      <button class="btn sec sm" id="pGo">Đi</button>
+    </div>
+  </div>
+  <div class="card" id="pCard"></div>
+  <div class="card">
+    <div class="row">
+      <button class="btn sec" id="pPrev">&#8592; Trước</button>
+      <span class="grow muted" id="pPos"></span>
+      <button class="btn sec" id="pNext">Sau &#8594;</button>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+/*__QUESTIONS__*/
+</script>
+<script>
+/*__APP__*/
+</script>
+</body>
+</html>

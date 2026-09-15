@@ -1,0 +1,185 @@
+{
+  "_note": "Câu HOTSPOT (dạng ô sổ xuống) — dựng lại thành text thuần từ ảnh đề của exam simulator. Key = id gốc trong AIF-C01 questions.json (đúng 30 chỗ trước đây bị loại vì options rỗng). slots[].l = nhãn dòng, slots[].a = đáp án đúng.",
+
+  "113": {
+    "no": 114,
+    "intro": "A company wants to build an ML application. Select and order the correct steps from the following list to develop a well-architected ML workload. Each step should be selected one time.",
+    "choices": ["Define business goal and frame ML problem", "Develop model", "Deploy model", "Monitor model"],
+    "slots": [
+      { "l": "Step 1", "a": "Define business goal and frame ML problem" },
+      { "l": "Step 2", "a": "Develop model" },
+      { "l": "Step 3", "a": "Deploy model" },
+      { "l": "Step 4", "a": "Monitor model" }
+    ],
+    "vi": "Vòng đời ML luôn bắt đầu từ bài toán kinh doanh chứ không phải từ dữ liệu hay mô hình: xác định mục tiêu và định khung bài toán ML trước, sau đó mới phát triển mô hình, triển khai, rồi giám sát khi đã chạy thật. Giám sát phải nằm cuối vì chỉ có ý nghĩa khi mô hình đã phục vụ người dùng."
+  },
+
+  "124": {
+    "no": 125,
+    "intro": "A company has developed a large language model (LLM) and wants to make the LLM available to multiple internal teams. The company needs to select the appropriate inference mode for each team. Select the correct inference mode from the following list for each use case. Each inference mode should be selected one or more times.",
+    "choices": ["Batch transform", "Real-time inference"],
+    "slots": [
+      { "l": "The company's chatbot needs predictions from the LLM to understand users' intent with minimal latency.", "a": "Real-time inference" },
+      { "l": "A data processing job needs to query the LLM to process gigabytes of text files on weekends.", "a": "Batch transform" },
+      { "l": "The company's engineering team needs to create an API that can process small pieces of text content and provide low-latency predictions.", "a": "Real-time inference" }
+    ],
+    "vi": "Quy tắc phân biệt: cần trả lời NGAY cho người dùng thì dùng real-time inference; xử lý khối lượng lớn theo lịch, không cần kết quả tức thì thì dùng batch transform. Dòng 1 (chatbot, độ trễ tối thiểu) và dòng 3 (API trả dự đoán độ trễ thấp) đều là real-time. Dòng 2 xử lý hàng gigabyte vào cuối tuần — đúng đặc trưng batch."
+  },
+
+  "134": {
+    "no": 135,
+    "intro": "A company wants to develop ML applications to improve business operations and efficiency. Select the correct ML paradigm from the following list for each use case. Each ML paradigm should be selected one or more times.",
+    "choices": ["Supervised learning", "Unsupervised learning"],
+    "slots": [
+      { "l": "Binary classification", "a": "Supervised learning" },
+      { "l": "Multi-class classification", "a": "Supervised learning" },
+      { "l": "K-means clustering", "a": "Unsupervised learning" },
+      { "l": "Dimensionality reduction", "a": "Unsupervised learning" }
+    ],
+    "vi": "Mấu chốt là có nhãn hay không. Mọi bài toán phân loại (nhị phân hay nhiều lớp) đều cần dữ liệu đã gán nhãn để học → supervised learning. Ngược lại, K-means gom cụm và giảm chiều dữ liệu đều tự tìm cấu trúc ẩn mà không cần nhãn → unsupervised learning."
+  },
+
+  "142": {
+    "no": 143,
+    "intro": "A company is training its employees on how to structure prompts for foundation models. Select the correct prompt engineering technique from the following list for each prompt template. Each prompt engineering technique should be selected one time.",
+    "choices": ["Chain-of-thought reasoning", "Few-shot learning", "Zero-shot learning"],
+    "slots": [
+      { "l": "\"Classify the following text as either sports, politics, or entertainment: [input text].\"", "a": "Zero-shot learning" },
+      { "l": "\"A [image 1], [image 2], and [image 3] are examples of [target class]. Classify the following image as [target class].\"", "a": "Few-shot learning" },
+      { "l": "\"[Question.] [Instructions to follow.] Think step by step and walk me through your thinking.\"", "a": "Chain-of-thought reasoning" }
+    ],
+    "vi": "Nhận diện bằng dấu hiệu trong chính prompt: không có ví dụ mẫu nào → zero-shot; có kèm vài ví dụ mẫu trước khi hỏi → few-shot; yêu cầu mô hình trình bày từng bước suy luận (\"think step by step\") → chain-of-thought."
+  },
+
+  "143": {
+    "no": 144,
+    "intro": "A company is using a generative AI model to develop a digital assistant. The model's responses occasionally include undesirable and potentially harmful content. Select the correct Amazon Bedrock filter policy from the following list for each mitigation action. Each filter policy should be selected one time.",
+    "choices": ["Content filters", "Contextual grounding check", "Denied topics", "Word filters"],
+    "slots": [
+      { "l": "Block input prompts or model responses that contain harmful content such as hate, insults, violence, or misconduct", "a": "Content filters" },
+      { "l": "Avoid subjects related to illegal investment advice or legal advice", "a": "Denied topics" },
+      { "l": "Detect and block specific offensive terms", "a": "Word filters" },
+      { "l": "Detect and filter out information in the model's responses that is not grounded in the provided source information", "a": "Contextual grounding check" }
+    ],
+    "vi": "Bốn chính sách của Bedrock Guardrails, mỗi cái một nhiệm vụ riêng: Content filters lọc các hạng mục dựng sẵn (thù ghét, xúc phạm, bạo lực, hành vi sai trái); Denied topics chặn cả một CHỦ ĐỀ mô tả bằng ngôn ngữ tự nhiên; Word filters chặn TỪ NGỮ cụ thể; Contextual grounding check đối chiếu câu trả lời với nguồn tài liệu để chặn nội dung bịa đặt."
+  },
+
+  "154": {
+    "no": 155,
+    "intro": "A company wants more customized responses to its generative AI models' prompts. Select the correct customization methodology from the following list for each use case. Each use case should be selected one time.",
+    "choices": ["Continued pre-training", "Data augmentation", "Model fine-tuning"],
+    "slots": [
+      { "l": "The models must be taught a new domain-specific task", "a": "Model fine-tuning" },
+      { "l": "A limited amount of labeled data is available and more data is needed", "a": "Data augmentation" },
+      { "l": "Only unlabeled data is available", "a": "Continued pre-training" }
+    ],
+    "vi": "Chọn theo loại dữ liệu đang có: dạy mô hình một TÁC VỤ mới thuộc lĩnh vực cụ thể → fine-tuning (cần dữ liệu có nhãn); có ít dữ liệu có nhãn và cần thêm dữ liệu → data augmentation (sinh thêm mẫu từ dữ liệu sẵn có); chỉ có dữ liệu KHÔNG nhãn → continued pre-training."
+  },
+
+  "184": {
+    "no": 185,
+    "intro": "A company needs to customize a base model that is hosted on Amazon Bedrock. Select the correct model customization method from the following list of company requirements. Each model customization method should be selected one or more times.",
+    "choices": ["Continued pre-training", "Fine-tuning"],
+    "slots": [
+      { "l": "The company wants to improve the model's performance on specific tasks and examples.", "a": "Fine-tuning" },
+      { "l": "The company wants to improve the model's domain knowledge by providing specific documents.", "a": "Continued pre-training" },
+      { "l": "The company wants to retrain the model by using more unlabeled data over time.", "a": "Continued pre-training" }
+    ],
+    "vi": "Phân biệt bằng mục tiêu và loại dữ liệu: nâng hiệu năng trên TÁC VỤ cụ thể kèm ví dụ (dữ liệu có nhãn) → fine-tuning; nạp thêm KIẾN THỨC lĩnh vực bằng tài liệu thô, hoặc huấn luyện tiếp bằng dữ liệu không nhãn → continued pre-training. LƯU Ý: dòng 2 có người tranh luận là fine-tuning, nhưng \"cung cấp tài liệu để bổ sung kiến thức miền\" là mô tả kinh điển của continued pre-training."
+  },
+
+  "187": {
+    "no": 188,
+    "intro": "A company is designing a customer service chatbot by using a fine-tuned large language model (LLM). The company wants to ensure that the chatbot uses responsible AI characteristics. Select the correct responsible AI characteristic from the following list for each application design action. Each responsible AI characteristic should be selected one time or not at all.",
+    "choices": ["Governance", "Privacy and security", "Safety", "Transparency"],
+    "slots": [
+      { "l": "Anonymize personal information during training data preparation", "a": "Privacy and security" },
+      { "l": "Design the customer service chatbot to provide explainable decisions", "a": "Transparency" },
+      { "l": "Use Amazon Bedrock Guardrails to prevent harmful output and misuse of the chatbot", "a": "Safety" }
+    ],
+    "vi": "Ẩn danh thông tin cá nhân là bảo vệ dữ liệu người dùng → privacy and security. Cho phép giải thích được quyết định → transparency. Dùng Guardrails chặn nội dung có hại và ngăn lạm dụng → safety. Governance là khung quản trị tổng thể (chính sách, quy trình phê duyệt), không khớp hành động thiết kế cụ thể nào ở đây."
+  },
+
+  "190": {
+    "no": 191,
+    "intro": "A company wants to use Amazon SageMaker features for various use cases. Select the correct SageMaker feature from the following list for each use case. Each SageMaker feature should be selected one time or not at all.",
+    "choices": ["SageMaker Canvas", "SageMaker Feature Store", "SageMaker Ground Truth", "SageMaker JumpStart", "SageMaker Model Monitor"],
+    "slots": [
+      { "l": "Preparing data through a visual interface without using code", "a": "SageMaker Canvas" },
+      { "l": "Finding and using a prebuilt solution for fraud detection", "a": "SageMaker JumpStart" },
+      { "l": "Create labeled datasets with human intervention", "a": "SageMaker Ground Truth" }
+    ],
+    "vi": "Canvas là giao diện trực quan không cần viết code. JumpStart là kho mô hình và GIẢI PHÁP dựng sẵn, gồm cả mẫu phát hiện gian lận. Ground Truth là dịch vụ gán nhãn có sự tham gia của con người. Feature Store lưu trữ đặc trưng dùng chung và Model Monitor giám sát drift — không khớp trường hợp nào ở đây."
+  },
+
+  "228": {
+    "no": 229,
+    "intro": "A company is using Amazon SageMaker to develop AI models. Select the correct SageMaker feature or resource from the following list for each step in the AI model lifecycle workflow. Each SageMaker feature or resource should be selected one time or not at all.",
+    "choices": ["SageMaker Clarify", "SageMaker Model Registry", "SageMaker Serverless Inference"],
+    "slots": [
+      { "l": "Managing different versions of the model", "a": "SageMaker Model Registry" },
+      { "l": "Using the current model to make predictions", "a": "SageMaker Serverless Inference" }
+    ],
+    "vi": "Quản lý PHIÊN BẢN mô hình kèm quy trình phê duyệt là chức năng của Model Registry. Dùng mô hình để đưa ra dự đoán là khâu suy luận — Serverless Inference. Clarify dùng để phát hiện thiên lệch và giải thích mô hình, không thuộc hai bước này."
+  },
+
+  "234": {
+    "no": 235,
+    "intro": "A company wants to develop a solution that uses generative AI to create content for product advertisements, including sample images and slogans. Select the correct model type from the following list for each action. Each model type should be selected one time.",
+    "choices": ["Diffusion model", "Object detection model", "Transformer-based model"],
+    "slots": [
+      { "l": "Create high-quality images that are influenced by the generated slogans and product", "a": "Diffusion model" },
+      { "l": "Create contextually relevant slogans based on the advertisement product", "a": "Transformer-based model" },
+      { "l": "Ensure that company brand elements are properly placed in the images", "a": "Object detection model" }
+    ],
+    "vi": "Chọn theo việc cần làm: sinh ẢNH chất lượng cao → diffusion model; sinh VĂN BẢN (khẩu hiệu) có ngữ cảnh → transformer-based model; kiểm tra vị trí các yếu tố thương hiệu trong ảnh, tức định vị đối tượng → object detection model."
+  },
+
+  "244": {
+    "no": 245,
+    "intro": "A company is developing an AI application to help the company approve or deny personal loans. The application must follow the principles of responsible AI. Select the correct responsible AI principle from the following list for each action. Select each responsible AI principle one time or not at all.",
+    "choices": ["Explainability", "Fairness", "Privacy and security", "Robustness", "Safety"],
+    "slots": [
+      { "l": "Encrypt the application data, and isolate the application on a private network.", "a": "Privacy and security" },
+      { "l": "Evaluate how different population groups will be impacted.", "a": "Fairness" },
+      { "l": "Test the application with unexpected data to ensure the application will work in unique situations.", "a": "Robustness" }
+    ],
+    "vi": "Mã hoá dữ liệu và cô lập mạng → privacy and security. Đánh giá tác động lên các NHÓM DÂN CƯ khác nhau → fairness. Kiểm thử với dữ liệu bất thường để hệ thống vẫn chạy đúng trong tình huống lạ → robustness (khả năng chống chịu)."
+  },
+
+  "256": {
+    "no": 257,
+    "intro": "Select the correct AWS service or tool from the following list for each use case. Select each AWS service or tool one time or not at all.",
+    "choices": ["Amazon SageMaker Clarify", "Amazon SageMaker Ground Truth", "Amazon Bedrock Guardrails", "AWS CloudTrail", "AWS Trusted Advisor"],
+    "slots": [
+      { "l": "Apply human feedback across the ML lifecycle to improve the accuracy and relevancy of models.", "a": "Amazon SageMaker Ground Truth" },
+      { "l": "Implement safeguards that align with responsible AI policies.", "a": "Amazon Bedrock Guardrails" },
+      { "l": "Detect potential bias during data preparation and model training.", "a": "Amazon SageMaker Clarify" }
+    ],
+    "vi": "Ground Truth đưa CON NGƯỜI vào vòng lặp để gán nhãn và phản hồi xuyên suốt vòng đời ML. Guardrails là rào chắn cấu hình được, đúng nghĩa \"safeguards\" theo chính sách AI có trách nhiệm. Clarify chuyên phát hiện thiên lệch ở khâu chuẩn bị dữ liệu và huấn luyện. CloudTrail ghi log API, Trusted Advisor khuyến nghị tối ưu — không khớp."
+  },
+
+  "263": {
+    "no": 264,
+    "intro": "A company uses ML techniques to build applications. Select the correct ML technique from the following list for each task. Select each ML technique one time.",
+    "choices": ["Binary classification", "Multiclass classification", "Regression"],
+    "slots": [
+      { "l": "Analyze a text question to determine if the answer is correct.", "a": "Binary classification" },
+      { "l": "Analyze ecological factors to determine the number of species in a certain area.", "a": "Regression" },
+      { "l": "Analyze car attributes to determine the car model.", "a": "Multiclass classification" }
+    ],
+    "vi": "Đếm số kết quả có thể xảy ra: đúng/sai chỉ có hai khả năng → binary classification. Dự đoán SỐ LƯỢNG loài là một giá trị số liên tục → regression. Xác định mẫu xe trong số rất nhiều mẫu → multiclass classification."
+  },
+
+  "266": {
+    "no": 267,
+    "intro": "A company is building an AI solution by using Amazon SageMaker AI. The company wants to use SageMaker AI features to facilitate application development. Select the correct SageMaker AI feature from the following list for each use case. Select each feature one time.",
+    "choices": ["Clarify", "Data Wrangler", "Model Cards"],
+    "slots": [
+      { "l": "Determine the most suitable model to use for a business case.", "a": "Model Cards" },
+      { "l": "Prepare data through a low-code or no-code interface.", "a": "Data Wrangler" },
+      { "l": "Identify biases or imbalances in the data.", "a": "Clarify" }
+    ],
+    "vi": "Model Cards ghi lại mục đích, hiệu năng và giới hạn của từng mô hình — nhờ đó so sánh và chọn mô hình phù hợp với bài toán kinh doanh. Data Wrangler là công cụ chuẩn bị dữ liệu giao diện kéo-thả. Clarify phát hiện thiên lệch và mất cân bằng trong dữ liệu."
+  }
+}

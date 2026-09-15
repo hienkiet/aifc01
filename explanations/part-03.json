@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 76-116 (id 75-115).",
+
+  "75": { "answer": "B", "vi": "Mô hình chỉ chạy 1 lần/ngày và đang hoạt động tốt, nên chi phí gần như hoàn toàn đến từ số token trong prompt. Rút bớt số ví dụ few-shot là cách giảm tiền trực tiếp nhất. Fine-tuning (A) và Provisioned Throughput (D) đều tốn kém hơn nhiều với tần suất dùng thấp như vậy. Tăng token (C) làm chi phí tăng lên." },
+
+  "76": { "answer": "B", "vi": "Nội dung nghe hợp lý, trình bày như sự thật nhưng lại sai — đó là hallucination, mô hình bịa ra thông tin không có căn cứ. Data leakage (A) là rò rỉ dữ liệu kiểm thử vào huấn luyện. Overfitting (C) và underfitting (D) là vấn đề khái quát hoá của mô hình dự đoán, không mô tả hiện tượng bịa nội dung." },
+
+  "77": { "answer": "A", "vi": "Dữ liệu mật đã nằm trong trọng số của mô hình sau khi huấn luyện, nên không có cách nào che hay mã hoá ở đầu ra để gỡ nó ra. Bắt buộc phải xoá mô hình, loại dữ liệu mật khỏi tập huấn luyện rồi huấn luyện lại. Masking (B) và mã hoá (C, D) chỉ tác động lên dữ liệu lưu trữ hoặc văn bản trả về, không xoá được kiến thức mô hình đã học." },
+
+  "78": { "answer": "A", "vi": "Bài toán là dịch tài liệu, và BLEU là chỉ số chuẩn để đo chất lượng dịch máy bằng cách so trùng n-gram với bản dịch tham chiếu. ROUGE (C) thiên về recall, dùng cho tóm tắt. RMSE (B) cho hồi quy. F1 (D) cho phân loại." },
+
+  "79": { "answer": "B", "vi": "Lợi ích cốt lõi của Bedrock Agents là tự động hoá các tác vụ lặp lại và điều phối quy trình nhiều bước — agent tự lập kế hoạch, gọi API/Lambda rồi tổng hợp kết quả. Agent không tạo ra foundation model mới (A), không gọi nhiều FM rồi hợp nhất kết quả (C), cũng không phải công cụ chọn mô hình theo tiêu chí (D)." },
+
+  "80": { "answer": "B", "vi": "Ongoing pre-training liên tục nạp dữ liệu mới vào mô hình nên kiến thức luôn được cập nhật và chất lượng cải thiện dần theo thời gian. Nó không làm mô hình đơn giản đi (A), không rút ngắn thời gian huấn luyện (C) — thực tế còn tốn thêm, và không tối ưu tốc độ suy luận (D)." },
+
+  "81": { "answer": "A", "vi": "Token là đơn vị cơ bản mà mô hình đọc vào và sinh ra: có thể là một từ, một phần từ (subword) hoặc dấu câu. Phương án B mô tả embeddings (biểu diễn toán học). C mô tả trọng số mô hình. D mô tả prompt." },
+
+  "82": { "answer": "A", "vi": "Trên Bedrock, chi phí suy luận tính theo số token đầu vào cộng số token đầu ra. Temperature (B) không ảnh hưởng giá. Lượng dữ liệu huấn luyện (C) và thời gian huấn luyện (D) là chi phí của nhà cung cấp mô hình, không tính vào hoá đơn inference của bạn." },
+
+  "83": { "answer": "C", "vi": "Muốn kiểm soát luồng dữ liệu giữa S3 và SageMaker Studio, hãy đặt SageMaker trong VPC và dùng S3 VPC endpoint — lưu lượng đi trong mạng AWS, không ra Internet, và kiểm soát được bằng endpoint policy. Inspector (A) quét lỗ hổng, Macie (B) phát hiện dữ liệu nhạy cảm, Glacier Deep Archive (D) là lớp lưu trữ giá rẻ cho dữ liệu ít truy cập." },
+
+  "84": { "answer": "A", "vi": "Bedrock đọc dữ liệu huấn luyện và dữ liệu kiểm định (validation) trực tiếp từ Amazon S3 — đây là kho lưu trữ tiêu chuẩn cho mọi job trên Bedrock và SageMaker. EBS (B) là ổ đĩa gắn vào EC2, EFS (C) là hệ thống tệp chia sẻ, Snowcone (D) là thiết bị vận chuyển dữ liệu vật lý." },
+
+  "85": { "answer": "D", "vi": "Câu hỏi nhấn mạnh 'directly exposes the configured behavior' — tức moi ra chính system prompt/template đã cấu hình cho mô hình, đó là extracting the prompt template. Ignoring the prompt template (C) là phớt lờ chỉ dẫn chứ không làm lộ nó. Persona switch (A) và lợi dụng sự thân thiện (B) là thủ thuật lách kiểm duyệt, không phơi bày cấu hình." },
+
+  "86": { "answer": "C", "vi": "Theo mô hình trách nhiệm chung, AWS lo hạ tầng và bản thân dịch vụ, khách hàng lo dữ liệu của mình: mã hoá khi lưu và khi truyền, phân quyền truy cập. Vá lỗi Bedrock (A) và bảo vệ hạ tầng (B) là phần của AWS. Bedrock là dịch vụ được quản lý, không tự cài vào mạng công ty (D)." },
+
+  "87": { "answer": "B", "vi": "Từ khoá LEAST operational overhead. Automatic model evaluation trên Bedrock có sẵn chỉ số đo độc hại (toxicity), chạy tự động không cần con người. Đánh giá bằng người (A, C) tốn công và thời gian. RLHF (D) là kỹ thuật huấn luyện, không phải cách so sánh mô hình." },
+
+  "88": { "answer": "D", "vi": "Cố tình lách các cơ chế an toàn để mô hình sinh nội dung có hại — đó là jailbreak. Penetration testing (C) là khái niệm rộng hơn về kiểm thử xâm nhập hệ thống, còn ở đây mô tả đúng kỹ thuật cụ thể là jailbreak. Fuzzing (A) là ném dữ liệu ngẫu nhiên tìm lỗi. DoS (B) là tấn công từ chối dịch vụ." },
+
+  "89": { "answer": "B", "vi": "SageMaker có tuỳ chọn network isolation: container huấn luyện/suy luận chạy hoàn toàn không có kết nối mạng ra ngoài, đúng yêu cầu môi trường cô lập. Experiments (A) để theo dõi thí nghiệm. Mã hoá dữ liệu (C) bảo vệ dữ liệu nhưng không cô lập mạng. IAM role (D) kiểm soát quyền chứ không cắt kết nối Internet." },
+
+  "90": { "answer": "C", "vi": "Cần cơ chế để nhóm khác hiểu và kiểm toán mô hình khi nhóm ML chỉ chia sẻ artifact — SageMaker Model Cards ghi lại mục đích sử dụng, chi tiết huấn luyện và suy luận theo mẫu chuẩn. AWS AI Service Cards (B) là tài liệu do AWS công bố cho dịch vụ AI của chính AWS, không dùng cho mô hình của bạn. Tài liệu tự do trong S3 (A) và script trong Git (D) không có cấu trúc kiểm toán." },
+
+  "91": { "answer": "B", "vi": "Tăng năng suất lập trình bằng AI nghĩa là cài công cụ gợi ý mã (như Amazon Q Developer) vào IDE của lập trình viên. Mô hình phân loại nhị phân (A) không sinh được nội dung review. Không có thứ gọi là 'code forecasting tool' (C). NLP nói chung (D) quá mơ hồ so với giải pháp cụ thể là code assistant." },
+
+  "92": { "answer": "C", "vi": "DeepAR là thuật toán dự báo chuỗi thời gian của SageMaker, nên đầu vào bắt buộc là time series — chuỗi giá trị theo mốc thời gian. Văn bản (A), ảnh (B) và dữ liệu nhị phân (D) không dùng được với DeepAR." },
+
+  "93": { "answer": "D", "vi": "Muốn mô hình không thiên lệch giữa các nhóm nhân khẩu, việc đầu tiên là đo mức mất cân bằng giữa các lớp trong dữ liệu huấn luyện rồi điều chỉnh quy trình huấn luyện cho phù hợp. Giảm dữ liệu (A) làm tệ hơn. Bám theo kết quả lịch sử (B) sẽ tái tạo đúng thiên lệch trong quá khứ. Tạo mô hình riêng cho từng nhóm (C) chính là phân biệt đối xử." },
+
+  "94": { "answer": "A", "vi": "Adversarial prompting là chủ động đưa vào prompt các chỉ dẫn phòng thủ và thử nghiệm với đầu vào tấn công để mô hình học cách kháng cự prompt injection. Zero-shot (B), least-to-most (C) và chain-of-thought (D) là kỹ thuật nâng chất lượng suy luận, không có tác dụng bảo vệ." },
+
+  "95": { "answer": "C", "vi": "Đánh giá độ chính xác của mô hình hỏi-đáp cần cân bằng giữa precision và recall — F1 score làm đúng điều đó bằng trung bình điều hoà của hai chỉ số. Chỉ dùng precision (A) bỏ qua các câu trả lời đúng bị sót. Time to first token (B) đo tốc độ. Word error rate (D) dùng cho nhận dạng giọng nói." },
+
+  "96": { "answer": "C", "vi": "CFG (classifier-free guidance) scale quyết định mô hình bám sát prompt tới mức nào: tăng CFG thì ảnh sinh ra sát mô tả hơn, bớt ngẫu nhiên. Tăng số bước sinh (A) làm ảnh mịn hơn nhưng không bám prompt hơn. MASK_IMAGE_BLACK (B) dùng cho inpainting. Prompt strength (D) áp dụng cho image-to-image, không đúng ngữ cảnh này." },
+
+  "97": { "answer": "C", "vi": "Từ khoá MOST cost-effectively, và tri thức nền là chính sách công ty. RAG nạp đúng đoạn chính sách liên quan vào ngữ cảnh lúc chạy, không cần huấn luyện, cập nhật tài liệu là có hiệu lực ngay. Retrain (A), fine-tune (B) và pre-training (D) đều tốn kém và phải làm lại mỗi lần chính sách thay đổi." },
+
+  "98": { "answer": "A", "vi": "Đội ngũ ít kinh nghiệm lập trình cần trợ giúp khi dùng AWS Glue — Amazon Q Developer trả lời câu hỏi về dịch vụ AWS và sinh mã ETL ngay trong môi trường làm việc. AWS Config (B) theo dõi cấu hình tài nguyên. Personalize (C) và Comprehend (D) là dịch vụ AI cho mục đích khác." },
+
+  "99": { "answer": "A", "vi": "Chủ động thu thập ảnh từ nhiều giới tính, sắc tộc và vùng địa lý để mô hình hoạt động tốt với mọi nhóm người dùng — đó là nguyên tắc fairness (công bằng). Explainability (B) là khả năng giải thích quyết định. Governance (C) là khung quản trị. Transparency (D) là công khai thông tin về mô hình." },
+
+  "100": { "answer": "A", "vi": "Một dịch vụ đáp ứng cả hai yêu cầu phát hiện bias và giải thích dự đoán: SageMaker Clarify (dùng giá trị SHAP cho feature attribution). Data Wrangler (B) chuẩn bị dữ liệu. Model Cards (C) lập tài liệu mô hình. AI Service Cards (D) là tài liệu cho dịch vụ AI của AWS." },
+
+  "101": { "answer": "C", "vi": "Bedrock automatic model evaluation dùng BERTScore cho tác vụ tóm tắt — chỉ số so sánh ngữ nghĩa giữa bản tóm tắt sinh ra và bản tham chiếu bằng embedding, thay vì chỉ đếm từ trùng. AUC (A) và F1 (B) là chỉ số phân loại. 'Real world knowledge score' (D) không phải chỉ số dùng cho tóm tắt." },
+
+  "102": { "answer": "A", "vi": "Phân loại hoa dựa trên 4 đặc trưng số đo (bài toán Iris kinh điển) — k-NN phân loại bằng cách xét các điểm dữ liệu gần nhất, rất phù hợp. K-means (B) là gom cụm không giám sát, không dùng nhãn. ARIMA (C) dự báo chuỗi thời gian. Linear regression (D) dự đoán giá trị liên tục, không phân loại." },
+
+  "103": { "answer": "A", "vi": "Mã hoá artifact do job tuỳ chỉnh mô hình sinh ra bằng khoá do công ty tự quản lý — đó là AWS KMS (customer managed key). Inspector (B) quét lỗ hổng. Macie (C) phát hiện dữ liệu nhạy cảm. Secrets Manager (D) lưu trữ bí mật như mật khẩu, API key, không dùng mã hoá artifact." },
+
+  "104": { "answer": "B", "vi": "Sinh mã nguồn từ mô tả bằng ngôn ngữ tự nhiên là một dạng text generation — mô hình tạo ra chuỗi ký tự mới. Text summarization (A) rút gọn văn bản có sẵn. Text completion (C) hoàn thiện phần dở dang, hẹp hơn nhu cầu ở đây. Text classification (D) chỉ gán nhãn." },
+
+  "105": { "answer": "C", "vi": "Công ty đã có sẵn các bản viết lại 'dễ đọc hơn' làm tham chiếu, và muốn đầu ra của mô hình giống các ví dụ đó — đúng tình huống dùng ROUGE, chỉ số đo mức trùng khớp giữa văn bản sinh và văn bản tham chiếu. Giá trị hàm mất mát (A) chỉ phản ánh quá trình huấn luyện. Semantic robustness (B) đo tính ổn định khi nhiễu đầu vào. Latency (D) đo tốc độ." },
+
+  "106": { "answer": "B", "vi": "Negative prompt là cách khai báo những gì KHÔNG muốn xuất hiện trong ảnh, giúp loại bỏ các yếu tố lạc đề. Zero-shot (A) là không đưa ví dụ. Positive prompt (C) chỉ là mô tả thông thường, đã có sẵn. Prompt mơ hồ (D) làm vấn đề tệ hơn." },
+
+  "107": { "answer": "B", "vi": "Cần mô tả ngắn gọn và đúng đặc trưng riêng của từng dòng sản phẩm, nên tạo prompt theo từng nhóm sản phẩm, nêu rõ tính năng chính kèm yêu cầu về định dạng và độ dài. Một prompt chung rồi sửa tay (A) tốn công thủ công. Nhồi nhiều tính năng vào một prompt (C) làm mô tả loãng. Prompt riêng cho từng sản phẩm (D) không khả thi khi số sản phẩm lớn." },
+
+  "108": { "answer": "B", "vi": "Tốt trên tập huấn luyện, kém trên dữ liệu mới là overfitting. Tăng tham số regularization sẽ phạt độ phức tạp, buộc mô hình đơn giản hơn và khái quát hoá tốt hơn. Giảm regularization (A), thêm đặc trưng (C) hay huấn luyện thêm epoch (D) đều làm mô hình phức tạp hơn, tức overfit nặng hơn." },
+
+  "109": { "answer": "B", "vi": "Aurora PostgreSQL hỗ trợ tiện ích pgvector, cho phép lưu embedding dưới dạng kiểu vector và truy vấn tương đồng ngay trong cơ sở dữ liệu quan hệ. Athena (A) truy vấn dữ liệu trong S3, Redshift (C) là kho dữ liệu phân tích, EMR (D) xử lý dữ liệu lớn — không dịch vụ nào trong ba cái đó là vector database." },
+
+  "110": { "answer": "A", "vi": "Mô hình càng phức tạp (nhiều tầng, nhiều tham số) thì càng khó truy ngược vì sao nó ra quyết định — độ phức tạp mô hình tỉ lệ nghịch với khả năng giải thích. Thời gian huấn luyện (B), số siêu tham số (C) và thời gian triển khai (D) không quyết định mức độ giải thích được." },
+
+  "111": { "answer": "B", "vi": "Tổng hợp hàng loạt đánh giá của người dùng thành bản tóm lược ngắn gọn là bài toán summarization, phù hợp với LLM trên Amazon Bedrock. Personalize (A) dùng cho gợi ý, không phải dự báo chuỗi thời gian như phương án mô tả. Phân loại thuốc (C) không tạo ra bản tóm tắt. Rekognition (D) xử lý ảnh." },
+
+  "112": { "answer": "A", "vi": "Yêu cầu đặc thù là nhân viên phải xem và tự chỉnh trọng số của từng biến dựa trên kinh nghiệm — chỉ mô hình tuyến tính như logistic regression mới phơi ra hệ số cho từng biến một cách rõ ràng. Deep learning trên thành phần chính (B) và neural network (D) là hộp đen. k-NN (C) không có trọng số biến để chỉnh." },
+
+  "114": { "answer": "C", "vi": "Muốn biết một foundation model có đáp ứng mục tiêu kinh doanh hay không thì phải xem nó hoạt động ra sao trên chính tình huống sử dụng thực tế của bạn. Điểm trên benchmark (A) phản ánh năng lực chung, không đảm bảo phù hợp use case. Phân tích kiến trúc (B) và đo tài nguyên (D) là góc nhìn kỹ thuật, không phải mục tiêu kinh doanh." },
+
+  "115": { "answer": "A", "vi": "Đã có sẵn tập ảnh lớn đã gán nhãn và không gán thêm nữa — điều kiện chuẩn cho supervised learning. Unsupervised (B) dùng khi không có nhãn. Reinforcement learning (C) học qua thử-sai và phần thưởng. Active learning (D) là chiến lược chọn mẫu để gán nhãn thêm, trong khi đề bài nói rõ sẽ không gán nhãn thêm." }
+}

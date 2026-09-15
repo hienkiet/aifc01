@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 117-161 (id 116-160).",
+
+  "116": { "answer": "D", "vi": "Yêu cầu tuân thủ và quy định pháp lý phải được xác định ngay từ đầu, ở giai đoạn xác định mục tiêu kinh doanh — vì chúng chi phối toàn bộ thiết kế về sau (được dùng dữ liệu gì, lưu ở đâu, cần giải thích tới mức nào). Feature engineering (A), model training (B) và data collection (C) đều là các bước kỹ thuật diễn ra sau đó." },
+
+  "117": { "answer": "A", "vi": "Muốn mô hình liên tục chính xác hơn thì phải huấn luyện lại định kỳ với dữ liệu mới nhất — SageMaker hỗ trợ vòng lặp này. Personalize với dữ liệu lịch sử (B) không cải thiện liên tục và vốn dùng cho gợi ý. CloudWatch (C) chỉ giám sát. Rekognition (D) xử lý ảnh, không tối ưu mô hình dự báo." },
+
+  "118": { "answer": "D", "vi": "Trong các phương án, chỉ SageMaker endpoint là dịch vụ được quản lý để phục vụ dự đoán mà không phải tự dựng và vá máy chủ. EC2 (A) và EKS (B) đều buộc bạn quản lý hạ tầng. CloudFront + S3 (C) chỉ phân phối nội dung tĩnh, không chạy được mô hình." },
+
+  "119": { "answer": "B", "vi": "Ứng dụng cần tra cứu hồ sơ bồi thường, tìm chi tiết và mở tài liệu — tức vừa phải truy xuất tri thức vừa phải thực hiện hành động nhiều bước. Bedrock Agents lo phần điều phối, Knowledge Bases lo phần truy xuất tài liệu. Fraud Detector (A) phát hiện gian lận. Personalize (C) gợi ý sản phẩm. Huấn luyện mô hình mới (D) tốn kém và không cần thiết." },
+
+  "120": { "answer": "C", "vi": "Dùng AI kiểm tra sản phẩm qua hình ảnh để tìm hư hỏng, lỗi — đó là computer vision. 'Image processing' (D) chỉ là thao tác biến đổi ảnh (lọc, xoay, cắt), không bao hàm việc nhận biết lỗi. Recommendation system (A) và NLP (B) thuộc lĩnh vực khác." },
+
+  "121": { "answer": "B", "vi": "Cần tinh chỉnh mô hình tự động hoàn toàn — SageMaker có Automatic Model Tuning (hyperparameter tuning job) làm đúng việc này. Personalize (A) là dịch vụ gợi ý đóng gói sẵn, không cho bạn tuning mô hình tuỳ ý. Athena (C) truy vấn dữ liệu. Comprehend (D) phân tích văn bản." },
+
+  "122": { "answer": "A", "vi": "Từ khoá 'post-processing' — tức sau khi mô hình đã sinh ra kết quả. Ở giai đoạn này, human-in-the-loop cho người kiểm duyệt đầu ra để chặn nội dung thiên lệch hoặc độc hại. Data augmentation (B) và feature engineering (C) diễn ra ở khâu dữ liệu. Adversarial training (D) thuộc giai đoạn huấn luyện." },
+
+  "123": { "answer": "A", "vi": "Từ khoá MOST cost-effectively. Mô hình đã fine-tune rồi nên chỉ cần bổ sung dữ liệu đa dạng hơn và fine-tune lại — rẻ hơn nhiều so với pre-train một LLM mới từ đầu (D). RAG (B) bổ sung tri thức chứ không sửa được thiên lệch đã học vào trọng số. Trusted Advisor (C) là công cụ khuyến nghị hạ tầng, không liên quan tới bias." },
+
+  "125": { "answer": "AD", "vi": "Câu này chọn 2. CloudTrail ghi lại mọi lời gọi API tới Bedrock. Để lưu 5 năm với chi phí thấp nhất trong các lựa chọn, S3 Intelligent-Tiering tự động chuyển dữ liệu ít truy cập xuống tầng rẻ hơn — rẻ hơn S3 Standard (E). CloudWatch (B) tốn kém khi lưu dài hạn. Audit Manager (C) tổng hợp bằng chứng tuân thủ chứ không phải nơi lưu log." },
+
+  "126": { "answer": "A", "vi": "Cá nhân hoá kết quả gợi ý cho từng người dùng trên nền tảng thương mại điện tử là đúng mục đích của Amazon Personalize. Kendra (B) là tìm kiếm doanh nghiệp, trả về tài liệu liên quan chứ không cá nhân hoá theo hành vi mua. Rekognition (C) xử lý ảnh, Transcribe (D) xử lý audio." },
+
+  "127": { "answer": "A", "vi": "Dữ liệu bệnh nhân không được rời khỏi quốc gia — đó chính là data residency (nơi cư trú dữ liệu), chiến lược quản trị ràng buộc dữ liệu phải lưu và xử lý trong phạm vi địa lý nhất định. Data quality (B), discoverability (C) và enrichment (D) là các khía cạnh quản trị khác, không liên quan tới ranh giới địa lý." },
+
+  "128": { "answer": "A", "vi": "Giám sát hiệu năng hệ thống ML với khả năng mở rộng cao — Amazon CloudWatch thu thập metric, log và tạo cảnh báo. CloudTrail (B) ghi lời gọi API cho mục đích kiểm toán. Trusted Advisor (C) khuyến nghị tối ưu. Config (D) theo dõi thay đổi cấu hình tài nguyên." },
+
+  "129": { "answer": "A", "vi": "Yêu cầu mô hình 'trình bày từng bước lập luận' chính là chain-of-thought prompting, kỹ thuật giúp mô hình giải bài toán suy luận số học tốt hơn nhiều. Prompt injection (B) là tấn công. Few-shot (C) là đưa ví dụ mẫu. Prompt templating (D) là dùng khuôn mẫu có biến." },
+
+  "130": { "answer": "B", "vi": "Amazon Bedrock là dịch vụ được quản lý cung cấp foundation model từ nhiều nhà cung cấp qua một API duy nhất, để xây và mở rộng ứng dụng generative AI. Q Developer (A) là trợ lý lập trình. Kendra (C) là tìm kiếm doanh nghiệp. Comprehend (D) là NLP đóng gói sẵn." },
+
+  "131": { "answer": "A", "vi": "Ứng dụng phải nghe được lời người dùng nói rồi trả lời bằng giọng nói — cốt lõi là nhận dạng giọng nói, và mạng nơ-ron sâu là công nghệ đứng sau. Tìm mẫu trong dữ liệu số (B), tóm tắt văn bản (C) và phân loại ảnh (D) đều không xử lý đầu vào âm thanh." },
+
+  "132": { "answer": "D", "vi": "Yêu cầu 'giải thích chi tiết, từng bước một' — đó là chain-of-thought prompting. Few-shot (A) đưa ví dụ nhưng không buộc trình bày lập luận. Zero-shot (B) không có hướng dẫn gì thêm. Directional stimulus (C) là gợi ý từ khoá định hướng, không tạo chuỗi suy luận." },
+
+  "133": { "answer": "B", "vi": "Muốn mô hình luôn cập nhật dữ liệu mới nhất bằng các đợt huấn luyện định kỳ — đó là continuous pre-training. Batch learning (A) huấn luyện một lần trên toàn tập rồi dừng. Static training (C) là huấn luyện cố định, không cập nhật. 'Latent training' (D) không phải thuật ngữ chuẩn." },
+
+  "135": { "answer": "D", "vi": "Đặc trưng của khung quản trị AI là xây dựng chính sách và hướng dẫn về dữ liệu, minh bạch, AI có trách nhiệm và tuân thủ. Ba phương án còn lại nói về mở rộng kinh doanh (A), bám mục tiêu doanh thu (B) và chuyển đổi tăng trưởng (C) — đều là mục tiêu kinh doanh, không phải nội dung của khung quản trị." },
+
+  "136": { "answer": "C", "vi": "Muốn đo tác động tài chính thì phải quy về tiền cho mỗi đơn vị công việc — chi phí cho mỗi cuộc hội thoại, để so với chi phí khi dùng nhân viên. Số lượt hỏi (A) và AHT (D) là chỉ số vận hành. Chi phí huấn luyện mô hình (B) là khoản đầu tư một lần, không phản ánh hiệu quả vận hành." },
+
+  "137": { "answer": "B", "vi": "Phân nhóm khách hàng theo nhân khẩu học và hành vi mua mà không có nhãn sẵn — đó là clustering, và K-means là thuật toán gom cụm tiêu biểu. k-NN (A), decision tree (C) và SVM (D) đều là thuật toán có giám sát, cần nhãn để huấn luyện." },
+
+  "138": { "answer": "C", "vi": "Trong các phương án, giảm temperature là cách trực tiếp làm mô hình bớt bịa: nó buộc mô hình chọn token có xác suất cao nhất thay vì phiêu lưu. Agents (A) không giám sát huấn luyện. Không thể lọc ra 'dữ liệu gây ảo giác' (B) vì hallucination sinh ra từ cách mô hình suy luận. Không có FM nào được huấn luyện để không bao giờ ảo giác (D)." },
+
+  "139": { "answer": "B", "vi": "LLM vốn không có bộ nhớ giữa các lượt gọi, nên muốn nó nhớ nội dung trước đó thì phải đưa lịch sử hội thoại vào chính prompt của lượt hiện tại. Invocation logging (A) chỉ ghi log cho bạn xem. Personalize (C) là dịch vụ gợi ý. Provisioned Throughput (D) là mô hình giá, không tạo bộ nhớ." },
+
+  "140": { "answer": "C", "vi": "Cần sinh mô tả và khuyến nghị sản phẩm tự động bằng foundation model — Amazon Bedrock. Macie (A) phát hiện dữ liệu nhạy cảm. Transcribe (B) chuyển giọng nói thành văn bản. Textract (D) trích xuất văn bản từ tài liệu." },
+
+  "141": { "answer": "A", "vi": "Từ khoá LEAST development effort. Amazon Macie tự động quét S3, nhận diện dữ liệu nhạy cảm bằng ML và phát cảnh báo — bật lên là dùng, không cần viết code. Triển khai LLM để che dữ liệu (B) và tự viết regex (C) đều tốn công phát triển. Nhờ khách hàng đừng gửi dữ liệu nhạy cảm (D) không phải giải pháp kỹ thuật." },
+
+  "144": { "answer": "B", "vi": "Giá trị của SageMaker Model Cards là chuẩn hoá thông tin về mục đích, hiệu năng và giới hạn của mô hình theo một khuôn mẫu thống nhất, phục vụ quản trị và kiểm toán. Nó không phải bản tóm tắt cho đẹp (A), không giảm tài nguyên tính toán (C) và không lưu trữ mô hình (D)." },
+
+  "145": { "answer": "A", "vi": "F1 score là trung bình điều hoà của precision và recall, dùng khi cần cân bằng giữa việc bắt đúng và bắt đủ. Nó không đo tốc độ sinh câu trả lời (B), chi phí vận hành (C) hay hiệu suất năng lượng (D)." },
+
+  "146": { "answer": "D", "vi": "Từ khoá MOST cost-effectively, và câu hỏi thay đổi theo thời gian. RAG kết hợp prompt engineering lấy câu trả lời từ nguồn tài liệu cập nhật mà không phải huấn luyện lại lần nào. Fine-tune định kỳ (A) tốn kém và luôn chậm hơn thực tế. Pre-training (C) còn đắt hơn nữa." },
+
+  "147": { "answer": "A", "vi": "Dữ liệu huấn luyện không đại diện cho mọi nhóm nhân khẩu, dẫn tới hệ thống sàng lọc hồ sơ đối xử bất lợi với một số nhóm — đó là vi phạm chiều fairness (công bằng) của AI có trách nhiệm. Explainability (B), privacy (C) và transparency (D) là các chiều khác, không mô tả đúng vấn đề đại diện dữ liệu." },
+
+  "148": { "answer": "AB", "vi": "Câu này chọn 2. AWS Audit Manager tự động thu thập bằng chứng và ánh xạ vào các khung tuân thủ. AWS Config liên tục theo dõi cấu hình tài nguyên và đánh giá xem có lệch khỏi quy tắc hay không. Inspector (C) quét lỗ hổng bảo mật. CloudWatch (D) giám sát hiệu năng. CloudTrail (E) ghi log lời gọi API — hữu ích nhưng không tự đánh giá tuân thủ." },
+
+  "149": { "answer": "D", "vi": "Từ khoá MOST cost-effectively, và mô hình đang dùng là FM có sẵn trên Bedrock. Prompt engineering không tốn chi phí huấn luyện nào, chỉ cần viết lại prompt cho tốt hơn. Fine-tune (A), retrain (B) và huấn luyện FM mới (C) đều đắt hơn theo cấp số nhân." },
+
+  "150": { "answer": "B", "vi": "Công ty tuyên bố sẽ KHÔNG dùng dữ liệu có nhãn, nên phải chọn dịch vụ có sẵn khả năng phát hiện nội dung độc hại — Amazon Comprehend có API toxicity detection dùng ngay. Huấn luyện bằng thuật toán SageMaker (C) đòi hỏi dữ liệu có nhãn. Rekognition (A) kiểm duyệt ảnh chứ không phải bình luận văn bản. Polly (D) chuyển văn bản thành giọng nói." },
+
+  "151": { "answer": "D", "vi": "Yêu cầu then chốt là quan sát xem chất lượng mô hình có suy giảm theo thời gian không sau khi đã triển khai — đó là SageMaker Model Monitor, phát hiện data drift và model quality drift. Clarify (B) phân tích bias và giải thích, thường dùng trước khi triển khai. Rekognition (A) và Comprehend (C) là dịch vụ AI đóng gói." },
+
+  "152": { "answer": "A", "vi": "Trong bốn lựa chọn, chỉ SageMaker Model Cards phục vụ mục đích minh bạch: ghi lại mô hình hoạt động thế nào, dùng cho việc gì, giới hạn ra sao để cung cấp cho các bên liên quan. Rekognition (B), Comprehend (C) và Lex (D) là các dịch vụ AI ứng dụng, không cung cấp tài liệu giải trình mô hình của bạn." },
+
+  "153": { "answer": "A", "vi": "Tạo mô tả sản phẩm bằng nhiều ngôn ngữ — Amazon Translate dịch máy tự động giữa các ngôn ngữ. Transcribe (B) chuyển giọng nói thành văn bản. Kendra (C) là tìm kiếm doanh nghiệp. Polly (D) chuyển văn bản thành giọng nói." },
+
+  "155": { "answer": "A", "vi": "SageMaker Model Cards ghi lại thông tin chi tiết về mô hình và quá trình huấn luyện phục vụ quản trị và báo cáo. Debugger (B) gỡ lỗi quá trình huấn luyện. Model Monitor (C) giám sát khi chạy thật. JumpStart (D) là kho mô hình dựng sẵn." },
+
+  "156": { "answer": "A", "vi": "Generative AI tạo ra nội dung mới, nên tóm tắt khiếu nại khách hàng (sinh văn bản mới) là đáp án. Phân loại khách hàng (B), phân khúc theo loại đầu tư (C) và dự báo doanh thu (D) đều là ML truyền thống: gán nhãn, gom cụm, dự đoán số — không sinh nội dung." },
+
+  "157": { "answer": "A", "vi": "Dữ liệu là hồ sơ bệnh án, cần trích xuất thực thể y khoa rồi tạo bản tóm tắt — Amazon Comprehend Medical được huấn luyện riêng cho thuật ngữ y tế, nhận diện bệnh, thuốc, liều lượng và quan hệ giữa chúng. Personalize (B) dùng cho gợi ý. Textract (C) chỉ chuyển ảnh quét thành văn bản, mà đề nói dữ liệu đã có cấu trúc. Kendra (D) là công cụ tìm kiếm." },
+
+  "158": { "answer": "D", "vi": "Embeddings là phương pháp biểu diễn dữ liệu bằng số trong không gian ít chiều hơn, sao cho khoảng cách giữa các vector phản ánh mức tương đồng ngữ nghĩa. Nó không phải kỹ thuật nén dữ liệu (A), không phải mã hoá bảo mật (B), và không phải công cụ trực quan hoá (C) — dù có thể dùng kèm để trực quan hoá." },
+
+  "159": { "answer": "D", "vi": "Một số cuốn sách quá dài nên toàn bộ nội dung vượt quá context window của mô hình, khiến yêu cầu tóm tắt thất bại. Temperature (A) và Top P (C) chỉ ảnh hưởng độ ngẫu nhiên của văn bản sinh ra, không gây lỗi. Việc mô hình có hỗ trợ fine-tuning hay không (B) không liên quan tới khả năng tóm tắt." },
+
+  "160": { "answer": "B", "vi": "Từ khoá LEAST development effort, cần LLM cộng với tri thức riêng về lịch bay và đặt vé — RAG trên Amazon Bedrock cho phép cắm thẳng nguồn tri thức vào mà không cần huấn luyện. SageMaker Autopilot (A) và fine-tune trên JumpStart (D) đều đòi công sức ML lớn. Tự viết ứng dụng Python (C) tốn công phát triển nhất." }
+}

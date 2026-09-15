@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 340-382 (id 338-380).",
+
+  "338": { "answer": "B", "vi": "Điểm mấu chốt là đánh giá chất lượng BẢN DỊCH của các bản tóm tắt sang nhiều ngôn ngữ — BLEU là chỉ số chuẩn cho dịch máy. ROUGE (A) dùng cho tóm tắt, nhưng ở đây yếu tố cần đo là chất lượng dịch. AUC (C) và precision (D) là chỉ số phân loại." },
+
+  "339": { "answer": "C", "vi": "Không có dữ liệu gán nhãn về vùng nào là vùng nuôi cấy phát triển, nên phải dùng phương pháp không giám sát: clustering nhóm các điểm ảnh tương tự nhau để tách vùng phát triển khỏi nền. Logistic regression (A) và decision tree (B) cần nhãn. Dimensionality reduction (D) giảm số chiều chứ không phân vùng ảnh." },
+
+  "340": { "answer": "C", "vi": "Khác biệt quyết định giữa hai mô hình: Nova Micro chỉ xử lý văn bản, còn Nova Lite là mô hình đa phương thức, xử lý được ảnh, video và văn bản. Vì công ty cần xử lý cả tài liệu lẫn hình ảnh nên phải chọn Nova Lite dù muốn tiết kiệm. Các phương án A, B, D mô tả sai đặc điểm kỹ thuật của hai mô hình." },
+
+  "341": { "answer": "A", "vi": "Giải pháp phải làm chuỗi việc nhiều bước: hiểu câu hỏi, chuyển thành truy vấn OpenSearch, tạo file CSV rồi tải lên S3 — đó là công việc của một AI agent biết gọi công cụ. Một FM với few-shot prompting (B) không tự thực thi được các bước đó. Viết ứng dụng không dùng AI (C) mất khả năng hiểu câu hỏi tự nhiên. Decision tree (D) không phù hợp." },
+
+  "342": { "answer": "A", "vi": "Cần mô hình vừa hiểu được văn bản, hình ảnh lẫn video, vừa fine-tune được — Amazon Nova Pro là mô hình đa phương thức hỗ trợ tuỳ chỉnh. Titan Multimodal Embeddings (B) chỉ tạo embedding chứ không hiểu và sinh nội dung. Titan Text Express (C) chỉ xử lý văn bản. Nova Micro (D) cũng chỉ xử lý văn bản." },
+
+  "343": { "answer": "B", "vi": "Khối lượng prompt lớn, không cần kết quả ngay, và muốn ít công phát triển nhất — Amazon Bedrock batch inference nhận cả lô prompt qua API rồi trả kết quả bất đồng bộ, giá cũng rẻ hơn. Real-time (A) tốn kém và chậm với khối lượng lớn. Agents (C) phức tạp không cần thiết. Tự viết Lambda gửi từng prompt (D) tốn công nhất." },
+
+  "344": { "answer": "B", "vi": "RAG là quy trình để LLM tham chiếu nguồn tri thức xác thực bên ngoài nhằm tăng độ liên quan và chính xác của câu trả lời, mà KHÔNG cần huấn luyện lại. Phương án A mô tả việc huấn luyện. C mô tả điều ngược lại (giới hạn trong dữ liệu gốc). D nói về dịch thuật." },
+
+  "345": { "answer": "D", "vi": "Xây dựng giải pháp AI đáng tin cậy theo chuẩn quản lý đòi hỏi đảm bảo công bằng, minh bạch, trách nhiệm giải trình và bảo mật xuyên suốt vòng đời. Tối ưu GPU (A) là chuyện kỹ thuật. Chỉ để chuyên gia kỹ thuật tham gia (B) và hạn chế minh bạch (C) đi ngược hoàn toàn nguyên tắc AI đáng tin cậy." },
+
+  "346": { "answer": "C", "vi": "Lấy mô hình đã học một tác vụ rồi tinh chỉnh cho tác vụ khác nhưng có liên quan — đó là transfer learning. Hyperparameter tuning (A) chỉ dò tham số. Pre-training (B) là huấn luyện từ đầu. Reinforcement learning (D) là kiểu học qua phần thưởng." },
+
+  "347": { "answer": "A", "vi": "Prompt phải dùng được với mọi LLM trên Bedrock, nên điều cần lưu tâm là giới hạn số token tối đa — mỗi mô hình có context window khác nhau, prompt quá dài sẽ lỗi ở mô hình nhỏ. Các mô hình trên Bedrock đều hỗ trợ on-demand (B), đều cho điều chỉnh độ ngẫu nhiên (C) và đều tương thích Guardrails (D)." },
+
+  "350": { "answer": "B", "vi": "Phải liên lạc dịch vụ khẩn cấp trong vòng 30 giây kể từ khi phát hiện va chạm, và không được huấn luyện thêm — nên yếu tố quyết định là kích thước mô hình, vì mô hình nhỏ suy luận nhanh, đáp ứng ràng buộc thời gian. Model customization (A) bị loại vì đề cấm huấn luyện thêm. Chi phí (C) là thứ yếu so với an toàn tính mạng. Temperature (D) không ảnh hưởng tốc độ." },
+
+  "351": { "answer": "C", "vi": "Amazon Q Business có tính năng application guardrails (còn gọi là chat controls) để giới hạn trợ lý chỉ trả lời trong phạm vi chủ đề được công ty phê duyệt và chặn chủ đề bị cấm. Enterprise/Starter index (A, B) là gói dung lượng chỉ mục. Cross-account access (D) là chia sẻ chỉ mục giữa các tài khoản." },
+
+  "352": { "answer": "D", "vi": "Intelligent document processing (IDP) là tự động trích xuất và định dạng dữ liệu từ tài liệu quét, biểu mẫu. Phát hiện gian dịch (A), cá nhân hoá sản phẩm (B) và phân tích cảm xúc (C) đều là bài toán ML khác, không thuộc phạm vi IDP." },
+
+  "353": { "answer": "A", "vi": "Người dùng cố ghi đè chỉ dẫn ban đầu bằng câu 'bỏ qua mọi hướng dẫn trước đó' để mô hình hành xử ngoài giới hạn — đó là prompt injection. Data bias (B) là thiên lệch dữ liệu. Hallucination (C) là bịa thông tin. Data exposure (D) là rò rỉ dữ liệu." },
+
+  "354": { "answer": "C", "vi": "Có sẵn tập dữ liệu gán nhãn chất lượng cao và muốn tuỳ chỉnh foundation model để trả lời chính xác hơn — đó là fine-tuning. Continued pre-training (A) dùng dữ liệu KHÔNG nhãn. Tạo agent (B) là điều phối tác vụ. Prompt engineering (D) không tận dụng được tập dữ liệu đã gán nhãn." },
+
+  "355": { "answer": "D", "vi": "Muốn fine-tune một FM rồi chạy nó trên Bedrock, cách khả thi là dùng SageMaker AI để tuỳ chỉnh mô hình rồi nhập vào Bedrock qua tính năng Custom Model Import. Guardrails (A) chỉ lọc nội dung, không tạo ra mô hình. Personalize (B) là dịch vụ gợi ý. Conversational builder cho Agents (C) không phải công cụ tuỳ chỉnh mô hình." },
+
+  "356": { "answer": "D", "vi": "Muốn đo tác động tới DOANH THU, chỉ số trực tiếp là tỉ lệ chuyển đổi — bao nhiêu phần trăm khách được gợi ý đã thực sự mua hàng. Cross-domain performance (A) và solution efficiency (B) là chỉ số kỹ thuật. User satisfaction (C) đo cảm nhận, không quy ra tiền được." },
+
+  "357": { "answer": "A", "vi": "Yêu cầu là chỉ được dùng dữ liệu đã được phê duyệt, tuân thủ chính sách và nguyên tắc đạo đức — SageMaker Catalog quản trị dữ liệu, cho phép đăng ký, phê duyệt và kiểm soát quyền truy cập tới các tài sản dữ liệu. Clarify (B) phân tích bias. Model Registry (C) quản lý phiên bản mô hình. Model Cards (D) lập tài liệu mô hình." },
+
+  "358": { "answer": "A", "vi": "Ứng dụng phải hiểu yêu cầu của khách rồi tự gọi các API để hoàn tất giao dịch đặt chỗ — đó là Amazon Bedrock Agents, thành phần duy nhất trong danh sách có khả năng thực thi hành động. Intelligent prompt routing (B) chọn mô hình phù hợp. Knowledge Bases (C) chỉ truy xuất tài liệu. Guardrails (D) lọc nội dung." },
+
+  "359": { "answer": "C", "vi": "Theo thực hành tốt của MLOps, khi đưa mô hình vào chạy thật thì phải giám sát đầu ra liên tục để phát hiện suy giảm chất lượng hoặc drift. Hyperparameter tuning (A) và feature engineering (D) thuộc giai đoạn phát triển. Gán nhãn đánh giá của người dùng (B) hữu ích nhưng không phải yêu cầu bắt buộc của MLOps khi dùng mô hình pre-trained." },
+
+  "360": { "answer": "A", "vi": "Đã tuỳ chỉnh (fine-tune) mô hình trên Bedrock, để dùng được nó bắt buộc phải mua Provisioned Throughput cho custom model đó. SageMaker endpoint (B) và Model Registry (C) thuộc hệ SageMaker, không phải cách phục vụ custom model trên Bedrock. Đổi trạng thái phê duyệt (D) là khái niệm của SageMaker Model Registry." },
+
+  "361": { "answer": "A", "vi": "Chatbot phải xử lý được cả văn bản lẫn hình ảnh đầu vào rồi sinh câu trả lời — cần LLM đa phương thức, có trên Amazon Bedrock. Comprehend (B) chỉ phân tích văn bản. Amazon Q (C) là trợ lý doanh nghiệp, không phải nền tảng để tự xây chatbot đa phương thức. Rekognition (D) chỉ phân tích ảnh." },
+
+  "362": { "answer": "C", "vi": "Từ khoá LEAST operational effort, và công việc là viết mã kiểm thử phần mềm — Amazon Q Developer sinh unit test ngay trong IDE. Q Business (A) phục vụ tra cứu dữ liệu doanh nghiệp. Bedrock Agents (B) đòi phải tự xây dựng. Clarify (D) phân tích bias, không liên quan." },
+
+  "363": { "answer": "B", "vi": "Amazon Bedrock là nơi tập hợp foundation model từ nhiều nhà cung cấp, cho phép so sánh và chọn mô hình phù hợp với từng tình huống sử dụng. Personalize (A) là dịch vụ gợi ý. Q Developer (C) hỗ trợ lập trình. Rekognition (D) xử lý ảnh." },
+
+  "365": { "answer": "D", "vi": "Nhược điểm thật sự của generative AI trong môi trường sản xuất là hiện tượng ảo giác và thông tin sai lệch. Ba phương án còn lại đều mô tả ƯU điểm (độ chính xác cao, hành vi ổn định, ít tốn tài nguyên) nên không thể là nhược điểm — riêng B và C còn sai về bản chất vì generative AI vốn bất định và tốn tài nguyên." },
+
+  "366": { "answer": "A", "vi": "Từ khoá LEAST development effort để phát triển và triển khai ứng dụng dùng foundation model — Amazon Bedrock là dịch vụ được quản lý, gọi API là dùng ngay, không phải lo hạ tầng. SageMaker AI (B) đòi nhiều công sức ML hơn. PartyRock (C) chỉ là sân chơi thử nghiệm, không dùng để triển khai ứng dụng thật. Q Developer (D) là trợ lý lập trình." },
+
+  "367": { "answer": "C", "vi": "Dữ liệu về mẫu hành vi gian lận và mối quan hệ giữa chúng phù hợp với mô hình đồ thị — Amazon Neptune là cơ sở dữ liệu đồ thị, có sẵn Neptune ML để phân tích đồ thị bằng học máy. OpenSearch (A) là tìm kiếm, Aurora (B) là CSDL quan hệ, MemoryDB (D) là bộ nhớ đệm." },
+
+  "368": { "answer": "B", "vi": "Chỉ số cần đo là câu trả lời có bao quát HẾT mọi phần của câu hỏi hay không — đó là Completeness, một chỉ số dựng sẵn trong LLM-as-a-judge của Bedrock. ROUGE (A) so trùng n-gram với văn bản tham chiếu. Following instructions (C) đo mức tuân thủ chỉ dẫn về định dạng/phong cách. Refusal (D) đo tần suất mô hình từ chối trả lời." },
+
+  "369": { "answer": "C", "vi": "Hai yêu cầu ngược chiều nhau: sáng tạo thì tăng temperature, ngắn gọn thì giảm độ dài đầu ra — chỉ phương án C kết hợp đúng cả hai. A giảm cả hai (mất sáng tạo). B tăng cả hai (mất tính ngắn gọn). D thì sai cả hai chiều." },
+
+  "370": { "answer": "D", "vi": "Cần điều tra vì sao hệ thống gợi ý đồ chơi theo khuôn mẫu giới tính — SageMaker Clarify phát hiện bias trong dữ liệu lẫn trong dự đoán và giải thích yếu tố nào gây ra. Rekognition (A) xử lý ảnh, Q Developer (B) hỗ trợ lập trình, Comprehend (C) phân tích văn bản." },
+
+  "371": { "answer": "A", "vi": "Lưu vết mọi hành động mà từng người thực hiện trong tài khoản AWS phục vụ kiểm toán — đó là AWS CloudTrail, ghi lại lời gọi API kèm danh tính, thời gian, địa chỉ nguồn. Config (B) theo dõi thay đổi cấu hình tài nguyên. Audit Manager (C) tổng hợp bằng chứng theo khung tuân thủ. Trusted Advisor (D) đưa khuyến nghị." },
+
+  "372": { "answer": "A", "vi": "Mô hình AI đưa ra các con số ngân sách sai nhưng trình bày như thể đúng — đó là hallucination. Safety (B) là an toàn nội dung. Interpretability (C) là khả năng diễn giải. Cost (D) là chi phí vận hành." },
+
+  "373": { "answer": "C", "vi": "Yêu cầu là bản ghi CHỐNG SỬA ĐỔI và TRUY VẤN ĐƯỢC cho mọi lời gọi API — AWS CloudTrail Lake lưu sự kiện bất biến trong kho dữ liệu và cho truy vấn bằng SQL. Trusted Advisor (A) đưa khuyến nghị. Macie (B) phát hiện dữ liệu nhạy cảm. Inspector (D) quét lỗ hổng." },
+
+  "374": { "answer": "A", "vi": "Mô hình càng đơn giản càng dễ giải thích — linear regression cho ra phương trình với hệ số rõ ràng cho từng biến, minh bạch nhất trong bốn lựa chọn. SVM (B) khó diễn giải khi dùng kernel. Random cut forest (C) là tập hợp cây ngẫu nhiên. Neural network (D) là hộp đen điển hình." },
+
+  "375": { "answer": "C", "vi": "Kết nối từ SageMaker Studio tới Bedrock phải đi trong VPC của công ty — cấu hình AWS PrivateLink endpoint cho Bedrock API trong chính VPC đó. IAM (A) kiểm soát quyền hạn nhưng không quyết định đường đi của lưu lượng. Macie (B) không làm proxy. VPC peering (D) không áp dụng cho dịch vụ được AWS quản lý." },
+
+  "376": { "answer": "B", "vi": "Ứng dụng gia sư nhận đầu vào là văn bản hoặc ảnh chụp câu hỏi, rồi trả lời bằng văn bản kèm giải thích — cần multimodal LLM, mô hình hiểu nhiều loại đầu vào và sinh văn bản. Computer vision model (A) chỉ phân tích ảnh, không viết được lời giải. Diffusion (C) sinh ảnh. Text-to-speech (D) tạo giọng nói." },
+
+  "377": { "answer": "C", "vi": "Kết hợp LLM với nguồn tri thức bên ngoài để câu trả lời chính xác hơn — đó là Retrieval Augmented Generation (RAG). Reinforcement learning (A) học qua phần thưởng. NLP (B) là lĩnh vực rộng. Transfer learning (D) là tái sử dụng mô hình đã huấn luyện." },
+
+  "378": { "answer": "B", "vi": "Ứng dụng chạy thật một thời gian rồi câu trả lời kém dần, cần cảnh báo khi hiệu năng trôi — SageMaker Model Monitor theo dõi drift và gửi cảnh báo. A2I (A) tổ chức khâu con người rà soát. Rekognition (C) xử lý ảnh. Trusted Advisor (D) khuyến nghị tối ưu tài nguyên." },
+
+  "379": { "answer": "B", "vi": "Cần phát hiện dữ liệu nhạy cảm trong các bucket S3 trước khi chia sẻ với đối tác — Amazon Macie quét S3 bằng ML để tìm PII và dữ liệu nhạy cảm. Kendra (A) là công cụ tìm kiếm. Textract (C) trích xuất văn bản. Data Exchange (D) là chợ dữ liệu." },
+
+  "380": { "answer": "B", "vi": "Continued pre-training là đưa dữ liệu KHÔNG gán nhãn vào mô hình đã pre-trained để bổ sung kiến thức chuyên ngành. Phương án A mô tả fine-tuning (dữ liệu có nhãn, tác vụ cụ thể). C mô tả huấn luyện từ đầu. D mô tả đánh giá mô hình." }
+}

@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 162-204 (id 161-203).",
+
+  "161": { "answer": "C", "vi": "Tokenization là bước chia văn bản thành các đơn vị nhỏ (từ, phần từ, ký tự) để mô hình xử lý được. Nó không mã hoá (A), không nén tệp (B) và không dịch thuật (D)." },
+
+  "162": { "answer": "C", "vi": "Đặc trưng định danh của kiến trúc transformer là cơ chế self-attention, cho phép mỗi token 'nhìn' toàn bộ các token khác để nắm quan hệ ngữ cảnh. Lớp tích chập (A) là của CNN. Transformer xử lý được cả ảnh, âm thanh chứ không chỉ văn bản (B). Xử lý tuần tự từng phần tử (D) là đặc điểm của RNN — transformer xử lý song song." },
+
+  "163": { "answer": "D", "vi": "Hệ thống AI chấm điểm tín dụng để duyệt vay là quyết định tự động ảnh hưởng trực tiếp tới quyền lợi cá nhân, nên phải xem luật về trách nhiệm giải trình thuật toán (algorithm accountability) tại địa phương. Luật dữ liệu y tế (A), thẻ thanh toán (B) và quyền riêng tư giáo dục (C) đều thuộc lĩnh vực khác." },
+
+  "164": { "answer": "AC", "vi": "Câu này chọn 2. Bộ lọc nội dung của Bedrock Guardrails có các hạng mục: Hate, Insults, Sexual, Violence, Misconduct và Prompt Attack. Trong danh sách đưa ra, Hate và Violence nằm trong đó. Politics (B), Gambling (D) và Religion (E) không phải hạng mục dựng sẵn — muốn chặn thì phải tự khai báo qua denied topics." },
+
+  "165": { "answer": "B", "vi": "Prompt engineering dù làm tốt tới đâu vẫn mở ra bề mặt tấn công: kẻ xấu có thể chèn chỉ dẫn độc hại vào đầu vào để ghi đè hướng dẫn ban đầu (prompt injection). Ba phương án còn lại đều diễn đạt theo kiểu 'không đảm bảo tuyệt đối', là hạn chế chung chứ không phải rủi ro bảo mật cụ thể mà câu hỏi nhắm tới." },
+
+  "166": { "answer": "AC", "vi": "Câu này chọn 2. Trong pipeline RAG, phần chạy trước theo lô (offline) là chuẩn bị kho tri thức: sinh embedding cho nội dung và dựng chỉ mục tìm kiếm. Các bước còn lại phải chạy ngay khi người dùng hỏi: sinh embedding cho câu truy vấn (B), truy xuất nội dung liên quan (D) và sinh câu trả lời (E)." },
+
+  "167": { "answer": "B", "vi": "Chia bài toán lớn thành các bài toán con rồi gửi lần lượt cho LLM, đầu ra bước trước làm đầu vào bước sau — đó là prompt chaining. One-shot (A) là đưa một ví dụ. Tree of thoughts (C) khám phá nhiều nhánh suy luận song song. RAG (D) là truy xuất tri thức." },
+
+  "168": { "answer": "C", "vi": "Dữ liệu tồn kho thay đổi liên tục, nên không thể nhồi vào trọng số mô hình bằng huấn luyện. RAG truy xuất dữ liệu mới nhất tại thời điểm hỏi và đưa vào ngữ cảnh. Transfer learning (A) và federated learning (B) là kỹ thuật huấn luyện. One-shot prompting (D) không giải quyết được vấn đề dữ liệu cũ." },
+
+  "169": { "answer": "C", "vi": "Nhiều tổ chức cùng phát triển một mô hình nên cần tài liệu chuẩn hoá về phiên bản và quá trình phát triển — SageMaker Model Cards. Git (A) theo dõi mã nguồn chứ không phải siêu dữ liệu mô hình theo khuôn mẫu. Fraud Detector (B) và Comprehend (D) là dịch vụ AI cho mục đích khác." },
+
+  "170": { "answer": "D", "vi": "Phát hiện chất lượng mô hình thay đổi so với ban đầu để xử lý kịp thời — đó là SageMaker Model Monitor, theo dõi drift về dữ liệu và chất lượng khi mô hình đang chạy thật. JumpStart (A) là kho mô hình. HyperPod (B) là hạ tầng huấn luyện quy mô lớn. Data Wrangler (C) chuẩn bị dữ liệu." },
+
+  "171": { "answer": "C", "vi": "Chunking chia tài liệu thành các đoạn vừa phải trước khi tạo embedding, để khi truy xuất, hệ thống trả về đúng đoạn liên quan tới câu hỏi thay vì cả tài liệu dài — nhờ vậy ngữ cảnh đưa vào LLM sát và chính xác hơn. Nó không nhằm né giới hạn dung lượng CSDL (A), vẫn phải tạo embedding (B), và không phải để tiết kiệm chi phí lưu trữ (D)." },
+
+  "172": { "answer": "C", "vi": "Giai đoạn thử nghiệm, lưu lượng thấp, không dự đoán được mức dùng về sau, và muốn chi phí thấp nhất — On-Demand tính đúng theo token thực dùng, không dùng thì không mất tiền. Provisioned Throughput (B) tính tiền theo giờ dù có dùng hay không. EC2 GPU (A) và JumpStart (D) đều phải trả tiền hạ tầng liên tục." },
+
+  "173": { "answer": "B", "vi": "Cần chặn hẳn một chủ đề (nội dung chính trị) — Denied topics cho phép khai báo chủ đề bị cấm bằng mô tả ngôn ngữ tự nhiên. Word filters (A) chỉ chặn từ khoá cụ thể, dễ bị lách. Sensitive information filters (C) lọc PII. Content filters (D) lọc các hạng mục dựng sẵn như thù ghét, bạo lực — chính trị không nằm trong đó." },
+
+  "174": { "answer": "C", "vi": "Mục tiêu là giảm thời gian nhân viên phí phạm vào các trường hợp bị gắn cờ nhưng thực ra không gian lận — tức giảm false positive. Precision = TP/(TP+FP) đo đúng điều đó. Recall (A) quan tâm tới việc không bỏ sót gian lận. Accuracy (B) không phù hợp với dữ liệu mất cân bằng. Lift chart (D) là công cụ trực quan hoá." },
+
+  "175": { "answer": "B", "vi": "Cách hiệu quả nhất để người dùng tin câu trả lời là cho họ kiểm chứng được: đính kèm liên kết tới đúng trang tài liệu sản phẩm đã dùng làm căn cứ. Ghi mức độ tự tin (A) là con số người dùng khó diễn giải. Avatar (C) không liên quan tới độ tin cậy nội dung. Văn phong công ty (D) làm chuyên nghiệp hơn nhưng không chứng minh tính đúng đắn." },
+
+  "176": { "answer": "A", "vi": "Hệ thống phải nêu được lý do đằng sau khuyến nghị điều trị và trình bày dễ hiểu cho cả bác sĩ lẫn bệnh nhân — đó là explainability. Privacy and security (B) là bảo vệ dữ liệu. Fairness (C) là đối xử công bằng giữa các nhóm. Data governance (D) là khung quản trị dữ liệu." },
+
+  "177": { "answer": "A", "vi": "Ưu điểm của RAG là cho phép mô hình tham chiếu nguồn tri thức bên ngoài tại thời điểm trả lời, nhờ đó câu trả lời chính xác và giàu thông tin hơn mà không cần huấn luyện lại. RAG không tăng tốc huấn luyện (B), không dùng cho nhận dạng giọng nói (C) và không phải kỹ thuật tăng cường dữ liệu ảnh (D)." },
+
+  "178": { "answer": "D", "vi": "Mô hình đã fine-tune trên Bedrock, chạy thật với lưu lượng đều đặn mỗi phút — Provisioned Throughput cấp dung lượng dành riêng và là cách bắt buộc để phục vụ custom model, đồng thời rẻ hơn khi tải ổn định. On-demand (B) không khả dụng cho hầu hết custom model. EC2 (A) và Lambda (C) không chạy được mô hình Bedrock." },
+
+  "179": { "answer": "B", "vi": "Huấn luyện tiếp mô hình đã có trên tập dữ liệu CÓ NHÃN của một ngành cụ thể để nó quen thuật ngữ và yêu cầu riêng — đó là fine-tuning. Continuous pre-training (D) dùng dữ liệu KHÔNG nhãn. Data augmentation (A) tạo thêm mẫu. Quantization (C) nén mô hình để chạy nhẹ hơn." },
+
+  "180": { "answer": "A", "vi": "Agent đang hoạt động tốt, chỉ cần bổ sung vài ví dụ mẫu để chính xác hơn — cách làm là sửa advanced prompts của agent để nhúng các ví dụ đó vào. Guardrail (B) dùng để chặn nội dung, không phải nơi đặt ví dụ. Ground Truth (C) là gán nhãn dữ liệu. Thêm vào tập huấn luyện qua Lambda (D) đòi huấn luyện lại, quá phức tạp." },
+
+  "181": { "answer": "C", "vi": "IaC mô tả hạ tầng bằng mã nên môi trường tái lập được y hệt, triển khai nhất quán và mở rộng dễ dàng — giá trị cốt lõi trong MLOps. IaC không thay thế việc tinh chỉnh siêu tham số (A), không tự cấp máy mạnh (B) và cũng không tự chọn instance rẻ (D)." },
+
+  "182": { "answer": "C", "vi": "Instruction-based fine-tuning cần dữ liệu dạng chỉ dẫn kèm phản hồi mong muốn, tức các cặp câu hỏi – câu trả lời thuộc lĩnh vực của công ty. Gộp tài liệu thành một tệp (A) là dữ liệu thô cho continued pre-training. Gán nhãn tích cực/tiêu cực (B) phục vụ phân tích cảm xúc. Few-shot prompt (D) là kỹ thuật prompt, không phải dữ liệu huấn luyện." },
+
+  "183": { "answer": "C", "vi": "Federated learning huấn luyện mô hình ngay tại nơi dữ liệu nằm và chỉ gửi đi bản cập nhật trọng số, nhờ vậy dữ liệu gốc không bao giờ rời khỏi phạm vi kiểm soát — đảm bảo tuân thủ và quyền riêng tư. Reinforcement (A), transfer (B) và unsupervised learning (D) là các kiểu học, không có cơ chế bảo vệ dữ liệu nào." },
+
+  "185": { "answer": "B", "vi": "Hiện tại logic được viết cứng nên mỗi thị trường, mỗi dòng sản phẩm lại phải viết lại. Ưu thế của mô hình generative AI là khả năng thích ứng (adaptability): cùng một mô hình xử lý được nhiều loại khiếu nại khác nhau mà không cần lập trình lại. Tính dự đoán được của đầu ra (A), ít nhạy với thay đổi đầu vào (C) và khả năng giải thích (D) đều là điểm YẾU của generative AI, không phải ưu thế." },
+
+  "186": { "answer": "C", "vi": "Chỉ có hai kết quả: gian lận hoặc không gian lận — đó là phân loại nhị phân (binary classification). Regression (A) dự đoán giá trị liên tục. Diffusion (B) là mô hình sinh ảnh. Multi-class (D) dùng khi có từ ba nhãn trở lên." },
+
+  "188": { "answer": "D", "vi": "Cần giải pháp generative AI có chức năng chuyển giọng nói thành văn bản trong ngữ cảnh y khoa — AWS HealthScribe được thiết kế riêng để ghi và tạo ghi chú lâm sàng từ hội thoại bác sĩ–bệnh nhân. Q Developer (A) hỗ trợ lập trình. Polly (B) làm ngược lại (văn bản thành giọng nói). Rekognition (C) xử lý ảnh." },
+
+  "189": { "answer": "B", "vi": "Mô hình hồi quy (regression) cho ra giá trị số liên tục như giá nhà, doanh thu, nhiệt độ. Diffusion (A) sinh ảnh. Transformer (C) là kiến trúc mạng, không phải loại bài toán. Multi-modal (D) mô tả khả năng xử lý nhiều loại dữ liệu." },
+
+  "191": { "answer": "C", "vi": "Vector embedding biến văn bản thành số nên máy có thể tính khoảng cách/độ tương đồng giữa các đoạn văn bản bằng phép toán — nền tảng cho tìm kiếm ngữ nghĩa. Chia nhỏ văn bản (A) là chunking. Gộp ký tự thành đơn vị (B) là tokenization. Đếm số lần xuất hiện của từ (D) là bag-of-words, kỹ thuật cũ hơn và không nắm ngữ nghĩa." },
+
+  "192": { "answer": "BC", "vi": "Câu này chọn 2, và yêu cầu là dữ liệu phải ở nguyên Region nguồn với chi phí thấp nhất. Dùng Amazon Bedrock API nghĩa là fine-tuning diễn ra trong Region đó, dữ liệu không bị chuyển đi. Kết hợp AWS PrivateLink với VPC để lưu lượng không ra Internet. Outposts (A) và tự host Bedrock tại chỗ (D) đều không khả thi/rất tốn kém. CloudWatch (E) chỉ giám sát." },
+
+  "193": { "answer": "B", "vi": "Cần báo cáo chứng minh tuân thủ quy định quốc tế — AWS Artifact là cổng tải các chứng chỉ và báo cáo kiểm toán (SOC, ISO, PCI DSS) của AWS. Macie (A) phát hiện dữ liệu nhạy cảm. Secrets Manager (C) quản lý bí mật. Config (D) theo dõi cấu hình tài nguyên." },
+
+  "194": { "answer": "A", "vi": "Ứng dụng y tế trả lời câu hỏi cho bệnh nhân cần rào chắn an toàn: lọc nội dung có hại, chặn chủ đề nhạy cảm, che thông tin cá nhân — Guardrails for Amazon Bedrock. Inspector (B) quét lỗ hổng hạ tầng. Rekognition (C) xử lý ảnh. Trusted Advisor (D) khuyến nghị tối ưu tài nguyên." },
+
+  "195": { "answer": "B", "vi": "Trong bốn lựa chọn, BLEU là chỉ số duy nhất đo chất lượng văn bản do mô hình sinh ra bằng cách so trùng n-gram với bản tham chiếu. Lưu ý: chỉ số chuẩn cho tóm tắt thực ra là ROUGE, nhưng đề không đưa ROUGE vào lựa chọn. Accuracy (C) và F1 (A) dùng cho phân loại, MSE (D) dùng cho hồi quy." },
+
+  "196": { "answer": "D", "vi": "Fine-tuning huấn luyện tiếp mô hình nền trên dữ liệu có nhãn mới để nó làm tốt hơn một tác vụ cụ thể. Nó không thu nhỏ mô hình (A), không huấn luyện lại từ đầu (B) — đó mới là pre-training, và cũng không phải cách cập nhật kiến thức bằng dữ liệu mới (C) — đó là continued pre-training." },
+
+  "197": { "answer": "D", "vi": "Có 100 mẫu hội thoại chất lượng cao dạng cặp đầu vào–đầu ra, muốn mô hình học được giọng điệu đó — đúng điều kiện để chạy job fine-tuning trên Amazon Bedrock. Personalize (A) là dịch vụ gợi ý. HyperPod pre-training (B) dùng cho huấn luyện quy mô cực lớn, thừa thãi với 100 mẫu. TensorRT (C) là tối ưu tốc độ suy luận." },
+
+  "198": { "answer": "B", "vi": "Chatbot mở công khai trên website nhận đầu vào tự do từ người lạ, nên rủi ro ở khâu ĐẦU VÀO chính là prompt injection — chèn chỉ dẫn độc hại để chiếm quyền điều khiển mô hình. Data leakage (A) và hallucination (C) là vấn đề ở đầu ra. Concept drift (D) là suy giảm chất lượng theo thời gian, không phải lỗ hổng đầu vào." },
+
+  "199": { "answer": "B", "vi": "Muốn ngăn nội dung phân biệt đối xử, dùng Bedrock Guardrails để chặn các chủ đề đã khai báo trước (denied topics) và lọc nội dung độc hại. Phương án C 'chỉ cho phép trò chuyện trong các chủ đề định sẵn' là danh sách trắng, quá hạn chế và không phải cách Guardrails hoạt động. A và D nói về trải nghiệm người dùng, không phải kiểm duyệt." },
+
+  "200": { "answer": "B", "vi": "Ứng dụng nhận đầu vào là văn bản HOẶC ảnh chụp câu hỏi, rồi trả về câu trả lời viết kèm giải thích — cần mô hình hiểu nhiều phương thức đầu vào và sinh văn bản, tức multi-modal LLM. Computer vision model (A) chỉ phân tích ảnh, không viết được lời giải thích. Diffusion (C) sinh ảnh. Text-to-speech (D) tạo giọng nói." },
+
+  "201": { "answer": "D", "vi": "Kiểm thử để đo độ chính xác của mô hình diễn ra ở giai đoạn Evaluation, sau khi huấn luyện/tinh chỉnh và trước khi triển khai. Deployment (A) là đưa vào chạy thật. Data selection (B) là chọn dữ liệu. Fine-tuning (C) là bước huấn luyện thêm." },
+
+  "202": { "answer": "A", "vi": "Embeddings biểu diễn dữ liệu thành vector nhiều chiều, trong đó vị trí tương đối giữa các vector phản ánh quan hệ ngữ nghĩa. Phương án B mô tả RAG. C mô tả quantization. D mô tả vector database." },
+
+  "203": { "answer": "A", "vi": "Đặt temperature về 0 buộc mô hình luôn chọn token có xác suất cao nhất, cho kết quả ổn định nhất với cùng một prompt. Đặt temperature bằng 1 (D) làm ngược lại. Viết thêm câu 'hãy trả lời tất định' vào prompt (B, C) không tác động tới cơ chế lấy mẫu token nên không có hiệu lực thực sự." }
+}

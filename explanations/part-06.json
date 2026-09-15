@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 205-247 (id 204-246).",
+
+  "204": { "answer": "C", "vi": "Ứng dụng phải trả lời người dùng theo thời gian thực, nên tiêu chí quyết định là tốc độ suy luận (inference speed). Model complexity (A) ảnh hưởng gián tiếp nhưng không phải thứ cần đo. Innovation speed (B) là tốc độ ra bản mới của nhà cung cấp. Training time (D) không liên quan tới trải nghiệm lúc chạy." },
+
+  "205": { "answer": "A", "vi": "Chỉ dẫn đưa cho foundation model để nó trả lời chính xác hơn được gọi là prompt. Ba từ còn lại (direction, dialog, translation) không phải thuật ngữ chuẩn trong lĩnh vực này." },
+
+  "206": { "answer": "C", "vi": "Muốn giảm thiên lệch ngay từ khâu thu thập, dữ liệu phải cân bằng và lấy từ nhóm người đa dạng. Chỉ lấy khách hàng khớp nhân khẩu học hiện tại (A) sẽ khuếch đại thiên lệch sẵn có. Chỉ lấy người từng mua hàng (B) bỏ sót khách hàng tiềm năng. Dữ liệu công khai (D) không đảm bảo tính đại diện." },
+
+  "207": { "answer": "A", "vi": "Dự đoán khách hàng rời bỏ là bài toán phân loại nhị phân, và F1 score cân bằng precision với recall — phù hợp vì dữ liệu churn thường mất cân bằng. MSE (B) và R-squared (C) dành cho hồi quy. Thời gian huấn luyện (D) không phải chỉ số chất lượng." },
+
+  "208": { "answer": "A", "vi": "Tỉ lệ giữa số mục phân loại đúng và tổng số mục (đúng cộng sai) chính là công thức của Accuracy. Precision (B) chỉ xét trong nhóm được dự đoán dương. Recall (D) chỉ xét trong nhóm thực sự dương. F1 (C) là trung bình điều hoà của hai chỉ số đó." },
+
+  "209": { "answer": "A", "vi": "Dữ liệu nhiều gigabyte, chỉ cần chạy suy luận một lần mỗi ngày, không cần kết quả tức thì — đúng đặc điểm của batch inference. Asynchronous (B) dùng khi vẫn cần độ trễ gần thời gian thực. Real-time (C) và serverless (D) duy trì endpoint chờ yêu cầu, lãng phí với tần suất một lần/ngày." },
+
+  "210": { "answer": "A", "vi": "Mô hình đã chạy thật một thời gian dài rồi mới xuất hiện bất thường — cần công cụ giám sát liên tục sau triển khai. SageMaker Model Monitor theo dõi cả drift dữ liệu lẫn drift về bias trong môi trường production. Clarify (B) tính toán bias/giải thích tại một thời điểm, thường dùng trước khi triển khai. Model Cards (C) là tài liệu. Feature Store (D) lưu đặc trưng." },
+
+  "211": { "answer": "A", "vi": "Kiểm soát nhân viên được gọi mô hình nào trên Bedrock là bài toán phân quyền — dùng IAM policy giới hạn quyền bedrock:InvokeModel tới từng model ARN cụ thể. STS (B) chỉ cấp thông tin xác thực tạm thời. Phương án C nói về 'restrict model subscription', không phải cơ chế thật. Inspector (D) quét lỗ hổng." },
+
+  "212": { "answer": "A", "vi": "Học từ dữ liệu đã gán sẵn giá trị đầu ra đúng — đó là định nghĩa của supervised learning. Unsupervised (B) làm việc với dữ liệu không nhãn. Reinforcement learning (C) học qua phần thưởng từ môi trường. Transfer learning (D) là tái sử dụng mô hình đã huấn luyện, không nói về việc có nhãn hay không." },
+
+  "213": { "answer": "B", "vi": "Top K giới hạn số token ứng viên có xác suất cao nhất mà mô hình được chọn ở mỗi bước sinh. Maximum tokens (A) giới hạn độ dài đầu ra. Temperature (C) điều chỉnh phân bố xác suất chứ không giới hạn số ứng viên. Batch size (D) là tham số huấn luyện." },
+
+  "214": { "answer": "C", "vi": "Chuyển dữ liệu thành biểu diễn vector trước khi lưu vào cơ sở dữ liệu là việc của text embeddings model. Text completion (A) và instruction following (B) là mô hình sinh văn bản. Image generation (D) sinh ảnh." },
+
+  "215": { "answer": "D", "vi": "Cung cấp nhiều ví dụ mẫu theo đúng định dạng mong muốn để mô hình bắt chước — đó là few-shot prompting (đề nói 'example descriptions', số nhiều). One-shot (C) chỉ đưa một ví dụ. Zero-shot (A) không có ví dụ nào. Chain-of-thought (B) dùng cho bài toán suy luận." },
+
+  "216": { "answer": "B", "vi": "Dữ liệu đưa vào fine-tuning sẽ đi thẳng vào trọng số mô hình, nên cách duy nhất đảm bảo mô hình không bao giờ tiết lộ thông tin cá nhân là loại bỏ PII TRƯỚC khi huấn luyện. Guardrails (A) lọc ở đầu ra, vẫn có rủi ro lọt và không xoá được kiến thức đã học. Tăng Top-K (C) không liên quan. Mã hoá dữ liệu lưu trữ (D) không ngăn mô hình học nội dung đó." },
+
+  "217": { "answer": "D", "vi": "Chatbot phải tra tồn kho theo thời gian thực rồi trả về vị trí sản phẩm — tức mô hình cần vừa suy luận vừa gọi công cụ bên ngoài. ReAct (Reasoning and Acting) là kỹ thuật đan xen suy luận với hành động gọi API. Zero-shot (A), few-shot (B) và least-to-most (C) đều chỉ thao tác trên văn bản, không truy cập được dữ liệu tồn kho." },
+
+  "218": { "answer": "B", "vi": "Theo cam kết của Amazon Bedrock, dữ liệu đầu vào và đầu ra của khách hàng không được chia sẻ với nhà cung cấp mô hình, cũng không dùng để huấn luyện mô hình gốc. Ba phương án còn lại đều mô tả việc chia sẻ dữ liệu ở mức độ nào đó, trái với cam kết này." },
+
+  "219": { "answer": "C", "vi": "Tạo phụ đề cho nội dung video cần chuyển lời thoại thành văn bản — Amazon Transcribe, dịch vụ này còn xuất trực tiếp định dạng phụ đề như SRT/VTT. Comprehend (A) phân tích văn bản. Polly (B) làm chiều ngược lại. Translate (D) chỉ dịch, phải có văn bản trước." },
+
+  "220": { "answer": "B", "vi": "Gom khách hàng thành các nhóm dựa trên lịch sử mua và sở thích mà không có nhãn định sẵn — đó là clustering. Classification (A) cần nhãn có sẵn. Regression (C) dự đoán số. Content generation (D) là sinh nội dung." },
+
+  "221": { "answer": "C", "vi": "Muốn kiểm soát nhân viên tiếp cận foundation model nào, SageMaker JumpStart cho phép cấu hình giới hạn danh sách mô hình mà người dùng nhìn thấy và triển khai được. Cost Explorer (A) phân tích chi phí. AWS Artifact (B) cung cấp tài liệu tuân thủ. OpenSearch (D) là công cụ tìm kiếm." },
+
+  "222": { "answer": "B", "vi": "Công ty so sánh bản dịch của công cụ với bản dịch của người trên cùng bộ tài liệu — BLEU chấm điểm bằng cách đối chiếu với bản tham chiếu nên chỉ có ý nghĩa SO SÁNH TƯƠNG ĐỐI giữa hai phương pháp, không phải thước đo chất lượng tuyệt đối. Đó là lý do B đúng còn A sai. BERTScore (C, D) chủ yếu dùng cho tóm tắt và sinh văn bản, không phải chuẩn cho dịch máy." },
+
+  "223": { "answer": "A", "vi": "Temperature cao làm phân bố xác suất phẳng hơn, mô hình dám chọn cả token ít khả năng, nhờ đó đầu ra đa dạng và sáng tạo hơn. Giảm Top K (B) làm ngược lại, thu hẹp lựa chọn. Tăng độ dài đầu ra (C) chỉ khiến câu dài hơn. Độ dài prompt (D) không quyết định tính sáng tạo." },
+
+  "224": { "answer": "A", "vi": "Cần giao diện thân thiện để gán nhãn dữ liệu, nhằm giảm sai sót của mô hình trên dữ liệu thực tế mới — SageMaker Ground Truth cung cấp sẵn giao diện gán nhãn và quản lý lực lượng gán nhãn. Canvas (B) để xây mô hình không cần code. Bedrock playground (C) và Agents (D) không phục vụ gán nhãn." },
+
+  "225": { "answer": "AE", "vi": "Câu này chọn 2. Tuyển dụng bằng AI đụng tới hai chiều cốt lõi của AI có trách nhiệm: fairness (không thiên vị nhóm nhân khẩu nào) và transparency (công khai cách hệ thống ra quyết định để ứng viên và cơ quan quản lý giám sát được). Tolerance (B), flexibility (C) và open source (D) không phải chiều nào trong khung trách nhiệm AI của AWS." },
+
+  "226": { "answer": "C", "vi": "Mô hình chạy thật đúng một tuần, và câu hỏi là so dự đoán churn với hành vi thực tế của khách hàng — bài toán phân loại nhị phân, dùng F1 score. RMSE (A) cho hồi quy. ROI (B) là chỉ số tài chính. BLEU (D) đánh giá văn bản sinh." },
+
+  "227": { "answer": "A", "vi": "Từ khoá MOST cost-effectively, và nhu cầu là bổ sung ngữ cảnh từ thông tin nội bộ — Bedrock Knowledge Bases hiện thực RAG, không cần huấn luyện. Đổi FM (B) không đưa được dữ liệu công ty vào. Agents (C) dùng để điều phối hành động. Triển khai custom model (D) tốn kém nhất." },
+
+  "229": { "answer": "B", "vi": "Đảm bảo dữ liệu bao phủ mọi nhóm nhân khẩu là nói về tính đa dạng (diversity) của tập dữ liệu. Accuracy (A) là độ chính xác của giá trị. Recency bias (C) là thiên lệch thiên về dữ liệu mới. Reliability (D) là độ tin cậy của nguồn." },
+
+  "230": { "answer": "A", "vi": "Có sẵn kho tài liệu lớn và cần câu trả lời bám sát nội dung tài liệu đó — RAG là kỹ thuật phù hợp: truy xuất đoạn liên quan rồi đưa vào ngữ cảnh cho LLM. Few-shot (B) không đưa được cả kho tài liệu vào. Temperature = 1 (C) làm đầu ra thất thường. Giảm token (D) chỉ cắt ngắn." },
+
+  "231": { "answer": "B", "vi": "Chatbot dùng cách viết sáng tạo, viết tắt, sai chính tả có chủ đích — các chỉ số đếm từ trùng khớp sẽ chấm điểm rất thấp dù câu trả lời hay. BERTScore so sánh ở mức ngữ nghĩa bằng embedding nên vẫn đánh giá đúng. ROUGE (C) và BLEU (D) dựa trên trùng khớp n-gram, không phù hợp. F1 (A) dùng cho phân loại." },
+
+  "232": { "answer": "B", "vi": "Phân tích phản hồi bằng văn bản của khách hàng rồi tự động xếp vào các danh mục — đây là ứng dụng của xử lý ngôn ngữ tự nhiên (NLP). Computer vision (A) xử lý ảnh. Recommendation system (C) gợi ý sản phẩm. Fraud detection (D) phát hiện gian lận." },
+
+  "233": { "answer": "B", "vi": "Bedrock Guardrails có tính năng contextual grounding check, đối chiếu câu trả lời với nguồn tài liệu được cung cấp và chặn nội dung không có căn cứ — đúng nhu cầu đảm bảo tính xác thực cho ngành tài chính. AWS Config (A), Fraud Detector (C) và Audit Manager (D) đều không tác động tới đầu ra của mô hình." },
+
+  "235": { "answer": "C", "vi": "Lưu trữ, quản lý và đánh phiên bản cho nhiều mô hình là đúng chức năng của SageMaker Model Registry, bao gồm cả quy trình phê duyệt trước khi triển khai. Audit Manager (A) phục vụ tuân thủ. Model Monitor (B) giám sát khi chạy. Canvas (D) là công cụ xây mô hình không cần code." },
+
+  "236": { "answer": "A", "vi": "Giá trị Shapley (SHAP) định lượng mức đóng góp của từng đặc trưng vào một dự đoán cụ thể, nên vừa minh bạch vừa giải thích được. Độ chính xác (B) chỉ nói mô hình đúng bao nhiêu phần trăm, không nói vì sao. Confusion matrix (C) cũng chỉ mô tả kết quả. Endpoint bảo mật (D) thuộc về an ninh." },
+
+  "237": { "answer": "A", "vi": "Tự động gom khách hàng và sản phẩm tương tự nhau mà không có nhãn định trước — đó là clustering, thuộc unsupervised learning. Supervised (B) cần nhãn. Reinforcement (C) học qua phần thưởng. Semi-supervised (D) cần một phần dữ liệu có nhãn." },
+
+  "238": { "answer": "B", "vi": "Dịch bài báo từ tiếng Anh sang các ngôn ngữ khác — Amazon Translate, có chế độ dịch thời gian thực để nhúng thẳng vào website. Transcribe (A) chuyển giọng nói thành văn bản. Personalize (C) gợi ý nội dung. Textract (D) trích xuất văn bản từ tài liệu." },
+
+  "239": { "answer": "D", "vi": "Chatbot dựa trên tài liệu ngân hàng công khai, và cách cải thiện là đưa các gợi ý/manh mối rút ra từ tài liệu vào prompt để định hướng câu trả lời — đó là directional stimulus prompting. Đề không nhắc tới ví dụ mẫu nên few-shot (C) không khớp. Lưu ý: câu này cộng đồng chia đôi giữa C và D, nếu bạn thấy few-shot thuyết phục hơn thì có thể dùng nút sửa đáp án." },
+
+  "240": { "answer": "C", "vi": "Dữ liệu nhạy cảm nằm trong VPC và phải ở nguyên trong mạng riêng khi fine-tune trên Bedrock — AWS PrivateLink tạo kết nối riêng giữa VPC và Bedrock, lưu lượng không đi qua Internet. IAM role (A) và resource policy (B) kiểm soát AI được phép làm gì, không kiểm soát đường đi của dữ liệu. KMS (D) mã hoá dữ liệu nhưng không giữ nó trong mạng nội bộ." },
+
+  "241": { "answer": "AC", "vi": "Câu này chọn 2 và cần hai việc khác nhau. Phụ đề: Amazon Transcribe chuyển lời thoại thành văn bản, rồi Amazon Translate dịch sang ngôn ngữ khác. Lồng tiếng: Amazon Polly chuyển văn bản đã dịch thành giọng nói. Textract (B, E) dùng cho tài liệu chứ không phải video. Translate (D) chỉ dịch chữ, không tạo được giọng nói." },
+
+  "242": { "answer": "C", "vi": "Chính sách công ty thay đổi thường xuyên và chatbot phải phản ánh gần như tức thì — RAG qua Bedrock Knowledge Bases lấy nội dung mới nhất tại thời điểm hỏi, cập nhật tài liệu là có hiệu lực ngay. Fine-tune (A) phải huấn luyện lại mỗi lần đổi chính sách. Chọn FM (B) chưa giải quyết gì. Q Business (D) là một hướng khả dĩ nhưng đề yêu cầu chọn LLM, và RAG là câu trả lời trực tiếp." },
+
+  "243": { "answer": "A", "vi": "Huấn luyện có giám sát trên tập dữ liệu nhỏ đã gán nhãn, nhắm vào một tác vụ cụ thể — đó là fine-tuning trong vòng đời foundation model. Data selection (B) là chọn dữ liệu. Pre-training (C) huấn luyện từ đầu trên khối dữ liệu khổng lồ không nhãn. Evaluation (D) là đánh giá." },
+
+  "245": { "answer": "C", "vi": "Muốn fine-tune để mô hình tinh chỉnh văn phong của thông điệp đầu ra, phải cho nó thấy cả đầu vào lẫn đầu ra mong muốn — tức các cặp tin nhắn gốc và tin nhắn đã được viết lại. Chỉ có đầu vào (A) hoặc chỉ có đầu ra (B) thì mô hình không học được phép biến đổi. Mẫu rời rạc không ghép cặp (D) cũng vậy." },
+
+  "246": { "answer": "D", "vi": "Inference là dùng mô hình đã huấn luyện để đưa ra dự đoán trên dữ liệu mới — ở đây là dự đoán khả năng bệnh nhân tái nhập viện. Thu thập dữ liệu lịch sử (A) là bước chuẩn bị. Đánh giá bằng các chỉ số (B) là evaluation. Tìm quy luật trong dữ liệu (C) là phân tích/huấn luyện." }
+}

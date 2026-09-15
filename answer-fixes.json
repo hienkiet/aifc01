@@ -1,0 +1,21 @@
+{
+  "_note": "Sửa đáp án sau khi rà soát thủ công toàn bộ 417 câu. Key = id gốc (index trong AIF-C01 questions.json). build.js áp dụng file này với ưu tiên CAO NHẤT, trên cả khoá đáp án chính thức trong answer-keys-v2.json. CẬP NHẬT: cả 3 sửa đổi dưới đây sau đó đã được khoá đáp án chính thức (data-correct) xác nhận độc lập, nên chúng chỉ còn vai trò lưới an toàn.",
+
+  "49": {
+    "from": "D",
+    "answer": "A",
+    "reason": "Sửa đáp án: A (không phải D). Để dùng custom model đã tùy chỉnh trên Amazon Bedrock, phải mua Provisioned Throughput cho model đó. \"Grant access\" (Model access) chỉ áp dụng cho foundation model của nhà cung cấp, không áp dụng cho model của chính bạn. Bộ đề này có câu 362 hỏi y hệt và trả lời A, câu 179 cũng trả lời Provisioned Throughput."
+  },
+
+  "200": {
+    "from": "A",
+    "answer": "B",
+    "reason": "Sửa đáp án: B (không phải A). Ứng dụng nhận đầu vào là văn bản HOẶC ảnh, rồi trả lời bằng văn bản kèm giải thích — đó là mô hình ngôn ngữ đa phương thức (multi-modal LLM). Computer vision model không sinh được câu trả lời và giải thích dạng văn bản. Bộ đề này có câu 378 hỏi y hệt và trả lời Multimodal LLM."
+  },
+
+  "434": {
+    "from": "(chưa có đáp án — bình chọn hòa 3 chiều B/C/E)",
+    "answer": "BE",
+    "reason": "Bổ sung đáp án: B + E. BERTScore đo độ tương đồng ngữ nghĩa; ROUGE (thiên về recall) đo mức độ bao phủ thông tin then chốt so với văn bản tham chiếu. BLEU thiên về precision và dùng cho dịch máy, không phải lựa chọn đúng ở đây."
+  }
+}

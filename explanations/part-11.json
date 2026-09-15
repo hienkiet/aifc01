@@ -1,0 +1,69 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 416-452 (id 411-446).",
+
+  "411": { "answer": "A", "vi": "Muốn đầu ra ổn định, ít ngẫu nhiên hơn thì giảm temperature — mô hình sẽ luôn ưu tiên token có xác suất cao nhất. Learning rate (B) là tham số huấn luyện, không dùng lúc suy luận. Stop sequence (C) chỉ quy định điểm dừng. Giới hạn số token (D) chỉ đổi độ dài, không đổi tính ổn định." },
+
+  "413": { "answer": "A", "vi": "Lời gọi API từ VPC tới Bedrock không được đi qua Internet công cộng — AWS PrivateLink tạo kết nối riêng trong mạng AWS. Ký request bằng access key (B) là xác thực, không đổi đường đi. Chuyển ứng dụng về on-premises rồi gọi endpoint công khai (C) làm điều ngược lại. Mã hoá dữ liệu (D) bảo vệ nội dung nhưng lưu lượng vẫn qua Internet." },
+
+  "414": { "answer": "C", "vi": "Một số dự đoán cần con người xem lại trước khi hành động — đó là quy trình human-in-the-loop, hiện thực bằng Amazon Augmented AI (A2I). Clarify (A) phân tích bias. Ground Truth (B) gán nhãn dữ liệu huấn luyện. Model Monitor (D) giám sát drift." },
+
+  "415": { "answer": "A", "vi": "Từ khoá 'real-world applications' — muốn biết mô hình hoạt động ra sao trong thực tế thì phải thử nghiệm với người dùng thật, tức A/B testing có kiểm soát. Đánh giá bởi chuyên gia (B) hữu ích nhưng vẫn là môi trường phòng thí nghiệm. Đo độ chính xác trên tập huấn luyện (C) là sai lầm cơ bản. Phân tích biểu diễn nội tại (D) là nghiên cứu kỹ thuật." },
+
+  "416": { "answer": "A", "vi": "Từ khoá LEAST operational overhead để giới hạn chatbot chỉ trả lời về sản phẩm — đặt rào chắn (guardrail) ngay trên prompt template là cách nhanh nhất, không phải viết thêm mã. Tự viết logic nhận diện chủ đề (B) tốn công phát triển và bảo trì. Giảm dữ liệu mô hình truy cập (C) không ngăn mô hình dùng kiến thức nền. Giảm temperature (D) không giới hạn được chủ đề." },
+
+  "417": { "answer": "B", "vi": "Mục tiêu kinh doanh là giảm công sức nhân viên chăm sóc khách hàng bỏ ra trong mỗi cuộc gọi — chỉ số phản ánh trực tiếp là thời lượng cuộc gọi trung bình. Website engagement (A) không liên quan tới tổng đài. Tỉ lệ nghỉ việc (C) là hệ quả gián tiếp và rất chậm. First contact resolution (D) đo khả năng giải quyết dứt điểm, không đo công sức bỏ ra." },
+
+  "418": { "answer": "B", "vi": "Cần chỉ số TỰ ĐỘNG so bản tóm tắt do mô hình sinh với bản tóm tắt tham chiếu do người viết — đó là ROUGE, chuẩn mực cho đánh giá tóm tắt. F1 (A) dùng cho phân loại. Perplexity (C) đo độ 'bất ngờ' của mô hình với văn bản, không cần bản tham chiếu. FID (D) đánh giá chất lượng ảnh sinh." },
+
+  "419": { "answer": "C", "vi": "Dùng phản hồi của nhân viên để tinh chỉnh thêm câu trả lời của mô hình — đó chính là RLHF (học tăng cường từ phản hồi của con người). Model distillation (A) là nén mô hình. Continued pre-training (B) dùng dữ liệu văn bản thô, không tận dụng được đánh giá của con người. Intelligent prompt routing (D) là chọn mô hình phù hợp cho từng prompt." },
+
+  "420": { "answer": "A", "vi": "Amazon Bedrock cung cấp nhiều foundation model hiệu năng cao từ các nhà cung cấp hàng đầu qua một API chung. Rekognition (B) xử lý ảnh, Lex (C) xây chatbot theo kịch bản, Kendra (D) là công cụ tìm kiếm doanh nghiệp — cả ba đều là dịch vụ AI chuyên biệt, không phải nơi tập hợp FM." },
+
+  "421": { "answer": "AB", "vi": "Câu này chọn 2. Chuẩn bị dữ liệu fine-tune theo nguyên tắc AI có trách nhiệm cần: nguồn dữ liệu đa dạng về nhân khẩu để mô hình công bằng hơn, và tiêu chuẩn gán nhãn nhất quán trên toàn tập dữ liệu để tránh nhiễu và thiên lệch do người gán nhãn. Chạy theo số lượng bất kể chất lượng (C), chỉ dùng dữ liệu tổng hợp (D) và giảm số nhãn (E) đều làm giảm chất lượng và tăng rủi ro." },
+
+  "422": { "answer": "B", "vi": "Ongoing pre-training liên tục bổ sung dữ liệu mới nên kiến thức của mô hình được cập nhật và chất lượng cải thiện dần theo thời gian. Nó không làm mô hình bớt phức tạp (A), không rút ngắn thời gian huấn luyện (C) và cũng không giảm chi phí huấn luyện (D) — thực tế còn tốn thêm." },
+
+  "423": { "answer": "B", "vi": "Cần sinh mã và unit test theo thời gian thực ngay khi lập trình viên đang gõ — Amazon Q Developer tích hợp vào IDE làm đúng việc này. Personalize (A) là dịch vụ gợi ý sản phẩm. Comprehend (C) phân tích văn bản. Kendra (D) là công cụ tìm kiếm." },
+
+  "424": { "answer": "A", "vi": "Cần kiểm tra thiên lệch TRƯỚC khi huấn luyện — SageMaker Clarify tính các chỉ số pre-training bias trực tiếp trên tập dữ liệu. Chỉ số post-training (C) chỉ tính được sau khi mô hình đã huấn luyện xong, không đáp ứng yêu cầu 'trước khi huấn luyện'. Model Cards (B, D) là công cụ lập tài liệu, không tính toán chỉ số bias." },
+
+  "425": { "answer": "C", "vi": "Lãnh đạo lo RAG làm kiến trúc phức tạp, nên lập luận thuyết phục nhất là lợi ích cốt lõi: RAG neo câu trả lời vào nguồn tri thức xác thực, nhờ đó giảm hẳn hiện tượng bịa đặt thông tin. RAG thực tế làm TĂNG độ trễ (A) chứ không giảm, không liên quan tới tốc độ huấn luyện (B), và không làm giảm các biện pháp kiểm soát phát triển (D)." },
+
+  "426": { "answer": "D", "vi": "Trợ lý RAG trả lời thiếu hoặc sai, nên phải đánh giá CẢ HAI khâu của pipeline: tài liệu truy xuất có đúng và đủ liên quan không, và câu trả lời cuối có chính xác không. Chỉ dùng BLEU (A) không đo được chất lượng truy xuất. Đo độ trễ (B) là chỉ số vận hành. Chỉ đánh giá câu trả lời cuối (C) bỏ sót nguyên nhân gốc nằm ở khâu truy xuất." },
+
+  "427": { "answer": "D", "vi": "Trích xuất cả dữ liệu có cấu trúc lẫn phi cấu trúc từ tài liệu PDF quét và biểu mẫu — Amazon Textract, dịch vụ chuyên đọc tài liệu, nhận diện bảng biểu và trường biểu mẫu. Polly (A) tạo giọng nói, Lex (B) xây chatbot, Personalize (C) gợi ý sản phẩm." },
+
+  "428": { "answer": "C", "vi": "Theo hướng dẫn về AI có trách nhiệm của AWS, hệ thống hỗ trợ tuyển dụng phải được kiểm thử để chắc chắn không phân biệt đối xử với các nhóm được pháp luật bảo vệ. Để AI tự quyết định tuyển dụng không có người xem lại (A) là rủi ro nghiêm trọng. Chỉ huấn luyện trên hồ sơ nhân viên thành công trong quá khứ (B) tái tạo đúng thiên lệch cũ. Giữ bí mật quy trình (D) đi ngược nguyên tắc minh bạch." },
+
+  "429": { "answer": "B", "vi": "Cần ghi lại bài toán kinh doanh, giả định về dữ liệu, lưu ý khi huấn luyện và rủi ro khi sử dụng — đó chính là nội dung chuẩn của SageMaker Model Cards, phục vụ minh bạch và quản trị. Model Registry (A) quản lý phiên bản và phê duyệt. Model Monitor (C) giám sát drift. Model Dashboard (D) là màn hình tổng quan." },
+
+  "430": { "answer": "A", "vi": "Yêu cầu là ĐÁNH GIÁ và LẬP HỒ SƠ chứng minh tuân thủ cho khối lượng công việc của chính công ty — AWS Audit Manager tự động thu thập bằng chứng và ánh xạ vào các khung tuân thủ. AWS Artifact (D) chỉ cho tải chứng chỉ của bản thân AWS, không đánh giá hệ thống của bạn. Model Cards (B) và Model Monitor (C) thuộc phạm vi mô hình, không phải tuân thủ pháp lý." },
+
+  "431": { "answer": "A", "vi": "Nhiều tình huống sử dụng khác nhau và mục tiêu là chi phí thấp nhất — nguyên tắc là chọn mô hình NHỎ NHẤT vẫn đáp ứng yêu cầu chất lượng cho từng tác vụ, vì tóm tắt văn bản không cần mô hình mạnh như sinh mã. Dùng mô hình lớn nhất cho mọi việc (B) lãng phí. Huấn luyện FM riêng cho từng use case (C) đắt nhất. Batch cho mọi yêu cầu (D) không dùng được cho trợ lý cần trả lời tức thì." },
+
+  "432": { "answer": "B", "vi": "Cần mô hình pre-trained, mẫu giải pháp và notebook ví dụ để triển khai và fine-tune nhanh — đó đúng là SageMaker JumpStart. SageMaker Studio (A) là môi trường phát triển tổng quát. Bedrock model catalog (C) liệt kê mô hình nhưng không cung cấp notebook mẫu và solution template. Canvas (D) là công cụ không cần code." },
+
+  "433": { "answer": "BC", "vi": "Câu này chọn 2. Hệ thống sàng lọc hồ sơ phải đảm bảo đối xử công bằng giữa mọi nhóm nhân khẩu (fairness) và phải giải thích được vì sao một ứng viên bị loại (explainability) — hai chiều cốt lõi của AI có trách nhiệm. Modularity (A) là đặc tính kiến trúc phần mềm. Secrecy (D) đi ngược minh bạch. Underfitting (E) là lỗi chất lượng mô hình." },
+
+  "434": { "answer": "BE", "vi": "Câu này chọn 2, và hai yêu cầu là khác nhau. BERTScore đo độ tương đồng NGỮ NGHĨA bằng cách so sánh embedding, nên nhận ra cách diễn đạt khác nhau mà cùng ý. ROUGE thiên về recall nên đo mức BAO PHỦ thông tin then chốt của bản gốc. BLEU (C) thiên về precision và dùng cho dịch máy. F1 (A) và Accuracy (D) là chỉ số phân loại." },
+
+  "435": { "answer": "D", "vi": "Ghi lại mục đích, người sở hữu và giới hạn của mô hình — đó là SageMaker Model Cards. AWS AI Service Cards (B) là tài liệu do AWS công bố cho các dịch vụ AI của chính AWS, không dùng cho mô hình của bạn. Bedrock (A) là nền tảng FM. Prescriptive Guidance (C) là thư viện hướng dẫn kiến trúc." },
+
+  "436": { "answer": "D", "vi": "Chiến lược quản trị dữ liệu xuyên suốt vòng đời gồm: chính sách vòng đời dữ liệu, kiểm soát truy cập, ghi log và giám sát. Ba phương án còn lại đều là phản ví dụ — cho mọi nhân viên truy cập tự do (A), lưu vô thời hạn không phân loại (B) và chỉ dựa vào rà soát thủ công (C) đều vi phạm nguyên tắc quản trị." },
+
+  "439": { "answer": "B", "vi": "Theo dõi thời điểm dữ liệu được tạo, cập nhật và lên lịch xoá — đó là data lifecycle management (quản lý vòng đời dữ liệu). Data residency (A) quy định nơi lưu trữ theo địa lý. Data observability (C) là giám sát chất lượng và tình trạng dữ liệu. Data logging (D) chỉ là ghi nhật ký." },
+
+  "440": { "answer": "AE", "vi": "Câu này chọn 2. Thực hành bảo mật cho MCP gồm: luôn cập nhật MCP server và Amazon Q Developer CLI để vá lỗ hổng, và chỉ cài server từ nguồn đáng tin cậy. Chỉ giám sát hoạt động thành công bình thường (B) là bỏ qua dấu hiệu tấn công. Lưu cấu hình nhạy cảm dạng văn bản thuần (C) và tự động phê duyệt mọi công cụ (D) đều là lỗ hổng nghiêm trọng." },
+
+  "441": { "answer": "B", "vi": "Hệ thống sinh tóm tắt bệnh án nhưng đôi khi bịa thông tin nghe rất thuyết phục — đó là hallucination, và cách khắc phục là neo câu trả lời vào chính hồ sơ bệnh nhân bằng RAG. Kiểm tra đầu vào và định dạng đầu ra (A) không ngăn được nội dung sai. Mô hình nhỏ hơn (C) thường bịa nhiều hơn. Tăng tài nguyên và kích thước mô hình (D) không loại bỏ được ảo giác." },
+
+  "442": { "answer": "C", "vi": "Gọi một endpoint duy nhất và để Bedrock tự chọn mô hình phù hợp nhất cho từng yêu cầu — đó là Amazon Bedrock prompt router (intelligent prompt routing). Guardrails (A) lọc nội dung. Knowledge Bases (B) phục vụ RAG. Agent memory (D) lưu ngữ cảnh hội thoại." },
+
+  "443": { "answer": "AB", "vi": "Câu này chọn 2. Quản trị AI hiệu quả cần: quy trình rà soát định kỳ để kiểm tra kết quả mô hình có chính xác, công bằng và đúng chính sách hay không, và đào tạo cho mọi nhân viên làm việc với công cụ AI. Phó mặc cho nhà cung cấp đám mây (C) là hiểu sai mô hình trách nhiệm chung. Chỉ để lập trình viên tham gia (D) thiếu góc nhìn pháp lý và kinh doanh. Chỉ rà soát khi có sự cố (E) là bị động." },
+
+  "444": { "answer": "D", "vi": "Đo mức độ câu trả lời bám sát các đoạn văn bản đã truy xuất, tức không bịa thêm ngoài nguồn — đó là chỉ số Faithfulness trong đánh giá Knowledge Bases của Bedrock. Refusal (A) đo tần suất mô hình từ chối trả lời. Harmfulness (B) đo nội dung có hại. Stereotyping (C) đo định kiến." },
+
+  "445": { "answer": "B", "vi": "Từ khoá MOST operationally efficient, và yêu cầu là minh bạch, giải thích được cho hệ thống gợi ý kết bạn — SageMaker Clarify tính feature attribution để chỉ ra yếu tố nào dẫn tới gợi ý. Rekognition (A) phân tích ảnh, không giải thích mô hình. Chuyển sang Personalize (C) là làm lại hệ thống chứ không phải tăng tính giải thích. Ground Truth (D) là gán nhãn thủ công, tốn công nhất." },
+
+  "446": { "answer": "C", "vi": "Cung cấp cho khách hàng bên ngoài quyền truy cập an toàn tới mô hình từ ứng dụng của họ — cách chuẩn là tạo một API endpoint bảo mật, có xác thực và kiểm soát truy cập. Tự viết script xác thực (A) không phải giải pháp chuẩn. Chia sẻ thông tin đăng nhập của mô hình (B) là vi phạm bảo mật nghiêm trọng. Nhúng thẳng mô hình vào ứng dụng khách (D) làm lộ tài sản trí tuệ và không kiểm soát được." }
+}

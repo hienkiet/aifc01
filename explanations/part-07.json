@@ -1,0 +1,83 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 248-294 (id 247-293).",
+
+  "247": { "answer": "B", "vi": "Cần quy trình cho người xem lại dự đoán của mô hình, với ngưỡng độ tin cậy tự đặt và chỉnh được theo thời gian — đó đúng là Amazon Augmented AI (A2I). Personalize (A) là dịch vụ gợi ý. Inspector (C) quét lỗ hổng. Audit Manager (D) phục vụ tuân thủ." },
+
+  "248": { "answer": "D", "vi": "Trợ lý AI cho nhân viên tra cứu dữ liệu nội bộ doanh nghiệp — Amazon Q Business kết nối tới các nguồn dữ liệu nội bộ và trả lời bằng ngôn ngữ tự nhiên. Rekognition (A) xử lý ảnh, Textract (B) trích xuất văn bản từ tài liệu, Lex (C) xây chatbot theo kịch bản chứ không tự truy vấn kho tri thức doanh nghiệp." },
+
+  "249": { "answer": "A", "vi": "Từ khoá 'without writing any code' — SageMaker Canvas cho phép xây và triển khai mô hình bằng giao diện trực quan, không cần lập trình. Rekognition (B) và Comprehend (D) là API dựng sẵn nhưng không cho bạn tự xây mô hình. DeepRacer (C) là công cụ học reinforcement learning qua xe đua mô hình." },
+
+  "250": { "answer": "C", "vi": "Trong mô hình sinh ảnh khuếch tán, số bước sinh (generation steps) quyết định mức độ tinh xảo: nhiều bước cho ảnh chi tiết, ít bước cho ảnh trừu tượng, thô hơn. Model checkpoint (A) là phiên bản trọng số. Batch size (B) là số ảnh sinh cùng lúc. Token length (D) áp dụng cho văn bản." },
+
+  "251": { "answer": "A", "vi": "Yêu cầu là lời gọi API giữa ứng dụng và foundation model không được đi qua Internet công cộng — AWS PrivateLink tạo kết nối riêng qua mạng nội bộ AWS. Amazon Q (B) là trợ lý AI. CloudFront (C) là CDN phân phối nội dung công khai. CloudTrail (D) chỉ ghi log." },
+
+  "252": { "answer": "A", "vi": "Cần lọc nội dung có hại ở CẢ prompt đầu vào lẫn phản hồi của chatbot — đó là Amazon Bedrock Guardrails. Agents (B) điều phối tác vụ. Inference API (C) chỉ là cách gọi mô hình. Custom models (D) là mô hình đã tuỳ chỉnh, không có chức năng lọc." },
+
+  "253": { "answer": "C", "vi": "Muốn thử nghiệm, học hỏi về generative AI với chi phí thấp nhất — PartyRock là sân chơi miễn phí của Amazon Bedrock, xây app generative AI không cần tài khoản AWS hay viết code. Q Developer (A) và Q Business (D) là công cụ trả phí cho công việc thật. JumpStart (B) phải trả tiền hạ tầng khi triển khai mô hình." },
+
+  "254": { "answer": "A", "vi": "Huấn luyện trợ lý AI cho một lĩnh vực chuyên biệt cần dữ liệu hội thoại đa dạng, sử dụng đúng thuật ngữ của lĩnh vực đó. Dữ liệu doanh số theo thời gian (B), phân tích cảm xúc tin tức (C) và mã sản phẩm/người dùng (D) đều không dạy được mô hình cách trò chuyện trong lĩnh vực chuyên môn." },
+
+  "255": { "answer": "A", "vi": "Ứng dụng duyệt vay phải công bằng và có trách nhiệm, nên việc căn bản là rà soát dữ liệu huấn luyện tìm thiên lệch và đảm bảo mọi nhóm nhân khẩu đều có mặt. Mạng nhiều tầng ẩn (B) làm mô hình khó giải thích hơn. Giữ bí mật cách ra quyết định (C) đi ngược nguyên tắc minh bạch. Giám sát trên tập kiểm thử tĩnh (D) không phát hiện được vấn đề mới phát sinh." },
+
+  "257": { "answer": "A", "vi": "Người dùng ít kiến thức ML và không muốn viết code, cần dự đoán tỉ lệ nghỉ việc — SageMaker Canvas làm được bằng giao diện kéo-thả. Clarify (B) phân tích bias. Model Monitor (C) giám sát mô hình đang chạy. Data Wrangler (D) chuẩn bị dữ liệu nhưng vẫn cần hiểu biết kỹ thuật và không tự xây mô hình." },
+
+  "258": { "answer": "C", "vi": "Mục tiêu là hệ thống AI công bằng và giải thích được, nên nội dung đào tạo phải nhắm thẳng vào nhận thức về thiên lệch và các nguyên tắc AI có trách nhiệm. Kỹ năng lập trình nâng cao (A), giao thức mã hoá (B) và thuật toán ML nâng cao (D) đều là kỹ năng kỹ thuật, không giải quyết vấn đề đạo đức." },
+
+  "259": { "answer": "A", "vi": "Khả năng hiểu được vì sao mô hình đưa ra một dự đoán gọi là model interpretability (tính diễn giải). Model training (B) là quá trình huấn luyện. Interoperability (C) là khả năng tương tác giữa các hệ thống — dễ nhầm vì viết gần giống. Model performance (D) là hiệu năng." },
+
+  "260": { "answer": "B", "vi": "Phân nhóm khách hàng theo nhân khẩu học và hành vi mua khi không có nhãn — thuật toán gom cụm K-means. k-NN (A), decision tree (C) và SVM (D) đều là học có giám sát, đòi hỏi nhãn có sẵn." },
+
+  "261": { "answer": "A", "vi": "Đầu ra thiếu đa dạng nghĩa là mô hình luôn chọn các token an toàn nhất — tăng temperature sẽ mở rộng phân bố xác suất, cho ra kết quả phong phú hơn. Batch size (B), learning rate (C) và optimizer (D) đều là tham số của quá trình huấn luyện, không tác động tới đầu ra lúc suy luận." },
+
+  "262": { "answer": "C", "vi": "Muốn loại bỏ những thứ cụ thể khỏi ảnh sinh ra, dùng negative prompt để khai báo rõ những gì không được xuất hiện. Tăng temperature (A) làm ảnh ngẫu nhiên hơn. Prompt chi tiết hơn (B) mô tả thứ muốn có nhưng không cấm được thứ không muốn. Đổi mô hình (D) là giải pháp thừa." },
+
+  "264": { "answer": "B", "vi": "Cần gán nhãn dữ liệu bằng sức người nhưng không muốn tự xây ứng dụng gán nhãn cũng không muốn quản lý đội ngũ — SageMaker Ground Truth Plus là dịch vụ trọn gói, AWS lo cả công cụ lẫn nhân lực. Data Wrangler (A) chuẩn bị dữ liệu. Transcribe (C) và Macie (D) không liên quan tới gán nhãn." },
+
+  "265": { "answer": "D", "vi": "Tìm kiếm ảnh bằng ngôn ngữ tự nhiên đòi hỏi cơ sở dữ liệu vector với khả năng tìm lân cận gần nhất — Amazon OpenSearch Service hỗ trợ chỉ mục vector và k-NN. Comprehend (A) phân tích văn bản, Personalize (B) gợi ý sản phẩm, Polly (C) tạo giọng nói." },
+
+  "267": { "answer": "B", "vi": "Dùng tài liệu nội bộ (dạng văn bản thô, không có nhãn) để bổ sung kiến thức miền cho foundation model — đó là continued pre-training. Classification (A) và regression (D) là loại bài toán chứ không phải cách tuỳ chỉnh. Distillation (C) là nén mô hình lớn thành mô hình nhỏ." },
+
+  "268": { "answer": "C", "vi": "Model Monitor báo có data drift vượt ngưỡng, nghĩa là dữ liệu thực tế đã khác xa dữ liệu huấn luyện — cách khắc phục căn bản là huấn luyện lại mô hình với dữ liệu mới. Khởi động lại endpoint (A) không đổi được gì. Nới ngưỡng cảnh báo (B) là giấu vấn đề đi. Theo dõi thí nghiệm (D) không giải quyết drift." },
+
+  "269": { "answer": "B", "vi": "Muốn minh bạch quy trình ra quyết định với khách hàng, phải áp dụng kỹ thuật explainable AI để chỉ ra yếu tố nào đã ảnh hưởng tới hạn mức tín dụng. Thay bằng hệ thống luật cứng (A) là từ bỏ ML chứ không phải giải thích nó. Giao diện đẹp kèm giải thích kỹ thuật (C) không giúp khách hàng thường hiểu được. Tăng độ chính xác (D) không thay thế được nghĩa vụ minh bạch." },
+
+  "270": { "answer": "B", "vi": "Hai yêu cầu: được cảnh báo khi chất lượng suy luận giảm, và ngăn tái diễn. Huấn luyện lại mô hình xử lý vấn đề hiện tại, còn SageMaker Model Monitor theo dõi drift liên tục và gửi cảnh báo về sau. Clarify (A) không phải công cụ giám sát liên tục. Feature Store (C) và JumpStart (D) hoàn toàn không có chức năng phát hiện drift." },
+
+  "271": { "answer": "A", "vi": "Gom nhóm khách hàng dựa trên lịch sử mua mà không có nhãn định sẵn là clustering — ví dụ điển hình của unsupervised learning. Phân loại ảnh chó/mèo (B) và dự đoán giá nhà (C) đều cần nhãn, thuộc supervised. Học chơi cờ bằng thử-sai (D) là reinforcement learning." },
+
+  "272": { "answer": "C", "vi": "Đánh giá chất lượng bản tóm tắt do LLM sinh ra — ROUGE là chỉ số chuẩn, đo mức nội dung quan trọng của văn bản gốc được giữ lại trong bản tóm tắt. Recall đơn thuần (A) chỉ là một thành phần. AUC (B) dùng cho phân loại. MSE (D) cho hồi quy." },
+
+  "273": { "answer": "C", "vi": "Nhóm nghiên cứu muốn chính các nhà khoa học chấm điểm đầu ra — Amazon Bedrock model evaluation hỗ trợ chế độ đánh giá bằng con người với đội ngũ tự chọn. Personalize (A) là dịch vụ gợi ý, không có chức năng đánh giá. Rekognition (B) kiểm duyệt ảnh. Comprehend (D) phân tích cảm xúc." },
+
+  "275": { "answer": "D", "vi": "Cung cấp lời giải thích cho dự đoán của mô hình tới khách hàng và các bên liên quan — SageMaker Clarify tính feature attribution bằng SHAP. QuickSight (A) là công cụ BI. Comprehend (B) là NLP. Trusted Advisor (C) khuyến nghị tối ưu tài nguyên." },
+
+  "276": { "answer": "C", "vi": "Phân tích cảm xúc là việc hiểu ý nghĩa và sắc thái của ngôn ngữ con người, nên nó là một nhánh con của xử lý ngôn ngữ tự nhiên (NLP). Computer vision (A) xử lý hình ảnh, robotics (B) điều khiển máy móc, time series forecasting (D) dự báo theo thời gian." },
+
+  "277": { "answer": "D", "vi": "Truy cập riêng tư tới Bedrock API và không để dữ liệu lộ ra Internet — AWS PrivateLink tạo kết nối riêng giữa VPC và dịch vụ. CloudFront (A) phân phối nội dung công khai. Glue (B) làm ETL. Lake Formation (C) quản trị dữ liệu tập trung." },
+
+  "278": { "answer": "A", "vi": "Phân tích cảm xúc trên khối lượng lớn phản hồi dạng văn bản tự do — dùng LLM để thực hiện tác vụ NLP này. Thuật toán hồi quy (B) dự đoán giá trị số, không phân loại cảm xúc. Recommendation engine (C) gợi ý sản phẩm. Thuật toán chuỗi thời gian (D) dự báo theo thời gian, không đọc hiểu văn bản." },
+
+  "280": { "answer": "D", "vi": "Công ty đang cân nhắc mô hình nào sinh được ảnh và mô hình nào sinh được mô tả — tức xét kiểu dữ liệu đầu vào/đầu ra mà mô hình hỗ trợ, gọi là modality (phương thức). Latency (A) là độ trễ, model size (B) là kích thước, model customization (C) là khả năng tuỳ chỉnh — không cái nào nói về loại đầu ra." },
+
+  "281": { "answer": "D", "vi": "Gán mỗi đánh giá vào một trong ba nhãn định sẵn (trung tính, tích cực, tiêu cực) — đó là bài toán phân loại (classification). Open-ended generation (A), summarization (B) và machine translation (C) đều là tác vụ sinh văn bản, cần chỉ số đánh giá khác hẳn." },
+
+  "283": { "answer": "A", "vi": "Gom các điểm dữ liệu thành nhóm dựa trên độ tương đồng, không dùng nhãn — đó là clustering, thuộc unsupervised learning. Nhận diện ảnh động vật (B) và dự đoán giá nhà (C) cần dữ liệu có nhãn. Sinh văn bản từ prompt (D) là generative AI." },
+
+  "284": { "answer": "C", "vi": "Tìm kiếm trong kho tài liệu học liệu lớn ở quy mô doanh nghiệp — Amazon Kendra là dịch vụ enterprise search dùng ML, hiểu câu hỏi ngôn ngữ tự nhiên và trả về đoạn trả lời chính xác. Comprehend (A) phân tích văn bản. Textract (B) trích xuất văn bản từ tài liệu quét. Personalize (D) gợi ý nội dung." },
+
+  "285": { "answer": "C", "vi": "Từ khoá MOST operationally efficient, và mục tiêu là sinh VIDEO. Amazon Nova Reel sinh video trực tiếp, không cần khâu dựng thủ công. Hai phương án A và B chỉ sinh ảnh tĩnh rồi phải dùng phần mềm dựng phim — tốn công. Nova Pro (D) là mô hình đa phương thức hiểu video chứ không sinh video." },
+
+  "286": { "answer": "D", "vi": "Dữ liệu mất cân bằng giữa các lớp, và cần đo xem mô hình cân bằng giữa việc phát hiện đúng và phát hiện đủ tới đâu — F1 score, trung bình điều hoà của precision và recall. Accuracy (A) gây hiểu lầm nghiêm trọng khi dữ liệu lệch. Recall (B) và precision (C) mỗi cái chỉ nhìn một nửa vấn đề." },
+
+  "287": { "answer": "B", "vi": "Gán danh mục (cá nhân hay doanh nghiệp) vào từng bản ghi giao dịch chính là data labeling — tạo nhãn cho dữ liệu để huấn luyện có giám sát. Data encoding (A) là chuyển đổi định dạng biểu diễn. Normalization (C) đưa giá trị về cùng thang đo. Data balancing (D) cân bằng số lượng mẫu giữa các lớp." },
+
+  "288": { "answer": "C", "vi": "Rút ra các ý chính từ tài liệu chính sách dài — đó là bài toán tóm tắt (summarization), thế mạnh của generative AI. Regression (A) dự đoán số. Clustering (B) gom nhóm. Classification (D) gán nhãn, không tạo ra bản tóm lược." },
+
+  "289": { "answer": "B", "vi": "Cần biết đặc trưng đầu vào nào ảnh hưởng thế nào tới hành vi mô hình — SageMaker Clarify tính feature importance/SHAP để trả lời chính xác câu hỏi đó. Canvas (A) là công cụ xây mô hình không cần code. Feature Store (C) lưu trữ đặc trưng. Ground Truth (D) gán nhãn dữ liệu." },
+
+  "291": { "answer": "C", "vi": "Dữ liệu tốc độ Internet được thu thập liên tục theo thời gian và cần phân tích biến động trong ngày để dự đoán gián đoạn — đó là dữ liệu chuỗi thời gian (time series). Tabular (A) là mô tả chung chung, thiếu yếu tố thời gian vốn là mấu chốt ở đây. Text (B) và audio (D) không đúng loại." },
+
+  "292": { "answer": "D", "vi": "Phát hiện mẫu bất thường trong dữ liệu cảm biến mà KHÔNG có dữ liệu gán nhãn — autoencoder học cách tái tạo dữ liệu bình thường, khi gặp mẫu lạ thì sai số tái tạo tăng vọt, nhờ đó phát hiện bất thường mà không cần nhãn. Linear regression (A), classification (B) và decision tree (C) đều là học có giám sát, đòi hỏi nhãn." },
+
+  "293": { "answer": "A", "vi": "Muốn đo tác động TRỰC TIẾP tới doanh số, phải nhìn tỉ lệ khách hàng thực sự mua hàng sau khi tương tác với trợ lý AI (conversion rate). Số lượt tương tác (B) chỉ đo mức sử dụng. Điểm cảm xúc từ phản hồi (C) đo sự hài lòng. Độ chính xác hiểu ngôn ngữ (D) là chỉ số kỹ thuật." }
+}

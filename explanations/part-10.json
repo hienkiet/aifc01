@@ -1,0 +1,61 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 383-414 (id 381-410).",
+
+  "381": { "answer": "C", "vi": "Feature engineering là tạo ra hoặc chọn lọc các đặc trưng phù hợp từ dữ liệu thô để mô hình học tốt hơn — ví dụ ghép diện tích với số phòng, tách tháng bán ra khỏi ngày. Trực quan hoá dữ liệu (A) thuộc EDA. Tinh chỉnh siêu tham số (B) là bước khác. Thu thập dữ liệu từ nhiều nguồn (D) là khâu chuẩn bị dữ liệu." },
+
+  "382": { "answer": "D", "vi": "Mô hình đa phương thức (multimodal) là mô hình xử lý được nhiều loại dữ liệu khác nhau như ảnh, âm thanh, video và văn bản. Triển khai nhiều phiên bản (A), huấn luyện nhiều mô hình (B) và viết mã nhiều ngôn ngữ lập trình (C) đều không liên quan tới khái niệm 'đa phương thức'." },
+
+  "383": { "answer": "B", "vi": "Tốc độ mô hình xử lý yêu cầu và trả kết quả gọi là inference latency (độ trễ suy luận). Model size (A) là số tham số. Context window (C) là giới hạn token xử lý trong một lượt. Fine-tuning (D) là kỹ thuật tuỳ chỉnh mô hình." },
+
+  "384": { "answer": "B", "vi": "Khởi tạo trọng số ngẫu nhiên rồi huấn luyện trên khối dữ liệu web khổng lồ bằng hàm mục tiêu mô hình hoá ngôn ngữ — đó là pre-training, giai đoạn đầu tiên tạo ra một LLM. Fine-tuning (A) diễn ra sau, trên mô hình đã có trọng số. Model selection (C) là chọn mô hình. Deployment (D) là triển khai." },
+
+  "386": { "answer": "A", "vi": "Bỏ hẳn đặc trưng độ tuổi không xoá được thiên lệch, vì dữ liệu vốn đã lệch hẳn về nhóm trung niên. Mô hình sẽ học chủ yếu từ nhóm chiếm đa số và dự đoán kém chính xác cho nhóm trẻ và nhóm cao tuổi. Xoá một cột không làm giảm nhu cầu dữ liệu (B), không giúp riêng nhóm trẻ (C) và chắc chắn không làm mọi nhóm đều chính xác (D)." },
+
+  "387": { "answer": "B", "vi": "Mô hình sinh ra nội dung không liên quan tới đầu vào hoặc tác vụ — đó là hallucination (ảo giác). Interpretability (A) là khả năng diễn giải. Data bias (C) là thiên lệch trong dữ liệu. Nondeterminism (D) là việc cùng đầu vào cho ra đầu ra khác nhau, không phải sinh nội dung lạc đề." },
+
+  "388": { "answer": "C", "vi": "Chỉ cho phép người có thẩm quyền truy cập dữ liệu huấn luyện — đó là bài toán phân quyền, dùng AWS IAM. KMS (A) mã hoá dữ liệu nhưng việc quyết định ai được dùng khoá vẫn do IAM. EMR (B) xử lý dữ liệu lớn. Redshift (D) là kho dữ liệu." },
+
+  "389": { "answer": "A", "vi": "Muốn dữ liệu phản ánh sự đa dạng của người dùng toàn cầu, phải cân bằng tỉ lệ đại diện giữa các nhóm trong tập dữ liệu. Dùng dữ liệu của một vùng (B) làm mất tính toàn cầu. Lấy thêm mẫu cho nhóm đa số (C) và loại bỏ nhóm thiểu số (D) đều làm thiên lệch trầm trọng hơn." },
+
+  "390": { "answer": "B", "vi": "Cần một môi trường hợp nhất cho cả dữ liệu lẫn AI, nhiều nhóm cùng truy cập, cùng xây và chia sẻ mô hình cũng như ứng dụng generative AI một cách an toàn — đó là Amazon SageMaker Unified Studio. Lex (A) xây chatbot. PartyRock (C) là sân chơi cá nhân. Q Developer (D) là trợ lý lập trình." },
+
+  "391": { "answer": "A", "vi": "Cần chặn mô hình trả lời câu hỏi về chính trị — Amazon Bedrock Guardrails cho khai báo denied topics bằng mô tả ngôn ngữ tự nhiên. Agents (B) điều phối tác vụ. Clarify (C) phân tích bias. Model Monitor (D) giám sát drift." },
+
+  "392": { "answer": "B", "vi": "Để dùng tài liệu làm kho tri thức cho RAG, phải chia tài liệu thành các đoạn (chunk) rồi tạo embedding cho từng đoạn, lưu vào vector database để truy xuất theo ngữ nghĩa. Mã hoá tài liệu (A) là bảo mật. Gắn metadata (C) hỗ trợ lọc nhưng không phải bước cốt lõi. One-hot encoding (D) là kỹ thuật cũ, không nắm được ngữ nghĩa." },
+
+  "393": { "answer": "A", "vi": "Tạo báo cáo business intelligence và tự động sinh bản tóm tắt cho lãnh đạo từ dữ liệu người dùng cung cấp — Amazon Q trong QuickSight. Rekognition (B) xử lý ảnh. Textract (C) trích xuất văn bản từ tài liệu. Polly (D) tạo giọng nói." },
+
+  "394": { "answer": "C", "vi": "Đổi từ decision tree sang neural network được độ chính xác cao hơn nhưng mất khả năng diễn giải — đó là đánh đổi hiệu năng lấy tính diễn giải (interpretability). Portability (B, D) là khả năng chuyển đổi môi trường, không phải vấn đề ở đây. Compliance (A) không tăng lên khi mô hình khó giải thích hơn." },
+
+  "395": { "answer": "A", "vi": "Cần một mẫu prompt chuẩn dùng lại nhiều lần, chỉ thay phần mô tả từng sản phẩm — Amazon Bedrock Prompt Management lưu prompt kèm biến (variables) để tái sử dụng. Knowledge Bases (B) phục vụ RAG. Model evaluation (C) đánh giá mô hình. Cross-region inference (D) phân tải giữa các vùng." },
+
+  "396": { "answer": "D", "vi": "Minh bạch hơn nghĩa là nhìn thấy rõ hơn mô hình hoạt động thế nào, nhờ đó phát hiện thiên lệch dễ hơn và quản trị mô hình tốt hơn. Minh bạch KHÔNG làm giảm nhu cầu kiểm định (A), không xoá bỏ nghĩa vụ giám sát tuân thủ (B) và chắc chắn không tự động loại bỏ mọi thiên lệch (C) — nó chỉ giúp phát hiện." },
+
+  "397": { "answer": "D", "vi": "Hai yêu cầu: kiểm duyệt theo đúng giá trị và chuẩn mực đạo đức của chính công ty, và bắt kịp các dạng nội dung xấu mới xuất hiện. RLHF với phản hồi thời gian thực từ đội kiểm duyệt viên lành nghề đáp ứng cả hai. Pre-training trên nội dung Internet (A) không phản ánh giá trị công ty. Tập dữ liệu lịch sử (B) không xử lý được xu hướng mới. Nguyên tắc đạo đức chung chung (C) không phải giá trị riêng của công ty." },
+
+  "398": { "answer": "A", "vi": "Cùng một đầu vào cho ra đầu ra khác nhau là hành vi bình thường của LLM do cơ chế lấy mẫu token theo xác suất — tính bất định (nondeterministic). Đây không phải lỗi cấu hình guardrail (B) hay lỗ hổng bảo mật (C). Phương án D nói ngược lại hoàn toàn." },
+
+  "399": { "answer": "CE", "vi": "Câu này chọn 2. Cần lấy dữ liệu có nhãn từ khối dữ liệu chưa gán nhãn, và dữ liệu không chứa thông tin mật nên dùng lực lượng gán nhãn bên ngoài được. SageMaker Ground Truth với Mechanical Turk và job gán nhãn của SageMaker đều là cách hợp lệ. Batch inference (A) dùng chính mô hình chưa chuẩn để gán nhãn, sinh lỗi tích luỹ. PyTorch Distributed (B) là thư viện huấn luyện. OCR (D) chỉ đọc chữ trong ảnh, không áp dụng cho dữ liệu giao dịch." },
+
+  "400": { "answer": "D", "vi": "Cách chuẩn để Amazon Bedrock Agents gọi được dịch vụ bên ngoài là khai báo action group trỏ tới một API tuỳ chỉnh (Lambda hoặc lược đồ OpenAPI) — đó chính là phương án D. Negative prompting (A) và zero-shot (C) chỉ là kỹ thuật viết prompt, không mở được kết nối ra ngoài. LƯU Ý: câu này gây tranh cãi — khoá đáp án chính thức ghi D, nhưng nhiều người bình luận chọn B (Model Context Protocol), vì MCP cũng là chuẩn để agent kết nối công cụ bên ngoài, chỉ là mới hơn và gắn với Bedrock AgentCore hơn là Bedrock Agents cổ điển. Nếu bạn thấy B thuyết phục hơn, dùng nút sửa đáp án để đổi." },
+
+  "401": { "answer": "C", "vi": "Danh mục sản phẩm chỉ cập nhật mỗi tuần một lần, không cần kết quả tức thì — chế độ Batch của Bedrock rẻ hơn đáng kể (giảm khoảng 50% so với on-demand). On-Demand (A) đắt hơn cho khối lượng lớn. Provisioned Throughput (B) tính tiền liên tục dù chỉ dùng mỗi tuần một lần. Model evaluation (D) không phải mô hình giá." },
+
+  "402": { "answer": "B", "vi": "Muốn loại bỏ những đặc điểm nhất định khỏi ảnh sinh ra, dùng negative prompt để nêu rõ những gì không được xuất hiện. Mask prompt (A) và inpainting (C) dùng để chỉnh sửa vùng cụ thể của ảnh có sẵn. Outpainting (D) mở rộng ảnh ra ngoài khung hiện tại." },
+
+  "403": { "answer": "C", "vi": "Ngăn người dùng tìm cách vượt qua các cơ chế an toàn của trợ lý — đó là chính sách Prompt attacks của Bedrock Guardrails, phát hiện prompt injection và jailbreak. Contextual grounding check (A) kiểm tra câu trả lời có bám nguồn hay không. Denied topics (B) chặn chủ đề. Sensitive information filters (D) lọc PII." },
+
+  "404": { "answer": "C", "vi": "Cần neo câu trả lời vào nguồn dữ liệu chính thống của công ty để đảm bảo minh bạch và chính xác — đó là RAG. Prompt engineering (A) không đưa được nguồn dữ liệu vào. Reinforcement learning (B) là kỹ thuật huấn luyện. 'Static knowledge base' (D) chỉ là kho tài liệu tĩnh, không có cơ chế truy xuất và đưa vào ngữ cảnh mô hình." },
+
+  "405": { "answer": "B", "vi": "Tuân thủ quy định quản trị dữ liệu cho hệ thống duyệt vay đòi hỏi theo dõi và quản lý dữ liệu huấn luyện xuyên suốt vòng đời: nguồn gốc, thời hạn lưu, ai truy cập. Sửa đầu ra không lưu vết kiểm toán (A), ưu tiên tốc độ hơn yêu cầu nơi lưu trữ dữ liệu (C) đều vi phạm. Chỉ dùng dữ liệu tổng hợp (D) né tránh vấn đề chứ không phải giải pháp quản trị." },
+
+  "406": { "answer": "B", "vi": "Chỉ dẫn hệ thống của chatbot bị người dùng moi ra bằng cách dụ mô hình nhắc lại — đó là prompt leakage (rò rỉ prompt). Data poisoning (A) là đầu độc dữ liệu huấn luyện. Hallucination (C) là bịa thông tin. Output ungroundedness (D) là câu trả lời không bám nguồn." },
+
+  "407": { "answer": "C", "vi": "Yêu cầu là sinh câu trả lời DỰA TRÊN DỮ LIỆU CỦA CÔNG TY, và trong bốn lựa chọn chỉ có fine-tune mô hình trên dữ liệu công ty làm được điều đó. Ba phương án còn lại đều chỉ nói tới việc dùng mô hình pre-trained có sẵn (của Amazon, mã nguồn mở, hay bên thứ ba) — không cái nào đưa dữ liệu công ty vào." },
+
+  "408": { "answer": "C", "vi": "Dữ liệu có cấu trúc là dữ liệu sắp xếp theo hàng và cột với kiểu dữ liệu xác định — tệp CSV chứa số liệu đo lường là ví dụ điển hình. Bình luận trên diễn đàn (A), video tin tức (B) và bản ghi hội thoại (D) đều là dữ liệu phi cấu trúc." },
+
+  "409": { "answer": "D", "vi": "Cần lưu và tái sử dụng các chỉ dẫn hệ thống kèm ngữ cảnh trong công việc hằng ngày với FM trên Bedrock — đó là Prompt management. Knowledge Bases (A) phục vụ RAG. Guardrails (B) lọc nội dung. Playgrounds (C) chỉ để thử nghiệm tạm thời, không lưu trữ có tổ chức." },
+
+  "410": { "answer": "A", "vi": "Từ khoá LEAST implementation effort, và điểm mấu chốt là dữ liệu có nhãn rất hạn chế. RAG truy vấn thẳng cơ sở dữ liệu sản phẩm lúc chạy và đưa mô tả nguyên bản làm ngữ cảnh — không cần dữ liệu có nhãn, không cần huấn luyện. Fine-tune trên dữ liệu ít ỏi (B) cho kết quả kém và phải làm lại hằng tuần. Nhiều FM kèm lớp định tuyến (C) phức tạp. Huấn luyện FM mới (D) tốn kém nhất." }
+}

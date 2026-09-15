@@ -1,0 +1,73 @@
+{
+  "_note": "Giải thích tiếng Việt — câu 1-35 (id 0-34). Trường 'answer' dùng để build.js đối chiếu, nếu lệch với đáp án hiện tại sẽ cảnh báo lúc build.",
+
+  "0": { "answer": "B", "vi": "PDP (Partial Dependence Plot) vẽ ra ảnh hưởng của từng đặc trưng lên dự đoán khi giữ các đặc trưng khác cố định — đúng thứ cần cho yêu cầu minh bạch (transparency) và giải thích được (explainability) trước cổ đông. Code huấn luyện (A) và dữ liệu mẫu (C) là tài liệu kỹ thuật, không giải thích vì sao mô hình ra quyết định. Bảng hội tụ (D) chỉ nói mô hình học ổn định, không nói yếu tố nào tác động tới kết quả." },
+
+  "1": { "answer": "C", "vi": "Yêu cầu là đọc văn bản pháp lý rồi rút ra các ý chính — đây chính là bài toán tóm tắt (summarization), thế mạnh của LLM. NER (A) chỉ trích xuất thực thể rời rạc như tên người, ngày tháng, không cho ra 'ý chính'. Recommendation engine (B) và dịch đa ngôn ngữ (D) lạc đề hoàn toàn." },
+
+  "2": { "answer": "A", "vi": "Từ khoá là 'document how the inner mechanism affects the output' — cần mô hình tự nó giải thích được. Decision tree cho ra đường đi quyết định dạng if-then đọc được trực tiếp. Neural network (D) là hộp đen. Linear/logistic regression (B, C) tuy dễ diễn giải nhưng không phù hợp cho bài toán phân loại 20 lớp bằng cách này; câu hỏi nhấn mạnh cơ chế nội tại nên decision tree là lựa chọn chuẩn." },
+
+  "3": { "answer": "B", "vi": "'Đếm xem mô hình phân loại đúng bao nhiêu ảnh' chính là định nghĩa của Accuracy = số dự đoán đúng / tổng số dự đoán. R-squared (A) và RMSE (C) là chỉ số cho bài toán hồi quy (dự đoán số). Learning rate (D) là siêu tham số huấn luyện, không phải chỉ số đánh giá." },
+
+  "4": { "answer": "A", "vi": "Muốn đầu ra ngắn gọn và đúng một ngôn ngữ cụ thể thì cách rẻ và nhanh nhất là viết lại prompt cho rõ yêu cầu đó. Đổi kích thước mô hình (B) không kiểm soát được định dạng. Tăng temperature (C) và tăng Top K (D) làm đầu ra ngẫu nhiên và sáng tạo hơn — đi ngược lại mục tiêu nhất quán." },
+
+  "5": { "answer": "C", "vi": "Ba dấu hiệu cùng chỉ về Asynchronous inference: payload lớn (tới 1 GB), thời gian xử lý dài (tới 1 giờ), và vẫn cần độ trễ gần thời gian thực. Real-time (A) giới hạn payload 6 MB và timeout 60 giây. Serverless (B) cũng giới hạn tương tự và có cold start. Batch transform (D) là xử lý theo lô, không đáp ứng 'near real-time'." },
+
+  "6": { "answer": "B", "vi": "Tận dụng mô hình đã huấn luyện sẵn để làm tác vụ mới có liên quan, thay vì xây từ đầu — đó đúng là định nghĩa của transfer learning. Tăng/giảm số epoch (A, C) chỉ điều chỉnh quá trình huấn luyện hiện có. Unsupervised learning (D) là kiểu học, không phải chiến lược tái sử dụng mô hình." },
+
+  "7": { "answer": "A", "vi": "Yêu cầu là độ chính xác cao và giảm thiểu rủi ro gán nhãn sai — cần con người kiểm duyệt. SageMaker Ground Truth Plus là dịch vụ gán nhãn có đội ngũ chuyên gia do AWS quản lý (human-in-the-loop). Rekognition (C) nhận diện ảnh có sẵn chứ không tạo ảnh. Knowledge base (B) và QuickSight Q (D) không liên quan tới gán nhãn." },
+
+  "8": { "answer": "A", "vi": "Khi Bedrock không đọc được dữ liệu trong S3, nguyên nhân gần như luôn là thiếu quyền: IAM role mà Bedrock đảm nhiệm phải có quyền đọc bucket và giải mã dữ liệu. Mở public access (B) là lỗ hổng bảo mật nghiêm trọng và không phải cách sửa. Prompt engineering (C) không cấp được quyền. Xoá dữ liệu nhạy cảm (D) không giải quyết lỗi truy cập." },
+
+  "9": { "answer": "A", "vi": "Độ trễ thấp nhất đạt được khi suy luận diễn ra ngay trên thiết bị, không đi qua mạng. SLM (mô hình ngôn ngữ nhỏ) đủ nhẹ để chạy trên edge device, LLM (B) thì quá nặng. Hai phương án còn lại (C, D) gọi API tập trung và bất đồng bộ — thêm độ trễ mạng, trái yêu cầu." },
+
+  "10": { "answer": "A", "vi": "'Chia sẻ và quản lý biến (feature) giữa nhiều nhóm' chính là mục đích tồn tại của SageMaker Feature Store — kho lưu trữ đặc trưng dùng chung, đảm bảo nhất quán giữa huấn luyện và suy luận. Data Wrangler (B) để chuẩn bị dữ liệu, Clarify (C) để phát hiện bias, Model Cards (D) để lập tài liệu mô hình." },
+
+  "11": { "answer": "A", "vi": "Amazon Q Developer là trợ lý lập trình AI: gợi ý đoạn mã, theo dõi nguồn tham chiếu (reference tracking) và giấy phép mã nguồn mở của đoạn mã được gợi ý. Chạy ứng dụng không cần quản lý máy chủ (B) là Lambda. Chuyển audio thành văn bản (D) là Transcribe." },
+
+  "12": { "answer": "A", "vi": "VPC bị cấm mọi lưu lượng Internet nhưng vẫn cần gọi Bedrock — AWS PrivateLink tạo VPC endpoint để lưu lượng đi trong mạng riêng của AWS, không ra Internet. Macie (B) phát hiện dữ liệu nhạy cảm. CloudFront (C) là CDN. Internet gateway (D) làm đúng điều bị cấm." },
+
+  "13": { "answer": "C", "vi": "Xác suất rút bi xanh là phép tính số học đơn giản (4/13) — chỉ cần vài dòng code, luôn cho kết quả đúng tuyệt đối. Dùng ML (A, B, D) cho bài toán có công thức chính xác là thừa thãi, tốn công huấn luyện mà lại cho kết quả xấp xỉ. Đây là dạng câu 'LEAST operational overhead': đừng dùng AI khi không cần." },
+
+  "14": { "answer": "C", "vi": "'Runtime efficiency' là hiệu quả lúc vận hành, tức thời gian phản hồi trung bình (average response time). CSAT (A) đo sự hài lòng khách hàng. Thời gian huấn luyện mỗi epoch (B) và số instance huấn luyện (D) thuộc giai đoạn huấn luyện, không phải lúc chạy." },
+
+  "15": { "answer": "B", "vi": "Dữ liệu đầu vào là âm thanh cuộc gọi, nên bước đầu bắt buộc là chuyển giọng nói thành văn bản — Amazon Transcribe. Comprehend (D) phân tích văn bản nhưng phải có văn bản trước đã. Lex (A) xây chatbot. Model Monitor (C) giám sát chất lượng mô hình, không trích xuất thông tin." },
+
+  "16": { "answer": "B", "vi": "Từ khoá quyết định là 'unlabeled' — dữ liệu chưa gán nhãn. Không có nhãn thì không dùng được supervised learning (A). Phân nhóm khách hàng thành các tầng chính là clustering, thuộc unsupervised learning. Reinforcement learning (C) và RLHF (D) học qua tương tác và phần thưởng, không phù hợp bài toán phân nhóm." },
+
+  "17": { "answer": "A", "vi": "Truy vấn có cả văn bản lẫn hình ảnh nên cần đưa hai loại dữ liệu về cùng một không gian vector để so sánh — đó là multi-modal embedding model. Text embedding (B) chỉ xử lý văn bản. Các mô hình sinh (C, D) tạo ra nội dung mới, còn bài toán ở đây là tìm kiếm, cần embedding chứ không cần sinh." },
+
+  "18": { "answer": "A", "vi": "Fine-tuning trên Bedrock đòi hỏi dữ liệu có nhãn theo cặp prompt/completion, lưu dạng JSONL. Định dạng ở phương án B sai. Mua Provisioned Throughput (C) là bước để chạy custom model sau khi đã fine-tune, không phải cách fine-tune. Huấn luyện trên sách báo chung chung (D) là continued pre-training, không phải fine-tuning có nhãn." },
+
+  "19": { "answer": "C", "vi": "Phát hiện IP đáng ngờ nghĩa là tìm hành vi lệch khỏi mẫu bình thường — bài toán anomaly detection. Nhận dạng giọng nói (A) và NER (B) thuộc lĩnh vực khác. 'Fraud forecasting' (D) là dự báo gian lận trong tương lai, không phải kiểm tra một IP tại thời điểm hiện tại." },
+
+  "20": { "answer": "C", "vi": "Thứ biến OpenSearch thành vector database là khả năng đánh chỉ mục vector và tìm kiếm k-nearest neighbor (k-NN) — tìm các vector gần nhau nhất về ngữ nghĩa. Tích hợp S3 (A), geospatial (B) và phân tích luồng thời gian thực (D) đều là tính năng khác của OpenSearch, không liên quan tới vector search." },
+
+  "21": { "answer": "B", "vi": "Generative AI tạo ra nội dung mới — ảnh chân thực sinh từ mô tả văn bản là ví dụ điển hình. Ba phương án còn lại đều là AI/phân tích truyền thống: phát hiện xâm nhập (A), tối ưu chỉ mục CSDL (C), dự báo chứng khoán (D) — chúng phân tích hoặc dự đoán chứ không sinh nội dung mới." },
+
+  "22": { "answer": "B", "vi": "Context window là giới hạn số token mà mô hình xử lý được trong một lượt, tức 'nhét được bao nhiêu thông tin vào một prompt'. Temperature (A) điều chỉnh độ ngẫu nhiên. Batch size (C) thuộc huấn luyện. Model size (D) là số tham số, không trực tiếp quyết định độ dài prompt." },
+
+  "23": { "answer": "C", "vi": "Điều chỉnh giọng văn cho khớp phong cách công ty là việc của prompt engineering — thử nghiệm và tinh chỉnh prompt tới khi đạt yêu cầu, rẻ và nhanh nhất. Giới hạn token (A) chỉ làm câu trả lời ngắn đi. Batch inference (B) là cách chạy, không ảnh hưởng giọng văn. Tăng temperature (D) làm đầu ra thất thường hơn." },
+
+  "24": { "answer": "A", "vi": "Đưa vài ví dụ văn bản kèm nhãn tích cực/tiêu cực rồi mới đưa văn bản cần phân loại — đó là few-shot prompting, cách hiệu quả nhất để định hướng mô hình cho bài toán phân loại. Giải thích lý thuyết (B) không giúp gì. Không có ngữ cảnh (C) là zero-shot, kém chính xác hơn. Ví dụ về tác vụ không liên quan (D) còn gây nhiễu." },
+
+  "25": { "answer": "B", "vi": "AWS CloudTrail ghi lại mọi lời gọi API kèm danh tính người gọi, nên đây là nơi tra ai đã cố truy cập Bedrock trái phép để từ đó siết IAM policy. Audit Manager (A) tổng hợp bằng chứng tuân thủ chứ không ghi log gốc. Fraud Detector (C) phát hiện gian lận giao dịch. Trusted Advisor (D) khuyến nghị tối ưu tài nguyên." },
+
+  "26": { "answer": "A", "vi": "'Không quản lý hạ tầng bên dưới' là dấu hiệu của serverless — SageMaker Serverless Inference tự cấp phát và thu hồi tài nguyên theo lưu lượng. CloudFront (B) là CDN, không host mô hình. API Gateway (C) chỉ là cổng API, vẫn cần backend. AWS Batch (D) dùng cho job theo lô, phải cấu hình compute environment." },
+
+  "27": { "answer": "B", "vi": "AWS Artifact là nơi tải báo cáo tuân thủ (SOC, ISO, PCI...) và có thể đăng ký nhận thông báo khi có báo cáo mới. Audit Manager (A) đánh giá tuân thủ nội bộ của chính bạn. Trusted Advisor (C) khuyến nghị tối ưu. Data Exchange (D) là chợ dữ liệu bên thứ ba." },
+
+  "28": { "answer": "A", "vi": "Trong các phương án đưa ra, chỉ có việc thiết kế prompt template hướng dẫn mô hình nhận biết mẫu tấn công là biện pháp phòng thủ thật sự trước prompt injection. Tăng temperature (B) làm mô hình khó lường hơn, tệ hơn. Giới hạn danh sách mô hình (C) không ngăn được injection. Giảm số token đầu vào (D) chỉ cắt ngắn prompt." },
+
+  "29": { "answer": "D", "vi": "Generative AI Security Scoping Matrix xếp từ Scope 1 (dùng app có sẵn, trách nhiệm ít nhất) tới Scope 5 (tự huấn luyện mô hình từ đầu, trách nhiệm nhiều nhất). Tự xây và huấn luyện mô hình bằng dữ liệu của mình là Scope 5 — bạn chịu trách nhiệm toàn bộ: dữ liệu, huấn luyện, hạ tầng, đầu ra. Các phương án A, B, C tương ứng Scope 1, 3, 4." },
+
+  "30": { "answer": "A", "vi": "Nhận diện và phân loại con vật trong ảnh, tự động không cần người — đó là object detection (phát hiện và định vị đối tượng trong ảnh). Anomaly detection (B) tìm điểm bất thường. NER (C) xử lý văn bản. Inpainting (D) là kỹ thuật vá/sinh phần ảnh bị thiếu." },
+
+  "31": { "answer": "A", "vi": "Ngân sách hạn chế và muốn linh hoạt, không cam kết dài hạn — On-Demand tính tiền theo token thực dùng, không cần cam kết trước. Provisioned Throughput (C) đòi cam kết theo giờ/tháng, đắt nếu dùng ít. Model customization (B) là dịch vụ tuỳ chỉnh chứ không phải mô hình giá. Bedrock không có Spot Instance (D)." },
+
+  "32": { "answer": "B", "vi": "SageMaker JumpStart cung cấp kho foundation model dựng sẵn, triển khai chỉ vài cú nhấp và endpoint nằm trong VPC của bạn. 'SageMaker endpoints' (D) chỉ là hạ tầng phục vụ, không cung cấp sẵn FM để chọn. PartyRock (C) là sân chơi công cộng, không nằm trong VPC. Personalize (A) là dịch vụ gợi ý." },
+
+  "33": { "answer": "A", "vi": "Bảo mật khi dùng LLM trên Bedrock gồm hai lớp: prompt rõ ràng, cụ thể để hạn chế đầu ra ngoài ý muốn, và IAM theo nguyên tắc đặc quyền tối thiểu để kiểm soát ai gọi được mô hình. Audit Manager (B) và model evaluation (C) đánh giá chất lượng/tuân thủ chứ không phải biện pháp bảo mật truy cập. CloudWatch Logs (D) không làm mô hình giải thích được." },
+
+  "34": { "answer": "A", "vi": "Sinh câu lệnh SQL từ mô tả bằng ngôn ngữ tự nhiên là bài toán text-to-SQL, cần mô hình sinh ngôn ngữ kiểu GPT (transformer). Residual neural network (B) dùng cho thị giác máy tính. SVM (C) là bộ phân loại cổ điển. WaveNet (D) sinh âm thanh." }
+}
